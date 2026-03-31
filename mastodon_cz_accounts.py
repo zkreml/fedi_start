@@ -28,17 +28,26 @@ log = logging.getLogger(__name__)
 
 # ── CONFIG ────────────────────────────────────
 QUERY_INSTANCES = [
-    "mastodon.social",
-    "mstdn.social",
-    "mastodon.online",
-    "fosstodon.org",
-    "chaos.social",
-    "mastodon.cloud",
-    "infosec.exchange",
-    "scholar.social",
+    # CZ/SK instance – bereme všechny uživatele (bez language filtru)
+    "mastodonczech.cz",   # 713 CZ uživatelů
+    "cztwitter.cz",       # 229 CZ uživatelů
+    "witter.cz",          # 212 CZ uživatelů
+    "mastodon.arch-linux.cz",  # 115 CZ uživatelů
+    "mastodon.pirati.cz", # 52 CZ uživatelů
+    "f.cz",               # 40 CZ uživatelů
+    "lgbtcz.social",      # 7 CZ uživatelů
+    "boskovice.social",   # 5 CZ uživatelů
     "mamutovo.cz",
+    # Velké instance – filtr language=cs/sk
+    "mastodon.social",    # 346 CZ uživatelů
+    "mas.to",             # 33 CZ uživatelů
+    "mastodon.online",    # 16 CZ uživatelů
+    "mastodon.world",     # 14 CZ uživatelů
+    "mstdn.social",       # 12 CZ uživatelů
+    "masto.ai",           # 7 CZ uživatelů
+    "fosstodon.org",      # 7 CZ uživatelů
+    "infosec.exchange",   # 5 CZ uživatelů
 ]
-TARGET_LANGUAGES  = ["cs", "sk"]
 MIN_STATUSES      = 10
 MIN_FOLLOWERS     = 10
 MAX_DAYS_INACTIVE = 30
@@ -63,39 +72,19 @@ def api_get(url, timeout=12):
         log.debug(f"Chyba {url}: {e}"); return None
 
 # ── SBĚR ─────────────────────────────────────
-def fetch_directory(instance, language, order="active"):
-    accounts = []
-    seen_ids = set()
-    for page in range(MAX_PAGES):
-        offset = page * PAGE_LIMIT
-        url = (f"https://{instance}/api/v1/directory"
-               f"?language={language}&local=false&order={order}"
-               f"&limit={PAGE_LIMIT}&offset={offset}")
-        batch = api_get(url)
-        if not batch or not isinstance(batch, list):
-            break
-        new = 0
-        for acc in batch:
-            aid = acc.get("id")
-            if aid and aid not in seen_ids:
-                seen_ids.add(aid)
-                acc["_source_instance"] = instance
-                acc["_language"] = language
-                accounts.append(acc)
-                new += 1
-        log.debug(f"  {instance} lang={language} offset={offset}: {new} nových")
-        if len(batch) < PAGE_LIMIT:
-            break
-        time.sleep(RATE_LIMIT_DELAY)
-    return accounts
-
-def fetch_all():
+def fetch_all_accounts():
     seen_handles = set()
     all_accounts = []
     for instance in QUERY_INSTANCES:
-        for lang in TARGET_LANGUAGES:
-            log.info(f"directory {instance} lang={lang} ...")
-            batch = fetch_directory(instance, lang)
+        log.info(f"directory {instance} ...")
+        page = 0
+        while page < MAX_PAGES:
+            offset = page * PAGE_LIMIT
+            url = (f"https://{instance}/api/v1/directory"
+                   f"?limit={PAGE_LIMIT}&local=true&offset={offset}")
+            batch = api_get(url)
+            if not batch or not isinstance(batch, list):
+                break
             added = 0
             for acc in batch:
                 handle = acc.get("acct", "")
@@ -105,10 +94,16 @@ def fetch_all():
                     continue
                 seen_handles.add(handle)
                 acc["_handle"] = handle
+                acc["_source_instance"] = instance
                 all_accounts.append(acc)
                 added += 1
-            log.info(f"  → {added} nových (celkem {len(all_accounts)})")
+            log.debug(f"  {instance} offset={offset}: {added} nových")
+            if len(batch) < PAGE_LIMIT:
+                break
+            page += 1
             time.sleep(RATE_LIMIT_DELAY)
+        log.info(f"  → celkem {len(all_accounts)} unikátních účtů")
+        time.sleep(RATE_LIMIT_DELAY)
     log.info(f"Sběr hotov: {len(all_accounts)} unikátních účtů")
     return all_accounts
 
@@ -189,7 +184,6 @@ def build_output(raw):
             "category":    categorize(acc),
             "last_active": acc.get("last_status_at", ""),
             "url":         acc.get("url", ""),
-            "language":    acc.get("_language", "cs"),
         })
     seen = set()
     unique = []
@@ -216,6 +210,7 @@ def write_csv(accounts, output_dir):
 
 # ── MAIN ──────────────────────────────────────
 def main():
+    global TOP_N
     parser = argparse.ArgumentParser()
     parser.add_argument("--output", default=".", help="Výstupní adresář")
     parser.add_argument("--top",    default=TOP_N, type=int)
@@ -223,12 +218,11 @@ def main():
     args = parser.parse_args()
     if args.debug:
         logging.getLogger().setLevel(logging.DEBUG)
-    global TOP_N
     TOP_N = args.top
     output_dir = Path(args.output)
     output_dir.mkdir(parents=True, exist_ok=True)
-    log.info(f"Startuji – {len(QUERY_INSTANCES)} instancí × {len(TARGET_LANGUAGES)} jazyků")
-    raw = fetch_all()
+    log.info(f"Startuji – {len(QUERY_INSTANCES)} instancí")
+    raw = fetch_all_accounts()
     accounts = build_output(raw)
     if not accounts:
         log.error("Žádné účty! Zkontroluj připojení.")
