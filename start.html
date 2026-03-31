@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Začni na Mastodonu – Mamutovo</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap');
+
+  :root {
+    --bg: #0f0f0f;
+    --surface: #1a1a1a;
+    --surface2: #242424;
+    --accent: #6364ff;
+    --accent2: #ff6b6b;
+    --text: #f0f0f0;
+    --muted: #888;
+    --border: #2e2e2e;
+    --radius: 10px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Syne', sans-serif;
+    min-height: 100vh;
+    padding: 0 1rem;
+  }
+
+  /* --- HERO --- */
+  .hero {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 3rem 0 2rem;
+    text-align: center;
+  }
+
+  .badge {
+    display: inline-block;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    color: var(--muted);
+    font-family: 'Space Mono', monospace;
+    font-size: 0.72rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 999px;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 6vw, 3.2rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+  }
+
+  h1 span { color: var(--accent); }
+
+  .tagline {
+    color: var(--muted);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    max-width: 480px;
+    margin: 0 auto 2.5rem;
+  }
+
+  .tagline strong { color: var(--text); }
+
+  /* --- STEPS --- */
+  .steps {
+    max-width: 680px;
+    margin: 0 auto 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .step {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.4rem 1.6rem;
+    display: grid;
+    grid-template-columns: 2.5rem 1fr;
+    gap: 0 1rem;
+    align-items: start;
+    transition: border-color 0.2s;
+  }
+
+  .step:hover { border-color: var(--accent); }
+
+  .step-num {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--accent);
+    background: rgba(99,100,255,0.1);
+    border-radius: 6px;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+  }
+
+  .step-body h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.35rem;
+    letter-spacing: -0.01em;
+  }
+
+  .step-body p {
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 0.8rem;
+  }
+
+  /* --- BUTTONS --- */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.55rem 1.1rem;
+    border-radius: 7px;
+    text-decoration: none;
+    transition: all 0.15s;
+    cursor: pointer;
+    border: none;
+  }
+
+  .btn-primary {
+    background: var(--accent);
+    color: #fff;
+  }
+
+  .btn-primary:hover {
+    background: #7879ff;
+    transform: translateY(-1px);
+  }
+
+  .btn-secondary {
+    background: var(--surface2);
+    color: var(--text);
+    border: 1px solid var(--border);
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .btn-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  /* --- PATH HINT --- */
+  .path-hint {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--muted);
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.55rem 0.9rem;
+    display: inline-block;
+    margin-top: 0.6rem;
+    line-height: 1.7;
+  }
+
+  .path-hint span { color: var(--accent2); }
+
+  /* --- COPY POST --- */
+  .copy-box {
+    background: var(--surface2);
+    border: 1px dashed var(--border);
+    border-radius: var(--radius);
+    padding: 1rem 1.2rem;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: var(--text);
+    margin-bottom: 0.8rem;
+    position: relative;
+    cursor: pointer;
+    transition: border-color 0.2s;
+    user-select: all;
+  }
+
+  .copy-box:hover { border-color: var(--accent); }
+
+  .copy-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+
+  .copy-toast {
+    position: fixed;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(2rem);
+    background: var(--accent);
+    color: #fff;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.8rem;
+    padding: 0.6rem 1.4rem;
+    border-radius: 999px;
+    opacity: 0;
+    transition: all 0.25s;
+    pointer-events: none;
+    z-index: 100;
+  }
+
+  .copy-toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  /* --- HASHTAGS --- */
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.4rem;
+  }
+
+  .tag {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--accent);
+    background: rgba(99,100,255,0.08);
+    border: 1px solid rgba(99,100,255,0.2);
+    border-radius: 999px;
+    padding: 0.3rem 0.75rem;
+    text-decoration: none;
+    transition: all 0.15s;
+  }
+
+  .tag:hover {
+    background: rgba(99,100,255,0.2);
+    border-color: var(--accent);
+  }
+
+  /* --- FOOTER NOTE --- */
+  .footer-note {
+    max-width: 680px;
+    margin: 0 auto 3rem;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.82rem;
+    line-height: 1.6;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .footer-note a { color: var(--accent); text-decoration: none; }
+  .footer-note a:hover { text-decoration: underline; }
+
+  @media (max-width: 500px) {
+    .step { grid-template-columns: 1fr; }
+    .step-num { margin-bottom: 0.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="badge">🦣 Mamutovo · Průvodce pro nováčky</div>
+  <h1>Twitter bez <span>korporátu</span>.<br>Mastodon za 3 minuty.</h1>
+  <p class="tagline">
+    Žádné algoritmy. Žádné reklamy. <strong>Patří komunitě.</strong><br>
+    Tyhle 4 kroky ti zaplní feed a pomůžou udělat první post.
+  </p>
+</div>
+
+<div class="steps">
+
+  <!-- KROK 1 -->
+  <div class="step">
+    <div class="step-num">01</div>
+    <div class="step-body">
+      <h3>Stáhni starter pack</h3>
+      <p>CSV soubor s účty, které stojí za sledování. Nahraješ ho do Mastodonu a feed se okamžitě zaplní.</p>
+      <div class="btn-row">
+        <a href="starter-general.csv" download class="btn btn-primary">⬇ Stáhnout CSV – obecný mix</a>
+        <a href="starter-tech.csv" download class="btn btn-secondary">Tech & Linux</a>
+        <a href="starter-czech.csv" download class="btn btn-secondary">CZ účty</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- KROK 2 -->
+  <div class="step">
+    <div class="step-num">02</div>
+    <div class="step-body">
+      <h3>Nahraj CSV do Mastodonu</h3>
+      <p>Přejdi do nastavení a importuj soubor. Trvá to 30 sekund.</p>
+      <div class="path-hint">
+        <span>Nastavení</span> → Import a export → Import<br>
+        Typ: <span>Sledovaní</span> → Vyber soubor → <span>Nahrát</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- KROK 3 -->
+  <div class="step">
+    <div class="step-num">03</div>
+    <div class="step-body">
+      <h3>Pošli první post</h3>
+      <p>Zkopíruj, uprav, odešli. Komunita reaguje na #Představení.</p>
+      <span class="copy-label">Klikni pro zkopírování</span>
+      <div class="copy-box" onclick="copyPost(this)">
+Ahoj Mastodon! 👋 Jsem tu nový/nová, přišel/přišla jsem z [Twitteru / Facebooku].
+Zajímá mě [Linux / příroda / fotografie / ...]. Rád/a se seznámím!
+
+#Představení #novácek #Mamutovo
+      </div>
+      <a href="https://mamutovo.cz/publish" class="btn btn-primary" target="_blank">✏️ Napsat post</a>
+    </div>
+  </div>
+
+  <!-- KROK 4 -->
+  <div class="step">
+    <div class="step-num">04</div>
+    <div class="step-body">
+      <h3>Sleduj hashtagy, co tě zajímají</h3>
+      <p>Klikni na hashtag → „Sledovat hashtag". Příspěvky se ti začnou objevovat v timeline.</p>
+      <div class="tags">
+        <a href="https://mamutovo.cz/tags/představení" class="tag">#Představení</a>
+        <a href="https://mamutovo.cz/tags/česky" class="tag">#Česky</a>
+        <a href="https://mamutovo.cz/tags/linux" class="tag">#Linux</a>
+        <a href="https://mamutovo.cz/tags/opensource" class="tag">#OpenSource</a>
+        <a href="https://mamutovo.cz/tags/fotografie" class="tag">#Fotografie</a>
+        <a href="https://mamutovo.cz/tags/příroda" class="tag">#Příroda</a>
+        <a href="https://mamutovo.cz/tags/hudba" class="tag">#Hudba</a>
+        <a href="https://mamutovo.cz/tags/knihy" class="tag">#Knihy</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer-note">
+  Zasekl/a ses? Napiš na <a href="https://mamutovo.cz/@admin">@admin@mamutovo.cz</a> nebo
+  se zeptej v <a href="https://mamutovo.cz/tags/pomoc">#pomoc</a>.<br>
+  Tato stránka je open source: <a href="https://github.com/mamutovo/start">github.com/mamutovo/start</a>
+</div>
+
+<div class="copy-toast" id="toast">Zkopírováno! Vlož do pole pro post ✓</div>
+
+<script>
+  function copyPost(el) {
+    const text = el.innerText.trim();
+    navigator.clipboard.writeText(text).then(() => {
+      const toast = document.getElementById('toast');
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 2500);
+    });
+  }
+</script>
+
+</body>
+</html>

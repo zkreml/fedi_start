@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CZ účty na Mastodonu – Mamutovo</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap');
+
+:root {
+  --bg: #0d0d0d;
+  --surface: #161616;
+  --surface2: #1e1e1e;
+  --surface3: #252525;
+  --accent: #00c896;
+  --accent2: #ff6b6b;
+  --accent3: #fbbf24;
+  --text: #f0f0f0;
+  --muted: #777;
+  --muted2: #555;
+  --border: #282828;
+  --radius: 10px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Syne', sans-serif;
+  min-height: 100vh;
+}
+
+/* NAV */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--border);
+  background: rgba(13,13,13,0.9);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.nav-logo {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.85rem;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-links a {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.nav-links a:hover, .nav-links a.active { color: var(--text); }
+
+.nav-updated {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.68rem;
+  color: var(--muted2);
+}
+
+/* HEADER */
+.header {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem 1.5rem;
+}
+
+h1 {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.4rem;
+}
+
+h1 span { color: var(--accent); }
+
+.subtitle {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 1.8rem;
+}
+
+/* CONTROLS */
+.controls {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.search-wrap {
+  flex: 1;
+  min-width: 200px;
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  left: 0.8rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--muted2);
+  font-size: 0.85rem;
+  pointer-events: none;
+}
+
+input[type="text"] {
+  width: 100%;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  padding: 0.55rem 0.9rem 0.55rem 2.2rem;
+  color: var(--text);
+  font-family: 'Syne', sans-serif;
+  font-size: 0.88rem;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+input[type="text"]:focus { border-color: var(--accent); }
+input[type="text"]::placeholder { color: var(--muted2); }
+
+select {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  padding: 0.55rem 2rem 0.55rem 0.9rem;
+  color: var(--text);
+  font-family: 'Syne', sans-serif;
+  font-size: 0.85rem;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23555' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.7rem center;
+  transition: border-color 0.15s;
+}
+
+select:focus { border-color: var(--accent); }
+
+.filter-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  max-width: 1100px;
+  margin: 0 auto 1.2rem;
+  padding: 0 2rem;
+}
+
+.ftag {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.72rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.ftag:hover, .ftag.active {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(0,200,150,0.08);
+}
+
+/* STATS BAR */
+.stats-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto 1rem;
+  padding: 0 2rem;
+}
+
+.stats-count {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.stats-count strong { color: var(--text); }
+
+.view-btns {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.view-btn {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--muted);
+  transition: all 0.15s;
+  font-size: 0.8rem;
+}
+
+.view-btn.active, .view-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* DOWNLOAD BAR */
+.dl-bar {
+  max-width: 1100px;
+  margin: 0 auto 1.5rem;
+  padding: 0 2rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border-radius: 7px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.15s;
+}
+
+.btn-accent {
+  background: var(--accent);
+  color: #000;
+}
+
+.btn-accent:hover { background: #00dfa8; transform: translateY(-1px); }
+
+.btn-ghost {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+
+/* GRID */
+.grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 0.9rem;
+}
+
+.grid.list-view {
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+}
+
+/* CARD */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: border-color 0.2s, transform 0.15s;
+  animation: fadeIn 0.3s ease both;
+}
+
+.card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.card-header {
+  height: 60px;
+  background: linear-gradient(135deg, var(--surface2), var(--surface3));
+  position: relative;
+}
+
+.card-header-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.4;
+}
+
+.card-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  border: 3px solid var(--surface);
+  position: absolute;
+  bottom: -20px;
+  left: 1rem;
+  background: var(--surface2);
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1.4rem 1rem 1rem;
+}
+
+.card-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 0.15rem;
+  letter-spacing: -0.01em;
+}
+
+.card-handle {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.68rem;
+  color: var(--muted);
+  margin-bottom: 0.6rem;
+  word-break: break-all;
+}
+
+.card-bio {
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.5;
+  margin-bottom: 0.8rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-bottom: 0.8rem;
+}
+
+.card-tag {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.63rem;
+  color: var(--accent);
+  background: rgba(0,200,150,0.08);
+  border: 1px solid rgba(0,200,150,0.15);
+  border-radius: 999px;
+  padding: 0.15rem 0.5rem;
+}
+
+.card-stats {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.9rem;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.stat-val {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.stat-label {
+  font-size: 0.65rem;
+  color: var(--muted2);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.card-follow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.follow-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  background: var(--accent);
+  color: #000;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.5rem;
+  border-radius: 7px;
+  text-decoration: none;
+  transition: all 0.15s;
+}
+
+.follow-btn:hover { background: #00dfa8; }
+
+.score-badge {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--accent3);
+  background: rgba(251,191,36,0.1);
+  border: 1px solid rgba(251,191,36,0.2);
+  border-radius: 5px;
+  padding: 0.3rem 0.45rem;
+  white-space: nowrap;
+}
+
+/* LIST VIEW CARD */
+.list-view .card {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0 1rem;
+  align-items: center;
+  padding: 0.8rem 1rem;
+}
+
+.list-view .card-header { display: none; }
+.list-view .card-body { padding: 0; display: contents; }
+.list-view .card-bio { display: none; }
+.list-view .card-tags { display: none; }
+
+.list-view .card-avatar-list {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  object-fit: cover;
+  background: var(--surface2);
+  flex-shrink: 0;
+}
+
+.list-view .card-info { min-width: 0; }
+.list-view .card-name { font-size: 0.88rem; }
+.list-view .card-handle { margin-bottom: 0; }
+
+.list-view .card-stats {
+  gap: 1.5rem;
+  margin-bottom: 0;
+  flex-shrink: 0;
+}
+
+.list-view .card-follow { flex-direction: column; gap: 0.3rem; }
+.list-view .follow-btn { font-size: 0.68rem; padding: 0.35rem 0.7rem; flex: none; }
+
+/* EMPTY */
+.empty {
+  max-width: 1100px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+  display: none;
+}
+
+/* LOADING */
+.loading {
+  max-width: 1100px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+  text-align: center;
+  color: var(--muted);
+  font-family: 'Space Mono', monospace;
+  font-size: 0.8rem;
+}
+
+.spinner {
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  margin: 0 auto 1rem;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  nav { padding: 0.8rem 1rem; }
+  .header { padding: 1.5rem 1rem 1rem; }
+  .controls { padding: 0.8rem; }
+  .filter-tags, .stats-bar, .dl-bar, .grid { padding-left: 1rem; padding-right: 1rem; }
+  .grid { grid-template-columns: 1fr; }
+  nav .nav-updated { display: none; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/start" class="nav-logo">🦣 Mamutovo</a>
+  <div class="nav-links">
+    <a href="/start">← Průvodce</a>
+    <a href="/accounts" class="active">CZ účty</a>
+  </div>
+  <span class="nav-updated"><span id="lastUpdated">načítám...</span><span id="refreshCountdown" style="margin-left:0.4rem;color:var(--muted2);font-size:0.65rem;font-family:'Space Mono',monospace;"></span><span id="refreshBadge" style="margin-left:0.5rem;font-size:0.65rem;font-family:'Space Mono',monospace;transition:color 0.3s;"></span></span>
+</nav>
+
+<div class="header">
+  <h1>CZ účty na <span>Mastodonu</span></h1>
+  <p class="subtitle">Automaticky aktualizovaný seznam aktivních českých a slovenských účtů. Aktualizace každý den.</p>
+
+  <div class="controls">
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="searchInput" placeholder="Hledej podle jména, bio nebo tagu...">
+    </div>
+    <select id="categoryFilter">
+      <option value="">Všechny kategorie</option>
+    </select>
+    <select id="sortFilter">
+      <option value="score">Nejvyšší skóre</option>
+      <option value="followers">Nejvíce sledujících</option>
+      <option value="activity">Nejaktivnější</option>
+    </select>
+  </div>
+</div>
+
+<div class="filter-tags" id="filterTags">
+  <button class="ftag active" data-tag="">Vše</button>
+</div>
+
+<div class="stats-bar">
+  <span class="stats-count">Zobrazuji <strong id="visibleCount">0</strong> z <strong id="totalCount">0</strong> účtů</span>
+  <div class="view-btns">
+    <button class="view-btn active" id="gridBtn" title="Mřížka">⊞</button>
+    <button class="view-btn" id="listBtn" title="Seznam">≡</button>
+  </div>
+</div>
+
+<div class="dl-bar">
+  <button class="btn btn-accent" id="downloadCsvBtn">⬇ Stáhnout CSV (viditelné)</button>
+  <button class="btn btn-ghost" id="downloadAllCsvBtn">⬇ Celý seznam CSV</button>
+  <a href="accounts.json" class="btn btn-ghost" download>{ } JSON</a>
+</div>
+
+<div class="loading" id="loadingEl">
+  <div class="spinner"></div>
+  Načítám účty...
+</div>
+
+<div class="grid" id="grid"></div>
+<div class="empty" id="emptyEl">Žádné účty neodpovídají filtru. Zkus jiný výraz.</div>
+
+<script>
+// ────────────────────────────────
+// DATA – fallback když není JSON
+// ────────────────────────────────
+const FALLBACK_ACCOUNTS = [
+  {
+    name: "Mamutovo",
+    handle: "mamutovo@mamutovo.cz",
+    bio: "Oficiální účet české Mastodon instance Mamutovo. Novinky, tipy a komunita.",
+    avatar: "",
+    followers: 1200,
+    statuses: 340,
+    score: 95,
+    tags: ["česky", "komunita"],
+    category: "ostatni",
+    last_active: "2025-03-28"
+  },
+  {
+    name: "Linux CZ",
+    handle: "linuxcz@fosstodon.org",
+    bio: "Česká komunita okolo Linuxu a open source. Tipy, návody, diskuse.",
+    avatar: "",
+    followers: 870,
+    statuses: 1200,
+    score: 88,
+    tags: ["linux", "opensource", "tech"],
+    category: "tech",
+    last_active: "2025-03-29"
+  },
+  {
+    name: "Fedi.Tips CZ",
+    handle: "feditips@mstdn.social",
+    bio: "Tipy jak používat Mastodon a fediverse. Česky i anglicky.",
+    avatar: "",
+    followers: 650,
+    statuses: 980,
+    score: 82,
+    tags: ["mastodon", "fediverse", "tipy"],
+    category: "tech",
+    last_active: "2025-03-27"
+  },
+  {
+    name: "Open Source CZ",
+    handle: "oscz@mastodon.social",
+    bio: "Open source projekty, svobodný software a decentralizace po česku.",
+    avatar: "",
+    followers: 540,
+    statuses: 760,
+    score: 79,
+    tags: ["opensource", "svobodný software", "tech"],
+    category: "tech",
+    last_active: "2025-03-26"
+  },
+  {
+    name: "Česká věda",
+    handle: "ceskaveda@scholar.social",
+    bio: "Popularizace vědy a výzkumu v češtině. Biologie, fyzika, astronomie.",
+    avatar: "",
+    followers: 430,
+    statuses: 520,
+    score: 74,
+    tags: ["věda", "vzdělávání", "veda"],
+    category: "veda",
+    last_active: "2025-03-25"
+  },
+  {
+    name: "Foto CZ",
+    handle: "fotocz@mastodon.social",
+    bio: "Česká fotografická komunita. Krajiny, portréty, street foto.",
+    avatar: "",
+    followers: 390,
+    statuses: 890,
+    score: 71,
+    tags: ["fotografie", "foto", "umění"],
+    category: "foto",
+    last_active: "2025-03-28"
+  },
+  {
+    name: "Gaming CZ",
+    handle: "gamingcz@mastodon.social",
+    bio: "Videohry po česku. Recenze, novinky, diskuse bez korporátního hype.",
+    avatar: "",
+    followers: 310,
+    statuses: 430,
+    score: 65,
+    tags: ["gaming", "hry", "videohry"],
+    category: "gaming",
+    last_active: "2025-03-20"
+  },
+  {
+    name: "Kultura CZ",
+    handle: "kulturacz@mastodon.social",
+    bio: "Kultura, knihy, filmy a hudba v češtině.",
+    avatar: "",
+    followers: 280,
+    statuses: 350,
+    score: 61,
+    tags: ["kultura", "knihy", "hudba"],
+    category: "kultura",
+    last_active: "2025-03-22"
+  }
+];
+
+// ────────────────────────────────
+// STATE
+// ────────────────────────────────
+let allAccounts = [];
+let filtered = [];
+let viewMode = 'grid'; // 'grid' | 'list'
+
+// loadAccounts() přesunuto dolů (auto-refresh)
+
+// ────────────────────────────────
+// FILTER + SORT
+// ────────────────────────────────
+function applyFilters() {
+  const q = document.getElementById('searchInput').value.toLowerCase().trim();
+  const cat = document.getElementById('categoryFilter').value;
+  const sort = document.getElementById('sortFilter').value;
+  const activeTag = document.querySelector('.ftag.active')?.dataset.tag || '';
+
+  filtered = allAccounts.filter(a => {
+    const matchQ = !q ||
+      a.name.toLowerCase().includes(q) ||
+      (a.bio || '').toLowerCase().includes(q) ||
+      (a.handle || '').toLowerCase().includes(q) ||
+      (a.tags || []).some(t => t.toLowerCase().includes(q));
+    const matchCat = !cat || a.category === cat;
+    const matchTag = !activeTag ||
+      (a.tags || []).some(t => t.toLowerCase().includes(activeTag.toLowerCase()));
+    return matchQ && matchCat && matchTag;
+  });
+
+  filtered.sort((a, b) => {
+    if (sort === 'followers') return (b.followers || 0) - (a.followers || 0);
+    if (sort === 'activity') return (b.statuses || 0) - (a.statuses || 0);
+    return (b.score || 0) - (a.score || 0);
+  });
+
+  document.getElementById('visibleCount').textContent = filtered.length;
+  document.getElementById('emptyEl').style.display = filtered.length ? 'none' : 'block';
+  renderGrid();
+}
+
+// ────────────────────────────────
+// RENDER
+// ────────────────────────────────
+function fmt(n) {
+  if (!n) return '0';
+  if (n >= 1000) return (n / 1000).toFixed(1) + 'K';
+  return String(n);
+}
+
+function followUrl(handle) {
+  const instance = 'https://mamutovo.cz';
+  return `${instance}/authorize_interaction?uri=${encodeURIComponent('@' + handle)}`;
+}
+
+function avatarFallback(name) {
+  const colors = ['#00c896','#6364ff','#ff6b6b','#fbbf24','#a78bfa'];
+  const i = name.charCodeAt(0) % colors.length;
+  return `data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='52' height='52'><rect width='52' height='52' fill='${encodeURIComponent(colors[i])}' rx='8'/><text x='50%' y='50%' font-size='22' text-anchor='middle' dominant-baseline='central' fill='white' font-family='sans-serif'>${name.charAt(0).toUpperCase()}</text></svg>`;
+}
+
+function cardHTML(a, idx) {
+  const av = a.avatar || avatarFallback(a.name);
+  const tags = (a.tags || []).slice(0, 3).map(t =>
+    `<span class="card-tag">#${t}</span>`).join('');
+
+  if (viewMode === 'list') {
+    return `
+      <div class="card" style="animation-delay:${idx * 0.03}s">
+        <img class="card-avatar-list" src="${av}" alt="" onerror="this.src='${avatarFallback(a.name)}'">
+        <div class="card-info">
+          <div class="card-name">${a.name}</div>
+          <div class="card-handle">@${a.handle}</div>
+        </div>
+        <div class="card-stats">
+          <div class="stat"><span class="stat-val">${fmt(a.followers)}</span><span class="stat-label">sledující</span></div>
+          <div class="stat"><span class="stat-val">${fmt(a.statuses)}</span><span class="stat-label">postů</span></div>
+        </div>
+        <div class="card-follow">
+          <a href="${followUrl(a.handle)}" target="_blank" class="follow-btn">+ Sledovat</a>
+          <span class="score-badge">★ ${a.score || '?'}</span>
+        </div>
+      </div>`;
+  }
+
+  return `
+    <div class="card" style="animation-delay:${idx * 0.04}s">
+      <div class="card-header">
+        ${a.header ? `<img class="card-header-img" src="${a.header}" alt="">` : ''}
+        <img class="card-avatar" src="${av}" alt="" onerror="this.src='${avatarFallback(a.name)}'">
+      </div>
+      <div class="card-body">
+        <div class="card-name">${a.name}</div>
+        <div class="card-handle">@${a.handle}</div>
+        <div class="card-bio">${a.bio || ''}</div>
+        <div class="card-tags">${tags}</div>
+        <div class="card-stats">
+          <div class="stat">
+            <span class="stat-val">${fmt(a.followers)}</span>
+            <span class="stat-label">Sledující</span>
+          </div>
+          <div class="stat">
+            <span class="stat-val">${fmt(a.statuses)}</span>
+            <span class="stat-label">Postů</span>
+          </div>
+        </div>
+        <div class="card-follow">
+          <a href="${followUrl(a.handle)}" target="_blank" class="follow-btn">+ Sledovat</a>
+          <span class="score-badge">★ ${a.score || '?'}</span>
+        </div>
+      </div>
+    </div>`;
+}
+
+function renderGrid() {
+  const grid = document.getElementById('grid');
+  grid.innerHTML = filtered.map((a, i) => cardHTML(a, i)).join('');
+  grid.className = viewMode === 'list' ? 'grid list-view' : 'grid';
+}
+
+// ────────────────────────────────
+// CSV EXPORT
+// ────────────────────────────────
+function toCSV(accounts) {
+  const rows = ['Account address,Show boosts'];
+  accounts.forEach(a => rows.push(`${a.handle},true`));
+  return rows.join('\n');
+}
+
+function downloadCSV(content, filename) {
+  const blob = new Blob([content], { type: 'text/csv;charset=utf-8;' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = filename;
+  a.click();
+}
+
+// ────────────────────────────────
+// EVENTS
+// ────────────────────────────────
+document.getElementById('searchInput').addEventListener('input', applyFilters);
+document.getElementById('categoryFilter').addEventListener('change', applyFilters);
+document.getElementById('sortFilter').addEventListener('change', applyFilters);
+
+document.querySelectorAll('.ftag').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.ftag').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    applyFilters();
+  });
+});
+
+document.getElementById('gridBtn').addEventListener('click', () => {
+  viewMode = 'grid';
+  document.getElementById('gridBtn').classList.add('active');
+  document.getElementById('listBtn').classList.remove('active');
+  renderGrid();
+});
+
+document.getElementById('listBtn').addEventListener('click', () => {
+  viewMode = 'list';
+  document.getElementById('listBtn').classList.add('active');
+  document.getElementById('gridBtn').classList.remove('active');
+  renderGrid();
+});
+
+document.getElementById('downloadCsvBtn').addEventListener('click', () => {
+  downloadCSV(toCSV(filtered), 'mastodon-cz-filtered.csv');
+});
+
+document.getElementById('downloadAllCsvBtn').addEventListener('click', () => {
+  downloadCSV(toCSV(allAccounts), 'mastodon-cz-all.csv');
+});
+
+// ────────────────────────────────
+// KATEGORIE – popisky
+// ────────────────────────────────
+const CATEGORY_LABELS = {
+  tech:    'Tech & Linux',
+  kultura: 'Kultura & Umění',
+  zpravy:  'Zprávy & Politika',
+  veda:    'Věda & Vzdělávání',
+  foto:    'Fotografie',
+  gaming:  'Gaming',
+  ostatni: 'Ostatní',
+};
+
+// TOP hashtagy ze všech účtů – zobrazíme nejčastější
+function buildDynamicUI() {
+  // --- Kategorie select ---
+  const cats = [...new Set(allAccounts.map(a => a.category).filter(Boolean))].sort();
+  const sel = document.getElementById('categoryFilter');
+  // zachovej první option
+  sel.innerHTML = '<option value="">Všechny kategorie</option>';
+  cats.forEach(cat => {
+    const opt = document.createElement('option');
+    opt.value = cat;
+    opt.textContent = CATEGORY_LABELS[cat] || cat;
+    sel.appendChild(opt);
+  });
+
+  // --- Hashtag tlačítka – top 8 nejčastějších tagů ---
+  const tagCount = {};
+  allAccounts.forEach(a => (a.tags || []).forEach(t => {
+    tagCount[t] = (tagCount[t] || 0) + 1;
+  }));
+  const topTags = Object.entries(tagCount)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 8)
+    .map(([t]) => t);
+
+  const wrap = document.getElementById('filterTags');
+  wrap.innerHTML = '<button class="ftag active" data-tag="">Vše</button>';
+  topTags.forEach(tag => {
+    const btn = document.createElement('button');
+    btn.className = 'ftag';
+    btn.dataset.tag = tag;
+    btn.textContent = '#' + tag;
+    wrap.appendChild(btn);
+  });
+
+  // Re-attach events na nová tlačítka
+  wrap.querySelectorAll('.ftag').forEach(btn => {
+    btn.addEventListener('click', () => {
+      wrap.querySelectorAll('.ftag').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      applyFilters();
+    });
+  });
+}
+
+// ────────────────────────────────
+// AUTO-REFRESH – každou hodinu
+// ────────────────────────────────
+const REFRESH_INTERVAL_MS = 60 * 60 * 1000; // 1 hodina
+let lastGeneratedAt = null;
+let refreshTimer = null;
+let countdownTimer = null;
+let nextRefreshAt = null;
+
+function startCountdown() {
+  if (countdownTimer) clearInterval(countdownTimer);
+  nextRefreshAt = Date.now() + REFRESH_INTERVAL_MS;
+
+  countdownTimer = setInterval(() => {
+    const remaining = nextRefreshAt - Date.now();
+    if (remaining <= 0) { clearInterval(countdownTimer); return; }
+    const m = Math.floor(remaining / 60000);
+    const s = Math.floor((remaining % 60000) / 1000);
+    const el = document.getElementById('refreshCountdown');
+    if (el) el.textContent = `· obnoví za ${m}:${String(s).padStart(2,'0')}`;
+  }, 1000);
+}
+
+async function silentRefresh() {
+  try {
+    const res = await fetch('accounts.json?t=' + Date.now());
+    if (!res.ok) return;
+    const data = await res.json();
+    const newTs = data.updated_at || data.generated_at;
+
+    // Pouze pokud jsou data novější
+    if (newTs && newTs !== lastGeneratedAt) {
+      lastGeneratedAt = newTs;
+      allAccounts = data.accounts || data;
+      document.getElementById('totalCount').textContent = allAccounts.length;
+      document.getElementById('lastUpdated').textContent =
+        'Aktualizováno: ' + new Date(newTs).toLocaleDateString('cs-CZ', {
+          day: 'numeric', month: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit'
+        });
+      buildDynamicUI();
+      applyFilters();
+
+      // Flash indikátor
+      const badge = document.getElementById('refreshBadge');
+      if (badge) {
+        badge.textContent = '↻ aktualizováno';
+        badge.style.color = 'var(--accent)';
+        setTimeout(() => { badge.textContent = ''; badge.style.color = ''; }, 3000);
+      }
+    }
+  } catch { /* tiché selhání */ }
+
+  startCountdown();
+  refreshTimer = setTimeout(silentRefresh, REFRESH_INTERVAL_MS);
+}
+
+// ────────────────────────────────
+// LOAD – první načtení
+// ────────────────────────────────
+async function loadAccounts() {
+  try {
+    const res = await fetch('accounts.json?t=' + Date.now());
+    if (!res.ok) throw new Error('no json');
+    const data = await res.json();
+    allAccounts = data.accounts || data;
+    lastGeneratedAt = data.updated_at || data.generated_at || null;
+
+    if (lastGeneratedAt) {
+      document.getElementById('lastUpdated').textContent =
+        'Aktualizováno: ' + new Date(lastGeneratedAt).toLocaleDateString('cs-CZ', {
+          day: 'numeric', month: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit'
+        });
+    }
+  } catch {
+    allAccounts = FALLBACK_ACCOUNTS;
+    document.getElementById('lastUpdated').textContent = 'Ukázková data';
+  }
+
+  document.getElementById('loadingEl').style.display = 'none';
+  document.getElementById('totalCount').textContent = allAccounts.length;
+  buildDynamicUI();
+  applyFilters();
+
+  // Spusť auto-refresh
+  startCountdown();
+  refreshTimer = setTimeout(silentRefresh, REFRESH_INTERVAL_MS);
+}
+
+// ────────────────────────────────
+// INIT
+// ────────────────────────────────
+loadAccounts();
+</script>
+</body>
+</html>
