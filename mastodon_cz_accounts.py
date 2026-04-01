@@ -18,10 +18,26 @@ Cron (každý den v 3:00):
   0 3 * * * /usr/bin/python3 /opt/mastodon-start/mastodon_cz_accounts.py --output /var/www/start/ >> /var/log/mastodon-start.log 2>&1
 """
 
-import json, csv, time, re, argparse, logging
+import json, csv, time, re, argparse, logging, os
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 import urllib.request, urllib.error, urllib.parse
+
+def _load_token():
+    token = os.environ.get("MASTODON_TOKEN")
+    if token:
+        return token.strip()
+    env_path = Path(__file__).parent / ".env"
+    if env_path.exists():
+        for line in env_path.read_text().splitlines():
+            line = line.strip()
+            if line.startswith("MASTODON_TOKEN="):
+                return line.split("=", 1)[1].strip()
+            if line and not line.startswith("#") and "=" not in line:
+                return line  # raw token value
+    return None
+
+MASTODON_TOKEN = _load_token()
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s", datefmt="%H:%M:%S")
 log = logging.getLogger(__name__)
@@ -38,28 +54,23 @@ QUERY_INSTANCES = [
     "lgbtcz.social",      # 7 CZ uživatelů
     "boskovice.social",   # 5 CZ uživatelů
     "mamutovo.cz",
-    # Velké instance – filtr language=cs/sk
-    "mastodon.social",    # 346 CZ uživatelů
-    "mas.to",             # 33 CZ uživatelů
-    "mastodon.online",    # 16 CZ uživatelů
-    "mastodon.world",     # 14 CZ uživatelů
-    "mstdn.social",       # 12 CZ uživatelů
-    "masto.ai",           # 7 CZ uživatelů
-    "fosstodon.org",      # 7 CZ uživatelů
-    "infosec.exchange",   # 5 CZ uživatelů
 ]
+
 MIN_STATUSES      = 10
 MIN_FOLLOWERS     = 10
-MAX_DAYS_INACTIVE = 30
-TOP_N             = 60
+MAX_DAYS_INACTIVE = 365
+TOP_N             = 100
 RATE_LIMIT_DELAY  = 1.2
 PAGE_LIMIT        = 80
 MAX_PAGES         = 10
 
 # ── HTTP ──────────────────────────────────────
-def api_get(url, timeout=12):
+def api_get(url, timeout=15):
+    headers = {"User-Agent": "MamutovoStarterBot/1.0 (+https://mamutovo.cz)"}
+    if MASTODON_TOKEN:
+        headers["Authorization"] = f"Bearer {MASTODON_TOKEN}"
     try:
-        req = urllib.request.Request(url, headers={"User-Agent": "MamutovoStarterBot/1.0 (+https://mamutovo.cz)"})
+        req = urllib.request.Request(url, headers=headers)
         with urllib.request.urlopen(req, timeout=timeout) as r:
             return json.loads(r.read().decode())
     except urllib.error.HTTPError as e:
@@ -72,36 +83,39 @@ def api_get(url, timeout=12):
         log.debug(f"Chyba {url}: {e}"); return None
 
 # ── SBĚR ─────────────────────────────────────
+def _fetch_small_instance(instance, seen_handles, all_accounts):
+    """Malé CZ/SK instance: bereme všechny uživatele z directory."""
+    log.info(f"directory {instance} ...")
+    page = 0
+    while page < MAX_PAGES:
+        offset = page * PAGE_LIMIT
+        url = (f"https://{instance}/api/v1/directory"
+               f"?limit={PAGE_LIMIT}&local=true&offset={offset}")
+        batch = api_get(url)
+        if not batch or not isinstance(batch, list):
+            break
+        added = 0
+        for acc in batch:
+            acct = acc.get("acct", "")
+            handle = acct if "@" in acct else f"{acct}@{instance}"
+            if handle in seen_handles:
+                continue
+            seen_handles.add(handle)
+            acc["_handle"] = handle
+            acc["_source_instance"] = instance
+            all_accounts.append(acc)
+            added += 1
+        log.debug(f"  {instance} offset={offset}: {added} nových")
+        if len(batch) < PAGE_LIMIT:
+            break
+        page += 1
+        time.sleep(RATE_LIMIT_DELAY)
+
 def fetch_all_accounts():
     seen_handles = set()
     all_accounts = []
     for instance in QUERY_INSTANCES:
-        log.info(f"directory {instance} ...")
-        page = 0
-        while page < MAX_PAGES:
-            offset = page * PAGE_LIMIT
-            url = (f"https://{instance}/api/v1/directory"
-                   f"?limit={PAGE_LIMIT}&local=true&offset={offset}")
-            batch = api_get(url)
-            if not batch or not isinstance(batch, list):
-                break
-            added = 0
-            for acc in batch:
-                handle = acc.get("acct", "")
-                if "@" not in handle:
-                    handle = f"{handle}@{instance}"
-                if handle in seen_handles:
-                    continue
-                seen_handles.add(handle)
-                acc["_handle"] = handle
-                acc["_source_instance"] = instance
-                all_accounts.append(acc)
-                added += 1
-            log.debug(f"  {instance} offset={offset}: {added} nových")
-            if len(batch) < PAGE_LIMIT:
-                break
-            page += 1
-            time.sleep(RATE_LIMIT_DELAY)
+        _fetch_small_instance(instance, seen_handles, all_accounts)
         log.info(f"  → celkem {len(all_accounts)} unikátních účtů")
         time.sleep(RATE_LIMIT_DELAY)
     log.info(f"Sběr hotov: {len(all_accounts)} unikátních účtů")
@@ -187,7 +201,7 @@ def build_output(raw):
         })
     seen = set()
     unique = []
-    for r in sorted(results, key=lambda x: x["score"], reverse=True):
+    for r in sorted(results, key=lambda x: x["followers"], reverse=True):
         if r["handle"] not in seen:
             seen.add(r["handle"])
             unique.append(r)
