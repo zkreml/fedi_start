@@ -23,21 +23,38 @@ from datetime import datetime, timezone, timedelta
 from pathlib import Path
 import urllib.request, urllib.error, urllib.parse
 
-def _load_token():
-    token = os.environ.get("MASTODON_TOKEN")
-    if token:
-        return token.strip()
+def _load_tokens():
+    tokens = {}
     env_path = Path(__file__).parent / ".env"
-    if env_path.exists():
-        for line in env_path.read_text().splitlines():
+    env_lines = env_path.read_text().splitlines() if env_path.exists() else []
+    for key in ("MASTODON_TOKEN", "GTS_TOKEN"):
+        val = os.environ.get(key)
+        if not val:
+            for line in env_lines:
+                line = line.strip()
+                if line.startswith(f"{key}="):
+                    val = line.split("=", 1)[1].strip()
+                    break
+        if val:
+            tokens[key] = val.strip()
+    # fallback: raw token value (legacy .env bez klíče)
+    if "MASTODON_TOKEN" not in tokens:
+        for line in env_lines:
             line = line.strip()
-            if line.startswith("MASTODON_TOKEN="):
-                return line.split("=", 1)[1].strip()
             if line and not line.startswith("#") and "=" not in line:
-                return line  # raw token value
-    return None
+                tokens["MASTODON_TOKEN"] = line
+                break
+    return tokens
 
-MASTODON_TOKEN = _load_token()
+_TOKENS = _load_tokens()
+MASTODON_TOKEN = _TOKENS.get("MASTODON_TOKEN")
+GTS_TOKEN      = _TOKENS.get("GTS_TOKEN")
+
+def _token_for(instance: str) -> str | None:
+    """Vrátí GTS_TOKEN pro GoToSocial instance (obsahují 'gts.' v doméně), jinak MASTODON_TOKEN."""
+    if GTS_TOKEN and "gts." in instance:
+        return GTS_TOKEN
+    return MASTODON_TOKEN
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s", datefmt="%H:%M:%S")
 log = logging.getLogger(__name__)
@@ -48,27 +65,32 @@ QUERY_INSTANCES = [
     "mastodonczech.cz",   # 713 CZ uživatelů
     "cztwitter.cz",       # 229 CZ uživatelů
     "witter.cz",          # 212 CZ uživatelů
-    "mastodon.arch-linux.cz",  # 115 CZ uživatelů
     "mastodon.pirati.cz", # 52 CZ uživatelů
     "f.cz",               # 40 CZ uživatelů
     "lgbtcz.social",      # 7 CZ uživatelů
     "boskovice.social",   # 5 CZ uživatelů
     "mamutovo.cz",
+    "gts.arch-linux.cz",
+    "kompost.cz",
+    "spondr.cz",
+    "skorpil.cz",
+    "ajtaci.club",
 ]
 
 MIN_STATUSES      = 10
 MIN_FOLLOWERS     = 10
-MAX_DAYS_INACTIVE = 365
-TOP_N             = 100
+MAX_DAYS_INACTIVE = 90
+TOP_N             = 200
 RATE_LIMIT_DELAY  = 1.2
 PAGE_LIMIT        = 80
 MAX_PAGES         = 10
 
 # ── HTTP ──────────────────────────────────────
-def api_get(url, timeout=15):
+def api_get(url, timeout=15, token=None):
     headers = {"User-Agent": "MamutovoStarterBot/1.0 (+https://mamutovo.cz)"}
-    if MASTODON_TOKEN:
-        headers["Authorization"] = f"Bearer {MASTODON_TOKEN}"
+    tok = token if token is not None else MASTODON_TOKEN
+    if tok:
+        headers["Authorization"] = f"Bearer {tok}"
     try:
         req = urllib.request.Request(url, headers=headers)
         with urllib.request.urlopen(req, timeout=timeout) as r:
@@ -86,21 +108,22 @@ def api_get(url, timeout=15):
 def _fetch_small_instance(instance, seen_handles, all_accounts):
     """Malé CZ/SK instance: bereme všechny uživatele z directory."""
     log.info(f"directory {instance} ...")
+    token = _token_for(instance)
     page = 0
     while page < MAX_PAGES:
         offset = page * PAGE_LIMIT
         url = (f"https://{instance}/api/v1/directory"
                f"?limit={PAGE_LIMIT}&local=true&offset={offset}")
-        batch = api_get(url)
+        batch = api_get(url, token=token)
         if not batch or not isinstance(batch, list):
             break
         added = 0
         for acc in batch:
             acct = acc.get("acct", "")
             handle = acct if "@" in acct else f"{acct}@{instance}"
-            if handle in seen_handles:
+            if handle.lower() in seen_handles:
                 continue
-            seen_handles.add(handle)
+            seen_handles.add(handle.lower())
             acc["_handle"] = handle
             acc["_source_instance"] = instance
             all_accounts.append(acc)
@@ -120,6 +143,47 @@ def fetch_all_accounts():
         time.sleep(RATE_LIMIT_DELAY)
     log.info(f"Sběr hotov: {len(all_accounts)} unikátních účtů")
     return all_accounts
+
+def load_manual_accounts(seen_handles=None):
+    """Načte manual_accounts.csv a dohledá každý účet přes /api/v1/accounts/lookup."""
+    csv_path = Path(__file__).parent / "manual_accounts.csv"
+    if not csv_path.exists():
+        log.info("manual_accounts.csv nenalezen, přeskakuji")
+        return []
+    if seen_handles is None:
+        seen_handles = set()
+    accounts = []
+    with open(csv_path, newline="", encoding="utf-8") as f:
+        for row in csv.reader(f):
+            if not row:
+                continue
+            entry = row[0].strip()
+            if not entry or "@" not in entry:
+                continue
+            handle_part, instance = entry.rsplit("@", 1)
+            handle = f"{handle_part}@{instance}"
+            if handle.lower() in seen_handles:
+                log.debug(f"  {handle} již v seznamu, přeskakuji")
+                continue
+            url = f"https://{instance}/api/v1/accounts/lookup?acct={urllib.parse.quote(handle_part)}"
+            token = _token_for(instance)
+            if handle.lower() == "archos@gts.arch-linux.cz":
+                tok_preview = (token[:8] + "...") if token else None
+                log.info(f"[DEBUG archos] token={tok_preview} url={url}")
+            acc = api_get(url, token=token)
+            if handle.lower() == "archos@gts.arch-linux.cz":
+                log.info(f"[DEBUG archos] api_get vrátil: {None if not acc else 'dict s ' + str(list(acc.keys())[:5])}")
+            if not acc or not isinstance(acc, dict):
+                log.warning(f"  {handle}: lookup selhal")
+                continue
+            seen_handles.add(handle.lower())
+            acc["_handle"] = handle
+            acc["_source_instance"] = instance
+            accounts.append(acc)
+            log.debug(f"  {handle}: OK ({acc.get('followers_count', 0)} followers)")
+            time.sleep(RATE_LIMIT_DELAY)
+    log.info(f"Manuální účty: {len(accounts)} načteno z {csv_path.name}")
+    return accounts
 
 # ── FILTRY ────────────────────────────────────
 def passes_quality(acc):
@@ -202,8 +266,8 @@ def build_output(raw):
     seen = set()
     unique = []
     for r in sorted(results, key=lambda x: x["followers"], reverse=True):
-        if r["handle"] not in seen:
-            seen.add(r["handle"])
+        if r["handle"].lower() not in seen:
+            seen.add(r["handle"].lower())
             unique.append(r)
     return unique[:TOP_N]
 
@@ -237,6 +301,8 @@ def main():
     output_dir.mkdir(parents=True, exist_ok=True)
     log.info(f"Startuji – {len(QUERY_INSTANCES)} instancí")
     raw = fetch_all_accounts()
+    seen_handles = {acc["_handle"].lower() for acc in raw}
+    raw += load_manual_accounts(seen_handles)
     accounts = build_output(raw)
     if not accounts:
         log.error("Žádné účty! Zkontroluj připojení.")
