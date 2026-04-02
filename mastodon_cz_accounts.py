@@ -167,12 +167,7 @@ def load_manual_accounts(seen_handles=None):
                 continue
             url = f"https://{instance}/api/v1/accounts/lookup?acct={urllib.parse.quote(handle_part)}"
             token = _token_for(instance)
-            if handle.lower() == "archos@gts.arch-linux.cz":
-                tok_preview = (token[:8] + "...") if token else None
-                log.info(f"[DEBUG archos] token={tok_preview} url={url}")
             acc = api_get(url, token=token)
-            if handle.lower() == "archos@gts.arch-linux.cz":
-                log.info(f"[DEBUG archos] api_get vrátil: {None if not acc else 'dict s ' + str(list(acc.keys())[:5])}")
             if not acc or not isinstance(acc, dict):
                 log.warning(f"  {handle}: lookup selhal")
                 continue
