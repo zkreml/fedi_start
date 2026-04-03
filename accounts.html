@@ -449,6 +449,7 @@ select:focus { border-color: var(--accent); }
   border-radius: 5px;
   padding: 0.3rem 0.45rem;
   white-space: nowrap;
+  flex-shrink: 0;
 }
 
 /* LIST VIEW CARD */
@@ -763,13 +764,13 @@ function applyFilters() {
 // RENDER
 // ────────────────────────────────
 function fmtDate(iso) {
-  if (!iso) return 'Aktivní: neznámo';
+  if (!iso) return '—';
   const d = new Date(iso);
-  if (isNaN(d)) return 'Aktivní: neznámo';
+  if (isNaN(d)) return '—';
   const dd = String(d.getUTCDate()).padStart(2, '0');
   const mm = String(d.getUTCMonth() + 1).padStart(2, '0');
   const yyyy = d.getUTCFullYear();
-  return `Aktivní: ${dd}.${mm}.${yyyy}`;
+  return `${dd}.${mm}.${yyyy}`;
 }
 
 function fmt(n) {
