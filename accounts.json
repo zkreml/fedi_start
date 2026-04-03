@@ -1,73 +1,19 @@
 {
-  "generated_at": "2026-04-02T19:11:04.914259+00:00",
+  "generated_at": "2026-04-03T05:40:00.850339+00:00",
   "count": 200,
   "accounts": [
-    {
-      "name": "Filip Horký",
-      "handle": "FilipHorky@mastodonczech.cz",
-      "bio": "CEO FlashNews; formerly journalist; news from  # Czechia   also in English 🏠: Prague,  # CzechRepublic",
-      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/366/298/393/336/616/original/eca597d59a773fcc.jpg",
-      "followers": 4069,
-      "statuses": 363,
-      "score": 75,
-      "tags": [
-        "journalist"
-      ],
-      "category": "zpravy",
-      "last_active": "2024-05-01",
-      "url": "https://mastodonczech.cz/@FilipHorky"
-    },
-    {
-      "name": "Alexandr Mitrofanov",
-      "handle": "alexandrmitrofa@mastodonczech.cz",
-      "bio": "Political columnist",
-      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/335/662/184/794/597/original/a4e6fd184bab8379.jpg",
-      "followers": 3386,
-      "statuses": 854,
-      "score": 77,
-      "tags": [],
-      "category": "ostatni",
-      "last_active": "2023-01-31",
-      "url": "https://mastodonczech.cz/@alexandrmitrofa"
-    },
     {
       "name": "Daniel Dočekal",
       "handle": "medvidekpu@mastodon.social",
       "bio": "IT/C, new media, digital media, advertising, marketing, web architecture design, consultancy. @365tipu  and much more",
       "avatar": "https://files.mastodon.social/accounts/avatars/109/256/571/723/337/853/original/7bc66cdf9d5d1fa1.jpg",
       "followers": 2977,
-      "statuses": 11689,
+      "statuses": 11690,
       "score": 78,
       "tags": [],
       "category": "tech",
-      "last_active": "2026-04-02",
+      "last_active": "2026-04-03",
       "url": "https://mastodon.social/@medvidekpu"
-    },
-    {
-      "name": "Petr Koubský",
-      "handle": "petrkou@mastodonczech.cz",
-      "bio": "pracovně: redaktor  # enkocz   pro vědu a techniku soukromě: hory, jazz, kolo, šedesátá léta",
-      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/325/416/796/209/249/original/33c7c11cb6afbcf3.png",
-      "followers": 2760,
-      "statuses": 67,
-      "score": 71,
-      "tags": [],
-      "category": "ostatni",
-      "last_active": "2025-07-22",
-      "url": "https://mastodonczech.cz/@petrkou"
-    },
-    {
-      "name": "Ivan Bartoš :verified:",
-      "handle": "ivanbartos@mastodon.pirati.cz",
-      "bio": "Místopředseda vlády pro digitalizaci a ministr pro místní rozvoj, předseda České pirátské strany 🏴‍☠️ - oficiální profil",
-      "avatar": "https://mastodon.pirati.cz/system/accounts/avatars/109/370/524/711/689/136/original/e7c2a945e1bb3a53.jpg",
-      "followers": 2244,
-      "statuses": 84,
-      "score": 61,
-      "tags": [],
-      "category": "tech",
-      "last_active": "2023-04-20",
-      "url": "https://mastodon.pirati.cz/@ivanbartos"
     },
     {
       "name": "Chao-c'",
@@ -75,14 +21,14 @@
       "bio": "Nedokončil studia na vysoké škole života. Mužský rod, tykej mi.  ADHD. ⁂ 🇺🇳 🇪🇺 🇨🇿 🇺🇦 🇬🇱    Moderator of f.cz. We recycle waste heat of our datacenter. If you read this on bsky I can&#39;t interact back unless you follow ",
       "avatar": "https://f.cz/system/accounts/avatars/109/347/424/323/987/520/original/6e3171bf3756d6d2.jpeg",
       "followers": 2132,
-      "statuses": 18034,
+      "statuses": 18035,
       "score": 72,
       "tags": [
         "linux",
         "výzkum"
       ],
       "category": "tech",
-      "last_active": "2026-04-02",
+      "last_active": "2026-04-03",
       "url": "https://f.cz/@xChaos"
     },
     {
@@ -101,19 +47,6 @@
       "url": "https://mastodon.pirati.cz/@marcel_kolaja"
     },
     {
-      "name": "Jie",
-      "handle": "jie@mastodonczech.cz",
-      "bio": "Názory vyjadřují stanovisko Západního Předmongolska. Jediný můj profil na Mastodonu.",
-      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/372/304/199/271/294/original/1c79956bdd5f7e00.png",
-      "followers": 1981,
-      "statuses": 96,
-      "score": 70,
-      "tags": [],
-      "category": "ostatni",
-      "last_active": "2023-08-31",
-      "url": "https://mastodonczech.cz/@jie"
-    },
-    {
       "name": "David Slížek",
       "handle": "davidslizek@mastodonczech.cz",
       "bio": "šéfredaktor serveru Lupa.cz a správce MastodonCzech.cz",
@@ -127,19 +60,6 @@
       "url": "https://mastodonczech.cz/@davidslizek"
     },
     {
-      "name": "Martin Jurica 🐕",
-      "handle": "maestrosill@mastodonczech.cz",
-      "bio": "Démon 😈🦻, technical writer, tester, chovatel shib, ochotník a ICT mravenec. Autor přísloví: Kdo se moc ptá, málo googlí :-) A, proboha, tykejte mi 🙏😉",
-      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/337/002/279/688/309/original/fe85069636a3cfca.png",
-      "followers": 1952,
-      "statuses": 598,
-      "score": 77,
-      "tags": [],
-      "category": "ostatni",
-      "last_active": "2025-02-21",
-      "url": "https://mastodonczech.cz/@maestrosill"
-    },
-    {
       "name": "OliKočková",
       "handle": "OliKockova@cztwitter.cz",
       "bio": "Aktuálně pouze čtyřnásobně kočkodětná. Stýská se mi po mým zrzavým štěstí, odešel za Duhový most. INTJ. Eště furt potulná pobíječka SAPích much, někdy příště elektrikářka slaboproud anebo krotitelka AI. Líná adminka s vá",
@@ -151,21 +71,6 @@
       "category": "ostatni",
       "last_active": "2026-04-01",
       "url": "https://cztwitter.cz/@OliKockova"
-    },
-    {
-      "name": "Filip Rožánek",
-      "handle": "rozanek@mastodonczech.cz",
-      "bio": "Novinář | Lupa.cz | Dříve Marketing &amp; Media, Hospodářské noviny nebo Český rozhlas.",
-      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/378/060/149/504/310/original/54ae998f800e5c2f.jpg",
-      "followers": 1831,
-      "statuses": 1447,
-      "score": 87,
-      "tags": [
-        "novinář"
-      ],
-      "category": "zpravy",
-      "last_active": "2025-06-18",
-      "url": "https://mastodonczech.cz/@rozanek"
     },
     {
       "name": "NoLog.cz 🏴",
@@ -200,7 +105,7 @@
       "handle": "fuxoft@kompost.cz",
       "bio": "I made games many decades ago, now I play them and write about movies.  I live in Prague, Czech Republic. Some of my posts are in Czech language.  Listen to my &amp; my wife&#39;s film reviews (in Czech) here:   https://",
       "avatar": "https://cdn.masto.host/kompostcz/accounts/avatars/000/000/001/original/3f100dc2d4eed11c.jpg",
-      "followers": 1666,
+      "followers": 1667,
       "statuses": 7818,
       "score": 74,
       "tags": [
@@ -211,34 +116,19 @@
       "url": "https://kompost.cz/@fuxoft"
     },
     {
-      "name": "Bohumil Vostal",
-      "handle": "BohumilVostal@mastodonczech.cz",
-      "bio": "Novinář • bohumilvostal.cz",
-      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/372/503/064/180/867/original/e47cd8d85068a805.png",
-      "followers": 1654,
-      "statuses": 315,
-      "score": 67,
-      "tags": [
-        "novinář"
-      ],
-      "category": "zpravy",
-      "last_active": "2025-12-02",
-      "url": "https://mastodonczech.cz/@BohumilVostal"
-    },
-    {
       "name": "Filip Titlbach",
       "handle": "filiptitlbach@mastodonczech.cz",
       "bio": "Journalist. Floutek, novinář, člověk kočičí. Podcast Studio N, kniha Byli jsme tu vždycky.    https://  linktr.ee/filiptitlbach",
       "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/376/816/039/043/121/original/fb9a3ea3283f71b8.jpg",
       "followers": 1615,
-      "statuses": 1118,
+      "statuses": 1119,
       "score": 78,
       "tags": [
         "novinář",
         "journalist"
       ],
       "category": "zpravy",
-      "last_active": "2026-04-01",
+      "last_active": "2026-04-02",
       "url": "https://mastodonczech.cz/@filiptitlbach"
     },
     {
@@ -264,7 +154,7 @@
       "score": 91,
       "tags": [],
       "category": "ostatni",
-      "last_active": "2026-04-02",
+      "last_active": "2026-04-03",
       "url": "https://mastodonczech.cz/@365tipu"
     },
     {
@@ -272,15 +162,15 @@
       "handle": "archos@gts.arch-linux.cz",
       "bio": "I stand with Ukraine 🇺🇦   Admin   https://mastodon.arch-linux.cz  |  https://pixelfed.cz  |  https://mxchat.cz   Opensource nadšenec. Uživatel Arch Linuxu a GrapheneOS. Mám rád silniční cyklistiku, běh, výlety do přírody",
       "avatar": "https://gts.arch-linux.cz/fileserver/01HCMQ4TRWNBN4V7B5HBJB8EP6/attachment/original/01KK54XGMJP4A73AJGA0K5CNWJ.jpeg",
-      "followers": 1441,
-      "statuses": 1560,
+      "followers": 1442,
+      "statuses": 1569,
       "score": 57,
       "tags": [
         "linux",
         "opensource"
       ],
       "category": "tech",
-      "last_active": "2026-03-31",
+      "last_active": "2026-04-02",
       "url": "https://gts.arch-linux.cz/@archos"
     },
     {
@@ -289,11 +179,11 @@
       "bio": "# TYDEN   ~ Týdenní přehled. Nedělní  # newsletter  . V plné podobě placený CZ i EN, zkrácená podoba zdarma.  Přihlásit odběr ⤵️",
       "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/327/423/879/184/038/original/d243fe6e2714574f.png",
       "followers": 1400,
-      "statuses": 214,
+      "statuses": 211,
       "score": 61,
       "tags": [],
       "category": "ostatni",
-      "last_active": "2026-04-02",
+      "last_active": "2026-04-03",
       "url": "https://mastodonczech.cz/@rychlofky"
     },
     {
@@ -330,12 +220,12 @@
       "handle": "danielsnor@mastodon.social",
       "bio": "* jako 👨‍💻, ryzí amatér v mnoha disciplínách, technologický průkopník, rádoby 📸graf a dříve občasný 🏃, milovník 🚗 Mini Cooper SE, který na Mastodonu provozuje botník   @ zpravobot   …d8-D  * as 👨‍💻, a pure amateur in man",
       "avatar": "https://files.mastodon.social/accounts/avatars/109/337/792/291/669/750/original/e12cf6a706155980.png",
-      "followers": 1308,
-      "statuses": 5827,
+      "followers": 1310,
+      "statuses": 5831,
       "score": 66,
       "tags": [],
       "category": "ostatni",
-      "last_active": "2026-04-01",
+      "last_active": "2026-04-02",
       "url": "https://mastodon.social/@danielsnor"
     },
     {
@@ -354,38 +244,12 @@
       "url": "https://mastodon.social/@petra_bohemica"
     },
     {
-      "name": "Piráti",
-      "handle": "Pirati@mastodon.pirati.cz",
-      "bio": "🏴‍☠️ Jsme Piráti a děkujeme vám, že jste s námi v boji za svobodnou, vzdělanou a digitálně propojenou společnost.  Cílem Pirátů je na prvním místě prosazování základního lidského práva člověka na svobodné šíření přijaté ",
-      "avatar": "https://mastodon.pirati.cz/system/accounts/avatars/109/311/942/554/484/006/original/6343280103c537cc.jpg",
-      "followers": 1259,
-      "statuses": 59,
-      "score": 45,
-      "tags": [],
-      "category": "tech",
-      "last_active": "2023-03-22",
-      "url": "https://mastodon.pirati.cz/@Pirati"
-    },
-    {
-      "name": "Patrick Zandl",
-      "handle": "zandl@mastodon.pirati.cz",
-      "bio": "Pirátský místostarosta v Brandýse-Boleslavi, technologický publicista.",
-      "avatar": "https://mastodon.pirati.cz/system/accounts/avatars/000/005/906/original/c30c5059554495d7.jpg",
-      "followers": 1191,
-      "statuses": 98,
-      "score": 44,
-      "tags": [],
-      "category": "ostatni",
-      "last_active": "2024-12-07",
-      "url": "https://mastodon.pirati.cz/@zandl"
-    },
-    {
       "name": "Robin Bedrunka 🐞",
       "handle": "fabia_man@mamutovo.cz",
       "bio": "AJTÝ podpora.  # ostrava    Variabilita témat příspěvků zaručena. 🇨🇿🇵🇱 Tykej mi! Příspěvky mohou obsahovat stopové množství polštiny.  Uživatelská příručka Mastodonu v češtině:   https://  fs.bedrunka.eu/kestazeni/Masto ",
       "avatar": "https://mamutovo.cz/system/accounts/avatars/111/300/530/055/223/178/original/0b2fc4cecd6d2c8c.png",
       "followers": 1139,
-      "statuses": 8548,
+      "statuses": 8551,
       "score": 70,
       "tags": [],
       "category": "ostatni",
@@ -393,103 +257,19 @@
       "url": "https://mamutovo.cz/@fabia_man"
     },
     {
-      "name": "Roman_M",
-      "handle": "Roman_M@cztwitter.cz",
-      "bio": "",
-      "avatar": "https://cztwitter.cz/system/accounts/avatars/000/019/484/original/02d78a0a2434164f.jpg",
-      "followers": 1088,
-      "statuses": 83,
-      "score": 42,
-      "tags": [],
-      "category": "ostatni",
-      "last_active": "2022-12-25",
-      "url": "https://cztwitter.cz/@Roman_M"
-    },
-    {
-      "name": "Marek Lutonský",
-      "handle": "marekl@mastodonczech.cz",
-      "bio": "Dělám technické weby Živě, MobilMania a časopis Computer v Czech News Center. Jsem čtenář, datař a grafař, klavírista i cyklista…",
-      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/340/875/102/177/860/original/828fb07ad96abffe.png",
-      "followers": 1077,
-      "statuses": 76,
-      "score": 52,
-      "tags": [],
-      "category": "ostatni",
-      "last_active": "2025-04-13",
-      "url": "https://mastodonczech.cz/@marekl"
-    },
-    {
-      "name": "Markétka Gregorová",
-      "handle": "marketkag@mastodon.pirati.cz",
-      "bio": "🏴‍☠️ Pirate 🇪🇺 Member of the European Parliament  (Cybersec &amp; Disinfo) Singer. ENFP. Wannabe Slytherin. Sad Gryffindor. Absurdist. Don&#39;t belive everything you think.",
-      "avatar": "https://mastodon.pirati.cz/system/accounts/avatars/000/000/005/original/30ea2b660f3825ac.png",
-      "followers": 1053,
-      "statuses": 885,
-      "score": 54,
-      "tags": [],
-      "category": "ostatni",
-      "last_active": "2023-12-13",
-      "url": "https://mastodon.pirati.cz/@marketkag"
-    },
-    {
       "name": "Plsik (born in 320 ppm)",
       "handle": "plsik@mastodon.social",
       "bio": "Husband, father, craftsman, zen student, social services worker, climate activist, vegan. ADHD. Like NVDA, interfaith dialog, open source software, meditation, wander and nature. No violence, racism, discrimination, Nazi",
       "avatar": "https://files.mastodon.social/accounts/avatars/109/252/934/292/763/777/original/c78879ae2e714b5c.png",
-      "followers": 995,
-      "statuses": 10996,
+      "followers": 993,
+      "statuses": 10998,
       "score": 52,
       "tags": [
         "software"
       ],
       "category": "tech",
-      "last_active": "2026-04-01",
+      "last_active": "2026-04-02",
       "url": "https://mastodon.social/@plsik"
-    },
-    {
-      "name": "Vláďa Foltán",
-      "handle": "VladaFoltan@mastodonczech.cz",
-      "bio": "co-creator @tapolitikaCZ, co-boss @serialzone, running, travelling, sport (Barca, NE Patriots,  # LH44  ,  # UFC  ), books, US politics",
-      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/365/685/424/460/631/original/33de8c08864d2a67.jpg",
-      "followers": 972,
-      "statuses": 105,
-      "score": 50,
-      "tags": [
-        "politik"
-      ],
-      "category": "zpravy",
-      "last_active": "2023-10-19",
-      "url": "https://mastodonczech.cz/@VladaFoltan"
-    },
-    {
-      "name": "Bohdan Dlouhý",
-      "handle": "bohdandlouhy@mastodonczech.cz",
-      "bio": "Spisovatel romantických thrillerů, fotograf, arborista, barista, zahradník, tantra masér. Nová kniha: bohdandlouhy-cenazanavrat.cz",
-      "avatar": "https://mastodonczech.cz/system/accounts/avatars/110/640/640/298/057/469/original/d4de3d774ef9a140.png",
-      "followers": 955,
-      "statuses": 2336,
-      "score": 67,
-      "tags": [
-        "foto"
-      ],
-      "category": "foto",
-      "last_active": "2023-12-20",
-      "url": "https://mastodonczech.cz/@bohdandlouhy"
-    },
-    {
-      "name": "Apolena Rychlíková",
-      "handle": "Apolenarychlikova@witter.cz",
-      "bio": "Redaktorka deníku Alarm, politická komentátorka Čro, sloupkařka Salónu práva &amp; další, filmová režisérka, máma dvou božích dcer &amp; feministka",
-      "avatar": "https://media.witter.cz/accounts/avatars/109/364/422/806/414/118/original/a6404752f27ad874.jpg",
-      "followers": 955,
-      "statuses": 47,
-      "score": 39,
-      "tags": [
-        "film"
-      ],
-      "category": "kultura",
-      "last_active": "2023-01-11",
-      "url": "https://witter.cz/@Apolenarychlikova"
     },
     {
       "name": "beneslenka",
@@ -497,11 +277,11 @@
       "bio": "# ptacciproukrajinu    # anikdyjinak      https://www.  beneslenka.cz/",
       "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/374/810/317/936/537/original/17e088d45128b894.png",
       "followers": 947,
-      "statuses": 1890,
+      "statuses": 1891,
       "score": 65,
       "tags": [],
       "category": "ostatni",
-      "last_active": "2026-04-01",
+      "last_active": "2026-04-02",
       "url": "https://mastodonczech.cz/@beneslenka"
     },
     {
@@ -525,7 +305,7 @@
       "bio": "Linuxový nadšenec, programátor, genealog-amatér, openstreetmapper, exthaiboxer &amp; exgymrat, pravdoláskař a sluníčkář, INTJ, otec (to asi teď nejvíc).  A klidně mi tady tykejte. :-)   # fedi22    # linux    # genealogi",
       "avatar": "https://cdn.masto.host/spondrcz/accounts/avatars/109/262/555/558/157/314/original/055930bdae1ab0d7.png",
       "followers": 916,
-      "statuses": 3746,
+      "statuses": 3736,
       "score": 63,
       "tags": [
         "linux"
@@ -539,12 +319,12 @@
       "handle": "zoul@boskovice.social",
       "bio": "kulatá hlava, výborná lebka, pěkný profil, menší tváře, kulaté, tmavě oranžové oči, uši trošku větší, výborně posazené, jemnější srst, krátká, světle modrá, ocas uměrný tělu, výborná kondice, potřebuje zakulatit",
       "avatar": "https://boskovice.social/system/accounts/avatars/107/451/273/452/821/382/original/80246b62839c45ce.jpeg",
-      "followers": 897,
-      "statuses": 2272,
+      "followers": 898,
+      "statuses": 2273,
       "score": 57,
       "tags": [],
       "category": "ostatni",
-      "last_active": "2026-04-02",
+      "last_active": "2026-04-03",
       "url": "https://boskovice.social/@zoul"
     },
     {
@@ -553,11 +333,11 @@
       "bio": "🇪🇺 = 🏡 . 👀 bg cs da de el es et fi fr ga hr hu it lt lv mt nl pl pt ro sk sl sv ...  ✍️ cs ...",
       "avatar": "https://f.cz/system/accounts/avatars/111/622/491/694/920/402/original/cdb69d09a49c036b.png",
       "followers": 892,
-      "statuses": 1405,
+      "statuses": 1411,
       "score": 42,
       "tags": [],
       "category": "ostatni",
-      "last_active": "2026-04-02",
+      "last_active": "2026-04-03",
       "url": "https://f.cz/@tymoty"
     },
     {
@@ -566,13 +346,13 @@
       "bio": "# opensource    # security    # soukromí    # skaut    # nohejbal    # kutil    # auta    # toyobaru    # fantastika",
       "avatar": "https://cdn.masto.host/kompostcz/accounts/avatars/000/015/262/original/059b3351f441a7b8.jpg",
       "followers": 884,
-      "statuses": 7622,
+      "statuses": 7627,
       "score": 65,
       "tags": [
         "opensource"
       ],
       "category": "tech",
-      "last_active": "2026-04-01",
+      "last_active": "2026-04-03",
       "url": "https://kompost.cz/@jackc"
     },
     {
@@ -581,11 +361,11 @@
       "bio": "Jihočeskej venkovan, co si myslí, že je vtipnej, a zatím je jenom drzej 😉  Kombinace ajťáka, truhláře, chalupníka a zasloužilýho dědečka. Klidně tykej, tykadla mám a nebojím se je použít.   # WenkoffRetro    # WenkoffGri",
       "avatar": "https://mastodonczech.cz/system/accounts/avatars/110/260/997/161/100/412/original/81689f8a80c60d04.jpg",
       "followers": 862,
-      "statuses": 27034,
+      "statuses": 27052,
       "score": 67,
       "tags": [],
       "category": "ostatni",
-      "last_active": "2026-04-02",
+      "last_active": "2026-04-03",
       "url": "https://mastodonczech.cz/@OttovonWenkoff"
     },
     {
@@ -594,7 +374,7 @@
       "bio": "",
       "avatar": "https://mastodonczech.cz/system/accounts/avatars/110/643/529/884/149/361/original/0b786fefd0b3bed5.png",
       "followers": 859,
-      "statuses": 8896,
+      "statuses": 8900,
       "score": 63,
       "tags": [],
       "category": "ostatni",
@@ -607,38 +387,12 @@
       "bio": "server o českém internetu - automatický export zpráv a článků",
       "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/953/471/118/152/402/original/b1cb662ffc917ee8.png",
       "followers": 831,
-      "statuses": 5174,
+      "statuses": 5175,
       "score": 76,
       "tags": [],
       "category": "ostatni",
-      "last_active": "2026-04-02",
+      "last_active": "2026-04-03",
       "url": "https://mastodonczech.cz/@lupa"
-    },
-    {
-      "name": "Tomáš Friedl",
-      "handle": "TomasFriedl@mastodonczech.cz",
-      "bio": "Programátor a občasný cyklista na delší výpravy do zahraničí  Autor projektu   https://  zasobyplynu.cz     Autor mobilní aplikace   https://  play.google.com/store/apps/det  ails?id=gass.gass.gassga",
-      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/378/829/745/135/270/original/fd37f5c7c3f5a0d4.jpg",
-      "followers": 803,
-      "statuses": 59,
-      "score": 46,
-      "tags": [],
-      "category": "ostatni",
-      "last_active": "2025-10-22",
-      "url": "https://mastodonczech.cz/@TomasFriedl"
-    },
-    {
-      "name": "Jan Trnka",
-      "handle": "trnk_c@witter.cz",
-      "bio": "Teacher, researcher, wanderer.",
-      "avatar": "https://media.witter.cz/accounts/avatars/109/308/365/866/393/313/original/a7516a6d4a6a1c6a.jpg",
-      "followers": 803,
-      "statuses": 546,
-      "score": 44,
-      "tags": [],
-      "category": "ostatni",
-      "last_active": "2023-08-18",
-      "url": "https://witter.cz/@trnk_c"
     },
     {
       "name": "Tomáš Baránek",
@@ -672,11 +426,11 @@
       "bio": "Cvok, otec, ajťák, cvok, exPražák z Mělníka, cvok, kytarista, chovatel koz a gurmánek. Jo a říkal jsem cvok? Nohy si nečísluju. Transat sailing dreamer.",
       "avatar": "https://cztwitter.cz/system/accounts/avatars/000/024/617/original/d50adec48ae16674.jpg",
       "followers": 763,
-      "statuses": 7162,
+      "statuses": 7164,
       "score": 52,
       "tags": [],
       "category": "ostatni",
-      "last_active": "2026-04-02",
+      "last_active": "2026-04-03",
       "url": "https://cztwitter.cz/@honzakorinek"
     },
     {
@@ -691,22 +445,6 @@
       "category": "ostatni",
       "last_active": "2026-03-24",
       "url": "https://mastodon.social/@RezzaBuh"
-    },
-    {
-      "name": "Filip Molčan",
-      "handle": "fipa@mastodonczech.cz",
-      "bio": "Sociální podnikatel, dobrovolný strážce NP České Švýcarsko, cestovatel a fotograf. Kormidluji Good Sailors a píšu newsletter &quot;Zprávy z lesa&quot;.",
-      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/377/513/420/468/031/original/aae0763e116c99dd.png",
-      "followers": 752,
-      "statuses": 68,
-      "score": 46,
-      "tags": [
-        "foto",
-        "zprávy"
-      ],
-      "category": "foto",
-      "last_active": "2024-07-28",
-      "url": "https://mastodonczech.cz/@fipa"
     },
     {
       "name": "Adam Zbiejczuk",
@@ -740,71 +478,30 @@
       "url": "https://cztwitter.cz/@Otakar_Brabec"
     },
     {
-      "name": "Blataak",
-      "handle": "blataak@mastodonczech.cz",
-      "bio": "Kafe!",
-      "avatar": "https://mastodonczech.cz/system/accounts/avatars/110/649/419/379/624/656/original/b4825feff8daec1a.jpeg",
-      "followers": 702,
-      "statuses": 1231,
-      "score": 56,
+      "name": "Pavel Moravec",
+      "handle": "piratzbrna@mastodonczech.cz",
+      "bio": "Bývalý člen Pirátů.  Chceš slušně a věcně diskutovat? Vítej pod mými tooty.  Chceš být sprostý nebo urážet? Tak to se prosím vrať na Twitter :)",
+      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/332/322/035/461/987/original/c3a4636d0c9bb0b8.jpg",
+      "followers": 687,
+      "statuses": 2964,
+      "score": 73,
       "tags": [],
       "category": "ostatni",
-      "last_active": "2025-09-01",
-      "url": "https://mastodonczech.cz/@blataak"
-    },
-    {
-      "name": "Piškvor🇨🇿 🇺🇦",
-      "handle": "piskvor@cztwitter.cz",
-      "bio": "Nejtrestuhodnější roztržitostí je zapomínat na radost ze života.Může obsahovat stopy korýšů,sarkasmus,ionizující záření a µplasty.Pakoňů se neptat! he/him",
-      "avatar": "https://cztwitter.cz/system/accounts/avatars/000/001/830/original/b05efc03b42e6223.jpg",
-      "followers": 697,
-      "statuses": 2861,
-      "score": 55,
-      "tags": [],
-      "category": "ostatni",
-      "last_active": "2024-08-07",
-      "url": "https://cztwitter.cz/@piskvor"
-    },
-    {
-      "name": "Petr Heinz",
-      "handle": "hajma@cztwitter.cz",
-      "bio": "Mluvím o pivu, politice, programování, energetice a vláčcích. Ničemu moc nerozumím, ale mám hodně názorů. Elon Musk hate account.",
-      "avatar": "https://cztwitter.cz/system/accounts/avatars/000/003/910/original/fc8c2aa363f78e6a.jpeg",
-      "followers": 697,
-      "statuses": 222,
-      "score": 21,
-      "tags": [
-        "programov"
-      ],
-      "category": "tech",
-      "last_active": "2023-08-31",
-      "url": "https://cztwitter.cz/@hajma"
+      "last_active": "2026-04-02",
+      "url": "https://mastodonczech.cz/@piratzbrna"
     },
     {
       "name": "Zechy",
       "handle": "zechy@mastodonczech.cz",
       "bio": "Hry píšu i hraju, vedu programátory a taky vedu celkem normální život.   # indiedev    # cohraju    # zitbarak",
       "avatar": "https://mastodonczech.cz/system/accounts/avatars/110/650/435/206/381/075/original/c6db7e3ed8a050e8.png",
-      "followers": 687,
-      "statuses": 7386,
+      "followers": 686,
+      "statuses": 7384,
       "score": 57,
       "tags": [],
       "category": "gaming",
       "last_active": "2026-04-02",
       "url": "https://mastodonczech.cz/@zechy"
-    },
-    {
-      "name": "Pavel Moravec",
-      "handle": "piratzbrna@mastodonczech.cz",
-      "bio": "Bývalý člen Pirátů.  Chceš slušně a věcně diskutovat? Vítej pod mými tooty.  Chceš být sprostý nebo urážet? Tak to se prosím vrať na Twitter :)",
-      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/332/322/035/461/987/original/c3a4636d0c9bb0b8.jpg",
-      "followers": 687,
-      "statuses": 2963,
-      "score": 73,
-      "tags": [],
-      "category": "ostatni",
-      "last_active": "2026-04-01",
-      "url": "https://mastodonczech.cz/@piratzbrna"
     },
     {
       "name": "Pavel Janíček",
@@ -822,19 +519,6 @@
       "url": "https://mamutovo.cz/@paveljanicek"
     },
     {
-      "name": "poručík Pihrt",
-      "handle": "porucikPihrt@cztwitter.cz",
-      "bio": "Cimrmanolog amatér Že mě nemusíš mít strach, ani jsem si tě nezapsal.  Jo a ještě posluchač metalu a soundtracků.",
-      "avatar": "https://cztwitter.cz/system/accounts/avatars/000/000/201/original/00b1731812e8e188.jpg",
-      "followers": 629,
-      "statuses": 88,
-      "score": 33,
-      "tags": [],
-      "category": "ostatni",
-      "last_active": "2023-08-24",
-      "url": "https://cztwitter.cz/@porucikPihrt"
-    },
-    {
       "name": "OpenAlt",
       "handle": "openalt@mastodon.social",
       "bio": "Parta lidí z Linux v Brně  a Openmobility. Pořádali jsme konference  # LinuxAlt   a  # Openmobility  , nyní chystáme  # OpenAlt  . Máme sraz každý třetí pátek v měsíci.",
@@ -850,40 +534,12 @@
       "url": "https://mastodon.social/@openalt"
     },
     {
-      "name": "Ospalý táta",
-      "handle": "s_kavou_v_ruce@cztwitter.cz",
-      "bio": "Táta dvou dětí 5yo ♂️ 3yo ♀️ středně pokročilý knihomol 📖 sarkastické hovado 😜 začínající bylinkář 🌻🌱 a fanoušek tradiční čínské medicíny ☯️",
-      "avatar": "https://cztwitter.cz/system/accounts/avatars/110/136/557/777/828/283/original/fa250839f2585f95.png",
-      "followers": 617,
-      "statuses": 1769,
-      "score": 56,
-      "tags": [],
-      "category": "ostatni",
-      "last_active": "2025-03-30",
-      "url": "https://cztwitter.cz/@s_kavou_v_ruce"
-    },
-    {
-      "name": "Matěj Skalický",
-      "handle": "mskalick@witter.cz",
-      "bio": "Reportér Českého rozhlasu // Czech Radio Journalist // ✉️ matej.skalicky@czechradio.cz",
-      "avatar": "https://media.witter.cz/accounts/avatars/109/326/329/132/725/748/original/fb89a807277c424f.jpg",
-      "followers": 597,
-      "statuses": 36,
-      "score": 31,
-      "tags": [
-        "journalist"
-      ],
-      "category": "zpravy",
-      "last_active": "2023-01-18",
-      "url": "https://witter.cz/@mskalick"
-    },
-    {
       "name": "satai",
       "handle": "satai@mathstodon.xyz",
       "bio": "SW development @ Avast, evolution + theoretical biology @ natur.cuni.cz.   Profi sleeping @ home.  I use Arch, btw.",
       "avatar": "https://media.mathstodon.xyz/accounts/avatars/000/010/932/original/90bafb1972c9cfd7.jpg",
       "followers": 594,
-      "statuses": 1314,
+      "statuses": 1315,
       "score": 38,
       "tags": [],
       "category": "ostatni",
@@ -895,26 +551,13 @@
       "handle": "fandasin@social.linux.pizza",
       "bio": "Passionate about music(love my guitar), physics, and &#39;awesome crazy&#39; people. I am using sarcasm most of the time.  &quot;In world where You can be anything, be kind.&quot;  Situated in Czech Republic most of the ",
       "avatar": "https://cdn.social.linux.pizza/system/accounts/avatars/109/365/034/383/487/579/original/1dfe6169e2e89eae.jpg",
-      "followers": 583,
+      "followers": 581,
       "statuses": 1453,
       "score": 36,
       "tags": [],
       "category": "ostatni",
       "last_active": "2026-04-02",
       "url": "https://social.linux.pizza/@FandaSin"
-    },
-    {
-      "name": "Pražský Rejpal",
-      "handle": "prrejpal@cztwitter.cz",
-      "bio": "Kdysi nádražák a šotouš, pak IT a trochu nerd, teď obchodně-technický pracovník (představujte si pod tím co chcete) a rejpal.",
-      "avatar": "https://cztwitter.cz/system/accounts/avatars/000/001/044/original/5f47846e56b8d5b0.png",
-      "followers": 574,
-      "statuses": 1058,
-      "score": 40,
-      "tags": [],
-      "category": "ostatni",
-      "last_active": "2025-03-22",
-      "url": "https://cztwitter.cz/@prrejpal"
     },
     {
       "name": "infoek.cz :archlinux:",
@@ -930,56 +573,17 @@
       "url": "https://mamutovo.cz/@infoekcz"
     },
     {
-      "name": "Vojtěch Baader",
-      "handle": "baadvo@mastodonczech.cz",
-      "bio": "Technologický nadšenec 📱 tučňák 🐧 fanoušek zeleně 🍀 živočichů 🦭 zaměstnanec SŽ🚆 bývalý zaměstnanec vodáren💧kde jsem byl na pozici PLC vývojáře🧑‍💻 žiji ve Varech 🛀",
-      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/325/691/317/928/946/original/a2445cbbaad07b06.jpg",
-      "followers": 559,
-      "statuses": 19,
-      "score": 27,
-      "tags": [],
-      "category": "ostatni",
-      "last_active": "2024-03-07",
-      "url": "https://mastodonczech.cz/@baadvo"
-    },
-    {
       "name": "cernejpudink.cz",
       "handle": "cernejpudinkcz@mastodonczech.cz",
       "bio": "Nadržencům z řad jazzmenů, funkerů, soulmenů, punkerů, rockerů i rollerů.  # DoporučenoPanemPudinkem    # VelkýSummitPlaylist    # HrajemeKamarádkámAKamarádům    # NOLAGroove    # SoundOfDetroit    # PunkSPanemPudinkem  ",
       "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/330/117/576/913/185/original/c1811eda2ab4b7a5.jpg",
       "followers": 548,
-      "statuses": 1224,
+      "statuses": 1225,
       "score": 49,
       "tags": [],
       "category": "ostatni",
-      "last_active": "2026-04-02",
+      "last_active": "2026-04-03",
       "url": "https://mastodonczech.cz/@cernejpudinkcz"
-    },
-    {
-      "name": "Ján Simkanič",
-      "handle": "simindr@mastodonczech.cz",
-      "bio": "Publisher at Deník N",
-      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/372/597/383/378/216/original/b956bf1871c1ef65.png",
-      "followers": 547,
-      "statuses": 10,
-      "score": 40,
-      "tags": [],
-      "category": "ostatni",
-      "last_active": "2025-02-21",
-      "url": "https://mastodonczech.cz/@simindr"
-    },
-    {
-      "name": "Divka v Modrém",
-      "handle": "DivkaVModrem@cztwitter.cz",
-      "bio": "1 holka, 1 dítě, 1 křeček, 48 pokojovek, blbý humory a  # plzen",
-      "avatar": "https://cztwitter.cz/system/accounts/avatars/000/015/628/original/66c3f4b97623fa29.png",
-      "followers": 546,
-      "statuses": 736,
-      "score": 41,
-      "tags": [],
-      "category": "ostatni",
-      "last_active": "2023-10-27",
-      "url": "https://cztwitter.cz/@DivkaVModrem"
     },
     {
       "name": "Petr Lynx Balák",
@@ -997,45 +601,6 @@
       "url": "https://ohai.social/@LynxBaal"
     },
     {
-      "name": "Madla Gromovová",
-      "handle": "madla@mastodonczech.cz",
-      "bio": "Prosíme tootující, aby se během jízdy drželi madel.",
-      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/383/853/860/480/291/original/b9ffc169a48651f3.jpeg",
-      "followers": 543,
-      "statuses": 114,
-      "score": 41,
-      "tags": [],
-      "category": "ostatni",
-      "last_active": "2023-09-11",
-      "url": "https://mastodonczech.cz/@madla"
-    },
-    {
-      "name": "ᴄʜᴏʀᴏᴢᴏɴ 👹",
-      "handle": "ChorozonX@cztwitter.cz",
-      "bio": "Demon, explorer of the light side of the Force, ✈️ &amp; 🚀 geek.  And also  # NAFOFella   on Twitter.",
-      "avatar": "https://cztwitter.cz/system/accounts/avatars/000/035/347/original/d5470ab54b39e9aa.png",
-      "followers": 542,
-      "statuses": 41,
-      "score": 14,
-      "tags": [],
-      "category": "ostatni",
-      "last_active": "2023-08-21",
-      "url": "https://cztwitter.cz/@ChorozonX"
-    },
-    {
-      "name": "Mirek Novák",
-      "handle": "xmirek@mastodonczech.cz",
-      "bio": "Pracoval ve státní správě a přežil. Otec, snílek, exČTÚ. Osobní účet (private account)",
-      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/325/373/378/863/953/original/a285bda08a3d4504.jpg",
-      "followers": 540,
-      "statuses": 205,
-      "score": 34,
-      "tags": [],
-      "category": "ostatni",
-      "last_active": "2024-08-29",
-      "url": "https://mastodonczech.cz/@xmirek"
-    },
-    {
       "name": "Český statistický úřad",
       "handle": "czstatistika@mastodonczech.cz",
       "bio": "",
@@ -1047,21 +612,6 @@
       "category": "ostatni",
       "last_active": "2026-03-25",
       "url": "https://mastodonczech.cz/@czstatistika"
-    },
-    {
-      "name": "Technotramp [CZ]",
-      "handle": "technotramp@mastodonczech.cz",
-      "bio": "Hudba   # bjobsdyYUIEbidbnioCZ    # technotramp    # rplayer",
-      "avatar": "https://mastodonczech.cz/system/accounts/avatars/110/662/300/538/004/090/original/61ec5c42302cd327.jpg",
-      "followers": 526,
-      "statuses": 42,
-      "score": 25,
-      "tags": [
-        "hudba"
-      ],
-      "category": "kultura",
-      "last_active": "2023-12-28",
-      "url": "https://mastodonczech.cz/@technotramp"
     },
     {
       "name": "𝔇𝔞𝔪𝔦𝔞𝔫 ☥",
@@ -1121,28 +671,15 @@
       "bio": "Jsem starý Linuxák se dvěma dětma a ženou. Provozuju Roští.cz, dělám DevOps engineera a když to jen trochu jde, tak bastlím. Dobrou knihou, hrou, filmem, seriálem či novou technologií také nepohrdnu.",
       "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/367/912/423/388/569/original/729cd4ca672dbc54.png",
       "followers": 512,
-      "statuses": 4447,
+      "statuses": 4448,
       "score": 59,
       "tags": [
         "linux",
         "film"
       ],
       "category": "tech",
-      "last_active": "2026-04-02",
+      "last_active": "2026-04-03",
       "url": "https://mastodonczech.cz/@bycx"
-    },
-    {
-      "name": "Medídek Kadrnožka",
-      "handle": "medidekpu@cztwitter.cz",
-      "bio": "Z Říše tiše navrátivše, máma (a dva  # Preclíci  ), nervy v kýblu a dort v břiše, stále něco tvořící. &quot;Já tady mám manžle&quot; je z Čapka.   # plebstr    # nostr   🤙 na vyžádání, jsem tam mnohem víc než tady.",
-      "avatar": "https://cztwitter.cz/system/accounts/avatars/110/558/453/909/057/484/original/9d5b458d2a19f6ca.jpeg",
-      "followers": 508,
-      "statuses": 1041,
-      "score": 38,
-      "tags": [],
-      "category": "ostatni",
-      "last_active": "2024-07-14",
-      "url": "https://cztwitter.cz/@medidekpu"
     },
     {
       "name": "Jan Melvil Publishing",
@@ -1158,19 +695,6 @@
       "category": "kultura",
       "last_active": "2026-04-02",
       "url": "https://mastodonczech.cz/@janmelvil"
-    },
-    {
-      "name": "Janka Janička",
-      "handle": "Jankajanicka0@cztwitter.cz",
-      "bio": "Rusko je hovno.",
-      "avatar": "https://cztwitter.cz/system/accounts/avatars/110/125/848/306/550/005/original/78053366be87c4fc.jpg",
-      "followers": 502,
-      "statuses": 78,
-      "score": 15,
-      "tags": [],
-      "category": "ostatni",
-      "last_active": "2023-10-08",
-      "url": "https://cztwitter.cz/@Jankajanicka0"
     },
     {
       "name": "Stará Raketa",
@@ -1197,19 +721,6 @@
       "category": "ostatni",
       "last_active": "2026-04-02",
       "url": "https://witter.cz/@otecfura"
-    },
-    {
-      "name": "Lenka Vrtišková N",
-      "handle": "Lenislavka@mastodonczech.cz",
-      "bio": "Vím, že nic nevím, tak se ptám...  Rozhovory www.denikn.cz a jinde...  Popularizace vědy a tak vůbec...",
-      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/376/881/256/017/272/original/db971b26bc1c4270.jpg",
-      "followers": 487,
-      "statuses": 56,
-      "score": 39,
-      "tags": [],
-      "category": "ostatni",
-      "last_active": "2024-01-08",
-      "url": "https://mastodonczech.cz/@Lenislavka"
     },
     {
       "name": "Yonder",
@@ -1269,19 +780,6 @@
       "url": "https://cztwitter.cz/@vitsoft"
     },
     {
-      "name": "Lenny Kavalirova",
-      "handle": "Tichy_koutek@mastodonczech.cz",
-      "bio": "Eko-ukro-sluníčkář / zedník – hlínař / bylinkář / kvasič ✌️  Registrace k obsahovému newsletteru (free):   https://  substack.com/@lennykava      Blog + psaní / čtení:   https://www.  tichy-koutek.cz/      Tradice, stará",
-      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/377/566/747/081/287/original/d6878928ef8e4efb.jpeg",
-      "followers": 460,
-      "statuses": 133,
-      "score": 23,
-      "tags": [],
-      "category": "ostatni",
-      "last_active": "2025-02-14",
-      "url": "https://mastodonczech.cz/@Tichy_koutek"
-    },
-    {
       "name": "Jakub Cabal",
       "handle": "xcabal05@mamutovo.cz",
       "bio": "FPGA inženýr 🧑‍💻, uživatel Fedora Linux 🐧 a táta žijící někde v České republice 🇨🇿, který rád cestuje vlakem 🚅 a občas i na kole 🚴.",
@@ -1302,11 +800,11 @@
       "bio": "Ostrava / Divoký Čechistán / EU / Země / ZZ9 Plural Z Alfa. Jsem, tedy myslím, na rozdíl od mnohých.",
       "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/327/386/159/353/639/original/8fe411d8f8778527.jpeg",
       "followers": 444,
-      "statuses": 15302,
+      "statuses": 15305,
       "score": 65,
       "tags": [],
       "category": "ostatni",
-      "last_active": "2026-04-02",
+      "last_active": "2026-04-03",
       "url": "https://mastodonczech.cz/@babaq"
     },
     {
@@ -1323,56 +821,17 @@
       "url": "https://witter.cz/@tatageek"
     },
     {
-      "name": "Medvjed",
-      "handle": "medvjed@witter.cz",
-      "bio": "Medvěd středního věku z Prahy (nikoliv původem). Middle age bear from Prague.  Primary communication channel: Twitter.com/medvjed or e-mail: info@medvjed.store thank you for understanding.",
-      "avatar": "https://media.witter.cz/accounts/avatars/110/154/809/648/712/361/original/8c6a366632dfd062.jpg",
-      "followers": 436,
-      "statuses": 47,
-      "score": 18,
-      "tags": [],
-      "category": "ostatni",
-      "last_active": "2023-07-20",
-      "url": "https://witter.cz/@medvjed"
-    },
-    {
       "name": "Petr Skála",
       "handle": "Petr90@mamutovo.cz",
       "bio": "Introvert a věčný optimista ač občas skeptik a realista",
       "avatar": "https://mamutovo.cz/system/accounts/avatars/116/288/673/489/103/920/original/f1684ea3d5914d82.jpg",
       "followers": 433,
-      "statuses": 445,
+      "statuses": 447,
       "score": 26,
       "tags": [],
       "category": "ostatni",
       "last_active": "2026-04-02",
       "url": "https://mamutovo.cz/@Petr90"
-    },
-    {
-      "name": "Jáchym Brzezina",
-      "handle": "jachym@mastodonczech.cz",
-      "bio": "Vedoucí oddělení kvality ovzduší ČHMÚ Brno. Soukromý účet.  # dataviz    # infoviz    # infografika      https://  infoviz.cz     |   https://  info.chmi.cz     |   https://  envidata.cz",
-      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/375/281/808/059/492/original/1d8f5da15bb88abe.jpg",
-      "followers": 432,
-      "statuses": 596,
-      "score": 46,
-      "tags": [],
-      "category": "ostatni",
-      "last_active": "2025-10-22",
-      "url": "https://mastodonczech.cz/@jachym"
-    },
-    {
-      "name": "Neovlivní Sabiny Slonkové",
-      "handle": "Neovlivnicz@witter.cz",
-      "bio": "Nezávislý investigativní časopis a web o vlivu, lidech a vazbách. Šéfredaktorka Sabina Slonková",
-      "avatar": "https://media.witter.cz/accounts/avatars/109/375/776/488/838/100/original/0824713e67b15938.jpg",
-      "followers": 432,
-      "statuses": 156,
-      "score": 30,
-      "tags": [],
-      "category": "ostatni",
-      "last_active": "2025-09-05",
-      "url": "https://witter.cz/@Neovlivnicz"
     },
     {
       "name": "dan :adminit:",
@@ -1395,7 +854,7 @@
       "bio": "Tvořím junior.guru, rozcestník a komunitu pro začátečníky v programování. Když mě něco zaujme, sdílím to jako  # links  .   # python    # indiehacker    # buildinpublic    # solopreneur    # juniorguru    # junior    # e",
       "avatar": "https://mastodonczech.cz/system/accounts/avatars/110/921/870/573/231/541/original/ff3f4944e047b85c.jpg",
       "followers": 428,
-      "statuses": 4229,
+      "statuses": 4230,
       "score": 60,
       "tags": [
         "python",
@@ -1427,25 +886,12 @@
       "bio": "Lepší propást častečné zatmění Slunce než dospět k úplnému zatmění úsudku | Věčný snílek, Moravan, Čech i Evropan |  # worldaround    # ICT    # 3Dtisk    # 3Dprinting    # eMTB    # LEGO    # earlyadopter    # czech",
       "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/375/097/446/196/879/original/78c3c6a5d0129d19.jpg",
       "followers": 420,
-      "statuses": 3878,
+      "statuses": 3883,
       "score": 58,
       "tags": [],
       "category": "ostatni",
       "last_active": "2026-04-02",
       "url": "https://mastodonczech.cz/@tomulinek"
-    },
-    {
-      "name": "Bačkorka",
-      "handle": "backorka@cztwitter.cz",
-      "bio": "náhodná kolemjdoucí  roztomilý malý zvěřinec plný sebepoškozujících zvířátek  pozor, riziko střetu s básní",
-      "avatar": "https://cztwitter.cz/system/accounts/avatars/110/689/944/612/867/160/original/f2f6e1c0ef492854.jpeg",
-      "followers": 419,
-      "statuses": 526,
-      "score": 22,
-      "tags": [],
-      "category": "ostatni",
-      "last_active": "2024-03-05",
-      "url": "https://cztwitter.cz/@backorka"
     },
     {
       "name": "Petr Krčmář",
@@ -1481,27 +927,14 @@
       "bio": "✝️🌿🐕🐈🐓 💾 GNU/Linux user since 1999 🍥Debian;  # OSM   mapper;  # retrocomp  ;  # 80s    # 90s   🧔 40+ ♂️, married 👫 🇪🇺🇨🇿🇩🇪🇺🇦🇮🇱 ⁽ʰᵉᵃᵈᵉʳ ⁼ ᵃᵐⁱᵍᵃ⁵⁰⁰ ᵃᵍᵒⁿʸ ᵇᵘʳⁿⁱⁿᵍ ᵗʳᵉᵉ ᵖⁱˣᵉˡᵃʳᵗ⁾  # LibereckyKraj    # Frydlantsko    # Czechia",
       "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/398/759/290/577/889/original/49616fb0952f224c.gif",
       "followers": 404,
-      "statuses": 5927,
+      "statuses": 5929,
       "score": 50,
       "tags": [
         "linux"
       ],
       "category": "tech",
-      "last_active": "2026-03-31",
+      "last_active": "2026-04-02",
       "url": "https://mastodonczech.cz/@amarok"
-    },
-    {
-      "name": "Hanka O.",
-      "handle": "OpalkovaH@cztwitter.cz",
-      "bio": "Řídím projekty, auto, domácnost, padák 🪂 (už ne tolik) a hltám informace (musím si na to dát pozor, abych se nezahltila). Joined Mastodon on the day when Kherson was liberated 🇨🇿🤝🇺🇦",
-      "avatar": "https://cztwitter.cz/system/accounts/avatars/000/015/764/original/d14553db2f12e781.jpg",
-      "followers": 401,
-      "statuses": 754,
-      "score": 24,
-      "tags": [],
-      "category": "ostatni",
-      "last_active": "2023-09-19",
-      "url": "https://cztwitter.cz/@OpalkovaH"
     },
     {
       "name": "Anlex 🚋🚌",
@@ -1545,22 +978,6 @@
       "url": "https://mastodonczech.cz/@lacertacz"
     },
     {
-      "name": "Jan Šibík",
-      "handle": "sibik@mastodonczech.cz",
-      "bio": "35 let fotografuji události ve světě i v ČR, vydávám knihy a organizuji workshopy.  Více na   https://www.  sibik.cz",
-      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/388/823/920/525/007/original/819928f8fda6abf1.png",
-      "followers": 389,
-      "statuses": 109,
-      "score": 38,
-      "tags": [
-        "foto",
-        "knihy"
-      ],
-      "category": "foto",
-      "last_active": "2025-11-25",
-      "url": "https://mastodonczech.cz/@sibik"
-    },
-    {
       "name": "Martin B.",
       "handle": "srandista@mastodonczech.cz",
       "bio": "Slovák s českým občianstvom žijúci v Brne. Otec, IT-čkár, občasný hráč počítačových hier a volejbalu. Tykaj mi, budem ti tiež tykať.",
@@ -1590,19 +1007,6 @@
       "url": "https://witter.cz/@algebraicterror"
     },
     {
-      "name": "Gavin N. Harris",
-      "handle": "gavinnyoriginal@cztwitter.cz",
-      "bio": "Philosopher, poet, writer, playwright, songwriter, lyricist, historian and anticommunist. A fan of Chelsea and Ferrari.    @ MisaKrat    is my girl.",
-      "avatar": "https://cztwitter.cz/system/accounts/avatars/000/036/223/original/a4c9f1ee523478f9.jpg",
-      "followers": 378,
-      "statuses": 30,
-      "score": 27,
-      "tags": [],
-      "category": "ostatni",
-      "last_active": "2022-12-06",
-      "url": "https://cztwitter.cz/@gavinnyoriginal"
-    },
-    {
       "name": "Pavel Kout",
       "handle": "pavelkout@mastodonczech.cz",
       "bio": "„Svoboda znamená svobodně prohlásit, že dvě a dvě jsou čtyři. Jestliže toto je dáno, všechno ostatní z toho vyplyne.“ — George Orwell: 1984  Detroit Red Wings • Depeche Mode • Pink Floyd • Middle-earth • Road bike • Appl",
@@ -1627,34 +1031,6 @@
       "category": "ostatni",
       "last_active": "2026-04-01",
       "url": "https://mastodon.arch-linux.cz/@politiq"
-    },
-    {
-      "name": "Lady Catlion",
-      "handle": "Lady_Catlion@cztwitter.cz",
-      "bio": "",
-      "avatar": "https://cztwitter.cz/system/accounts/avatars/000/003/507/original/3e73fc305b91255f.jpg",
-      "followers": 368,
-      "statuses": 182,
-      "score": 20,
-      "tags": [],
-      "category": "ostatni",
-      "last_active": "2025-02-21",
-      "url": "https://cztwitter.cz/@Lady_Catlion"
-    },
-    {
-      "name": "Koniáš",
-      "handle": "koniash@cztwitter.cz",
-      "bio": "Knihy nepálím. Astrofyzik &amp; nanomagnetik. LaTeX je láska.  # otciash  . Netopýři neloví malé mořské rybky. IG: thekoniash",
-      "avatar": "https://cztwitter.cz/system/accounts/avatars/000/004/320/original/760bd9537a6f4f08.jpg",
-      "followers": 367,
-      "statuses": 128,
-      "score": 17,
-      "tags": [
-        "knihy"
-      ],
-      "category": "kultura",
-      "last_active": "2024-12-17",
-      "url": "https://cztwitter.cz/@koniash"
     },
     {
       "name": "Lukáš Jelínek",
@@ -1706,11 +1082,11 @@
       "bio": "Novinky o smartphonech, tabletech a nejen to. Vše najdete na   https://  dotekomanie.cz",
       "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/376/429/726/245/692/original/41cad03f848b7b33.jpg",
       "followers": 359,
-      "statuses": 10601,
+      "statuses": 10602,
       "score": 67,
       "tags": [],
       "category": "ostatni",
-      "last_active": "2026-04-02",
+      "last_active": "2026-04-03",
       "url": "https://mastodonczech.cz/@dotekomanie"
     },
     {
@@ -1718,14 +1094,14 @@
       "handle": "wuwej@mastodonczech.cz",
       "bio": "Svět vnější i vnitřní, užaslýma očima. Knihy. Blog.",
       "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/378/164/660/110/858/original/7e7dd7a11adab75c.jpg",
-      "followers": 354,
-      "statuses": 1875,
+      "followers": 355,
+      "statuses": 1877,
       "score": 49,
       "tags": [
         "knihy"
       ],
       "category": "kultura",
-      "last_active": "2026-04-01",
+      "last_active": "2026-04-02",
       "url": "https://mastodonczech.cz/@wuwej"
     },
     {
@@ -1761,38 +1137,12 @@
       "url": "https://f.cz/@stepan"
     },
     {
-      "name": "Ondřej Novák",
-      "handle": "Ondrejnovak@mastodonczech.cz",
-      "bio": "Šéfredaktoruju a bouchám články v Obnovitelně..cz, moderuju podcast Pod proudem. Dřív jsem točil pořad Natura na ČRo Plus, dělal PR Svazu moderní energetiky nebo psal pro Lupa.cz.",
-      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/325/638/315/919/620/original/4c1f11c5e9f20a9e.jpg",
-      "followers": 348,
-      "statuses": 37,
-      "score": 36,
-      "tags": [],
-      "category": "ostatni",
-      "last_active": "2024-11-26",
-      "url": "https://mastodonczech.cz/@Ondrejnovak"
-    },
-    {
-      "name": "Bob Čáp",
-      "handle": "bobcap@witter.cz",
-      "bio": "Ekosocialista, chodec, odborář, Žižkovák, milující otec a místopředseda Budoucnosti.",
-      "avatar": "https://media.witter.cz/accounts/avatars/109/307/202/040/746/703/original/6d87c57b04409fc5.jpg",
-      "followers": 348,
-      "statuses": 264,
-      "score": 24,
-      "tags": [],
-      "category": "ostatni",
-      "last_active": "2023-08-21",
-      "url": "https://witter.cz/@bobcap"
-    },
-    {
       "name": "Miroslav Hylš 🇺🇦 🇹🇼",
       "handle": "Yamato@mastodonczech.cz",
       "bio": "Jediný kostel, který ti dává světlo, je ten v plamenech!  Táta samoživitel. Tiskařský šotek z donucení. Sluníčkový odmítač. Proud boomer 😀",
       "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/370/769/070/828/288/original/7914e7ed38e5f080.jpg",
       "followers": 343,
-      "statuses": 4204,
+      "statuses": 4205,
       "score": 66,
       "tags": [],
       "category": "ostatni",
@@ -1800,29 +1150,12 @@
       "url": "https://mastodonczech.cz/@Yamato"
     },
     {
-      "name": "Zuzana Vlasatá",
-      "handle": "zuzanavlasata@mastodonczech.cz",
-      "bio": "Investigace a reportáže v www.denikreferendum.cz. Spoluautorka knihy Žlutý baron a true-crime podcastu Akce Olej, oceněného novinářskou cenou v kategorii investigace, www.akceolej.cz. Sloupek v Sedmé generaci. Matka dvou",
-      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/375/554/728/090/456/original/8c2aa4aeb5498911.jpg",
-      "followers": 342,
-      "statuses": 139,
-      "score": 30,
-      "tags": [
-        "knihy",
-        "novinář",
-        "journalist"
-      ],
-      "category": "kultura",
-      "last_active": "2023-03-28",
-      "url": "https://mastodonczech.cz/@zuzanavlasata"
-    },
-    {
       "name": "Marián Kyral",
       "handle": "mkyral@mastodonczech.cz",
       "bio": "Linux, OpenStreetMap, Geocaching    https://  twitter.com/xmkyral       # linux    # gentoo    # openstreetmap    # osm    # geocaching    # photo    # 3Dprinting    # Beskydy    # Frýdek    # Místek   :-D",
       "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/324/848/127/961/667/original/f31c5f09fc756e0c.jpeg",
       "followers": 334,
-      "statuses": 14515,
+      "statuses": 14518,
       "score": 50,
       "tags": [
         "linux"
@@ -1830,19 +1163,6 @@
       "category": "tech",
       "last_active": "2026-04-02",
       "url": "https://mastodonczech.cz/@mkyral"
-    },
-    {
-      "name": "Jan_Petrus",
-      "handle": "JanPetrus@cztwitter.cz",
-      "bio": "Railway, SAAB, BlackBerry, Pink Floyd, igniscon, technology.  &quot;Lead, follow or get out of the road.&quot;",
-      "avatar": "https://cztwitter.cz/system/accounts/avatars/000/009/461/original/bcb4e7a68911e954.png",
-      "followers": 331,
-      "statuses": 2391,
-      "score": 41,
-      "tags": [],
-      "category": "ostatni",
-      "last_active": "2024-10-08",
-      "url": "https://cztwitter.cz/@JanPetrus"
     },
     {
       "name": "Jakub Neruda",
@@ -1874,73 +1194,19 @@
       "url": "https://mastodon.social/@pavlas"
     },
     {
-      "name": "Kris🐀 MouseQ",
-      "handle": "mysikralovna@mastodonczech.cz",
-      "bio": "Až vyrostu, bude ze mě spisovatelka, scenáristka a bohyně.",
-      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/372/766/136/528/006/original/bb6b032e12943ecd.png",
-      "followers": 327,
-      "statuses": 236,
-      "score": 38,
-      "tags": [],
-      "category": "ostatni",
-      "last_active": "2023-07-27",
-      "url": "https://mastodonczech.cz/@mysikralovna"
-    },
-    {
-      "name": "Medojedka",
-      "handle": "Medojedka@cztwitter.cz",
-      "bio": "🇨🇿🇺🇦 ♊  # marketing    # photography    # graphic    # wordpress    # illustration    # copywriting    # coolpixp950    # procreate    # mememaker    # paralelnilisty    # coffee    # nafo    # nafoczech   TW: MedojedkaC",
-      "avatar": "https://cztwitter.cz/system/accounts/avatars/000/008/567/original/f335425d18a9d9f6.png",
-      "followers": 325,
-      "statuses": 135,
-      "score": 23,
-      "tags": [
-        "photograph"
-      ],
-      "category": "foto",
-      "last_active": "2023-12-10",
-      "url": "https://cztwitter.cz/@Medojedka"
-    },
-    {
       "name": "logout",
       "handle": "logout@mastodonczech.cz",
       "bio": "Digitální džihádista. Spectrista. Linuxák. Ex-ex-programátor. 2:423/81.41. Geocacher. OK1ZXS. Monarchista. A nejčko i elektromobilista.  Prozatím dávám follow za follow, pokud je protistrana účet s živým obsahem. To ale ",
       "avatar": "https://mastodonczech.cz/system/accounts/avatars/110/649/165/312/297/028/original/f24a627ee984e315.jpeg",
       "followers": 320,
-      "statuses": 3064,
+      "statuses": 3065,
       "score": 54,
       "tags": [
         "linux"
       ],
       "category": "tech",
-      "last_active": "2026-04-01",
+      "last_active": "2026-04-02",
       "url": "https://mastodonczech.cz/@logout"
-    },
-    {
-      "name": "Andreas Papadopulos",
-      "handle": "Andreas@mastodonczech.cz",
-      "bio": "zpravodaj ČT ve Varšavě  |  andreas.papadopulos@czech-tv.cz",
-      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/371/256/658/785/655/original/1f1835f4355c5a36.jpg",
-      "followers": 320,
-      "statuses": 29,
-      "score": 36,
-      "tags": [],
-      "category": "ostatni",
-      "last_active": "2025-04-29",
-      "url": "https://mastodonczech.cz/@Andreas"
-    },
-    {
-      "name": "Kolektiv 115",
-      "handle": "kolektiv115@witter.cz",
-      "bio": "Analýza*akce*emancipace: Radikálně levicová skupina z Prahy /// Analysis*action*emantipation: Radical left group from Prague Součást antiautoritářské platformy Beyond Europe /// Part of antiauthoritarian platform Beyond ",
-      "avatar": "https://media.witter.cz/accounts/avatars/109/376/622/173/443/919/original/757e0753f5057ad9.jpg",
-      "followers": 320,
-      "statuses": 545,
-      "score": 27,
-      "tags": [],
-      "category": "ostatni",
-      "last_active": "2025-04-13",
-      "url": "https://witter.cz/@kolektiv115"
     },
     {
       "name": "loar",
@@ -1956,24 +1222,11 @@
       "url": "https://witter.cz/@loar"
     },
     {
-      "name": "Programy do voleb",
-      "handle": "programydovoleb@cztwitter.cz",
-      "bio": "Přehled stran, kandidátů, koalic a jejich volebních programů.",
-      "avatar": "https://cztwitter.cz/system/accounts/avatars/000/001/680/original/b0f5583a78c1c8ad.png",
-      "followers": 316,
-      "statuses": 2441,
-      "score": 56,
-      "tags": [],
-      "category": "ostatni",
-      "last_active": "2026-04-01",
-      "url": "https://cztwitter.cz/@programydovoleb"
-    },
-    {
       "name": "Jan Andrle",
       "handle": "jaandrle@fosstodon.org",
       "bio": "💻  # Webdev    # JavaScript    # CSS    # HTML    # Cordova    # PHP    # opensourse    # linux    # vim   👨🏼‍💼  # Millennial   Teysan (≈60%  # Argosi    # Spellslinger  ) 🤝  # WomenInTech   and being open for everyone i",
       "avatar": "https://cdn.fosstodon.org/accounts/avatars/109/262/014/005/913/849/original/6ebd259f9278dd3d.jpg",
-      "followers": 316,
+      "followers": 317,
       "statuses": 1057,
       "score": 26,
       "tags": [
@@ -1985,17 +1238,17 @@
       "url": "https://fosstodon.org/@jaandrle"
     },
     {
-      "name": "Anarchistická federace 🏴",
-      "handle": "af@witter.cz",
-      "bio": "Stavíme se proti všem formám útlaku a propagujeme vizi bezstátní, rovnostářské, samosprávné a ekologicky udržitelné společnosti.",
-      "avatar": "https://media.witter.cz/accounts/avatars/109/389/369/799/923/508/original/26dc24164f01648b.png",
-      "followers": 315,
-      "statuses": 137,
-      "score": 28,
+      "name": "Programy do voleb",
+      "handle": "programydovoleb@cztwitter.cz",
+      "bio": "Přehled stran, kandidátů, koalic a jejich volebních programů.",
+      "avatar": "https://cztwitter.cz/system/accounts/avatars/000/001/680/original/b0f5583a78c1c8ad.png",
+      "followers": 316,
+      "statuses": 2442,
+      "score": 56,
       "tags": [],
       "category": "ostatni",
-      "last_active": "2023-08-18",
-      "url": "https://witter.cz/@af"
+      "last_active": "2026-04-02",
+      "url": "https://cztwitter.cz/@programydovoleb"
     },
     {
       "name": "Minimax",
@@ -2003,7 +1256,7 @@
       "bio": "Postarší pozorovatel politiky, technologií, krypta… Albert Einstein: „Uprostřed problémů leží příležitost.“ Minimax: „Uprostřed problémů ležím většinou já.“",
       "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/376/897/249/890/626/original/9be7fed4f85279bc.jpg",
       "followers": 313,
-      "statuses": 1159,
+      "statuses": 1160,
       "score": 36,
       "tags": [
         "politik"
@@ -2011,19 +1264,6 @@
       "category": "zpravy",
       "last_active": "2026-04-02",
       "url": "https://mastodonczech.cz/@minimax"
-    },
-    {
-      "name": "Milan Znoj 🇺🇦",
-      "handle": "milan@mastodonczech.cz",
-      "bio": "# IT  ,  # myslivost  ,  # psi  ,  # koně  ,  # příroda  ,  # Lužickéhory  ,   # pivo",
-      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/377/544/269/888/620/original/4ba59093bebd6d49.jpg",
-      "followers": 311,
-      "statuses": 1372,
-      "score": 38,
-      "tags": [],
-      "category": "ostatni",
-      "last_active": "2025-01-27",
-      "url": "https://mastodonczech.cz/@milan"
     },
     {
       "name": "Ivan Stloukal 🍎",
@@ -2080,33 +1320,18 @@
       "url": "https://mastodonczech.cz/@Fencer"
     },
     {
-      "name": "Josef Patočka🐌",
-      "handle": "josefpatocka@witter.cz",
-      "bio": "V   @ reset_platforma    výzkum a organizování pro sociální, ekologickou a demokratickou ekonomiku.  Jindy vaření, zahrada a další alternativní hedonismus. 🌍🌹",
-      "avatar": "https://media.witter.cz/accounts/avatars/109/313/325/078/387/768/original/d167efe25853a156.jpeg",
-      "followers": 293,
-      "statuses": 114,
-      "score": 23,
-      "tags": [
-        "výzkum"
-      ],
-      "category": "veda",
-      "last_active": "2023-09-29",
-      "url": "https://witter.cz/@josefpatocka"
-    },
-    {
       "name": "Marek Pavliš 🇨🇿 🇪🇺",
       "handle": "MarekPavlis@mastodonczech.cz",
       "bio": "🔊 PERSONAL ACCOUNT, SOUKROMÝ ÚČET  🔄 boost, favorite ≠ agreement  🎸   https://  krasikmusic.com/      🌈  # Communications  ,  # Security  ,  # Business  ,  # Energy  ,  # Science  ,  # Art    🌌 Vědět víc, vidět dál.  Whe",
       "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/395/318/883/041/461/original/0403047b66245fa1.jpg",
       "followers": 291,
-      "statuses": 768,
+      "statuses": 769,
       "score": 30,
       "tags": [
         "science"
       ],
       "category": "veda",
-      "last_active": "2026-04-01",
+      "last_active": "2026-04-02",
       "url": "https://mastodonczech.cz/@MarekPavlis"
     },
     {
@@ -2121,19 +1346,6 @@
       "category": "ostatni",
       "last_active": "2026-04-01",
       "url": "https://witter.cz/@daliborzz"
-    },
-    {
-      "name": "Otakar Schön",
-      "handle": "oschon@mastodonczech.cz",
-      "bio": "Dělám, co mě baví: už 25 let píšu o hračkách, 15. rok pro  @hospodarky  # Tech    # Audio    # FVE   // I do what I enjoy and I enjoy what I do. 25 years of Tech and CE journalism  # Tech    # PVE    # Audio",
-      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/381/111/331/544/127/original/1163eb611fa281e4.jpg",
-      "followers": 288,
-      "statuses": 456,
-      "score": 41,
-      "tags": [],
-      "category": "ostatni",
-      "last_active": "2023-01-31",
-      "url": "https://mastodonczech.cz/@oschon"
     },
     {
       "name": "hynekolog",
@@ -2154,7 +1366,7 @@
       "bio": "Want to migrate to Linux? Use Linux as your daily driver? Play games on Linux?  Don&#39;t be shy. Just ask... :)  I am anti-fascist, anti-racism, anti-sexism, anti-homophobia, and believe black and trans lives matter.  R",
       "avatar": "https://media.witter.cz/accounts/avatars/109/365/852/327/923/849/original/29baa5c9bad0c2e9.png",
       "followers": 285,
-      "statuses": 10626,
+      "statuses": 10628,
       "score": 37,
       "tags": [
         "linux",
@@ -2170,11 +1382,11 @@
       "bio": "Denní informace z vývoje války na Ukrajině. Kompiluje a rediguje Tomáš Dvořák.   Tohle je automatizovaný mirror z FB stránky, který je před zveřejněním ručně redigován.  Chcete podpořit tyto pravidelné reporty? Kupte si ",
       "avatar": "https://f.cz/system/accounts/avatars/113/547/903/496/975/965/original/41234f0cd6c21d53.jpg",
       "followers": 283,
-      "statuses": 1977,
+      "statuses": 1981,
       "score": 54,
       "tags": [],
       "category": "ostatni",
-      "last_active": "2026-04-01",
+      "last_active": "2026-04-02",
       "url": "https://f.cz/@dnesnaukrajine"
     },
     {
@@ -2183,7 +1395,7 @@
       "bio": "Věda. Biologie. Linux. Open-source. Demokracie. Vojenství. 🇨🇿 🇺🇦 🇪🇺 🇮🇱 🇹🇼 🐧 🧑‍🔬",
       "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/517/861/315/401/112/original/b95153687f31af40.jpg",
       "followers": 279,
-      "statuses": 3161,
+      "statuses": 3162,
       "score": 50,
       "tags": [
         "linux",
@@ -2213,7 +1425,7 @@
       "bio": "Potulný programátor původem ze severních Sudet naplavený na Dolňácko. Krmící a drbací stroj pro tři a půl kočky. Hudba, knihy, fotografie.",
       "avatar": "https://mamutovo.cz/system/accounts/avatars/114/908/755/569/728/280/original/1aaa536f7da8c8d1.jpg",
       "followers": 278,
-      "statuses": 2536,
+      "statuses": 2538,
       "score": 47,
       "tags": [
         "fotografi",
@@ -2284,25 +1496,12 @@
       "url": "https://mastodonczech.cz/@birdlifecz"
     },
     {
-      "name": "Wolf70",
-      "handle": "Wolf70@mamutovo.cz",
-      "bio": "",
-      "avatar": "https://mamutovo.cz/system/accounts/avatars/114/331/054/470/320/761/original/b0bb123f8975cfac.png",
-      "followers": 271,
-      "statuses": 131,
-      "score": 22,
-      "tags": [],
-      "category": "ostatni",
-      "last_active": "2025-06-16",
-      "url": "https://mamutovo.cz/@Wolf70"
-    },
-    {
       "name": "Richard 🥦",
       "handle": "rholas@mamutovo.cz",
       "bio": "Stárnoucí bílý heterosexuální muž.  60 % života Brno, 40 % Frýdek.",
       "avatar": "https://mamutovo.cz/system/accounts/avatars/113/584/782/122/369/864/original/764f12d52afc2c5a.jpg",
       "followers": 268,
-      "statuses": 623,
+      "statuses": 622,
       "score": 37,
       "tags": [],
       "category": "ostatni",
@@ -2341,19 +1540,6 @@
       "url": "https://mastodonczech.cz/@fotovoltaika"
     },
     {
-      "name": "Piráti Střední Čechy",
-      "handle": "pirati_sck@mastodon.pirati.cz",
-      "bio": "Česká pirátská strana - Středočeský kraj / Czech Pirate party in the region of Central Bohemia",
-      "avatar": "https://mastodon.pirati.cz/system/accounts/avatars/108/137/408/740/007/796/original/25b0a0435957a005.jpeg",
-      "followers": 255,
-      "statuses": 615,
-      "score": 34,
-      "tags": [],
-      "category": "ostatni",
-      "last_active": "2023-08-15",
-      "url": "https://mastodon.pirati.cz/@pirati_sck"
-    },
-    {
       "name": "VSA",
       "handle": "vsa@mamutovo.cz",
       "bio": "",
@@ -2372,13 +1558,13 @@
       "bio": "Prý má rád kávu, hory, lezení a usměvavé lidi. Prý... :) Jo a nikdy nebyl skautem. To zcela určitě. Geodet/GISák, teď však developer/scrum master  # deskotůt    # pečuNaTo    He says he likes coffee, mountains, climbing ",
       "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/536/762/507/314/245/original/7c0de53421825dc3.jpg",
       "followers": 250,
-      "statuses": 928,
+      "statuses": 926,
       "score": 34,
       "tags": [
         "developer"
       ],
       "category": "tech",
-      "last_active": "2026-04-01",
+      "last_active": "2026-04-02",
       "url": "https://mastodonczech.cz/@neskaut"
     },
     {
@@ -2408,168 +1594,17 @@
       "url": "https://mastodonczech.cz/@sedmagenerace"
     },
     {
-      "name": "pelikanekcz",
-      "handle": "pelikanekcz@mastodonczech.cz",
-      "bio": "Kendó a Go bojovník. Táta level 3.",
-      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/970/276/965/982/270/original/f2e27679ec6ca658.jpg",
-      "followers": 247,
-      "statuses": 500,
-      "score": 28,
-      "tags": [],
-      "category": "ostatni",
-      "last_active": "2023-09-19",
-      "url": "https://mastodonczech.cz/@pelikanekcz"
-    },
-    {
-      "name": "Martin Drtina",
-      "handle": "martindrtina@mastodonczech.cz",
-      "bio": "Redaktor Lupa.cz se zájmem o technologie, právo a média. Entrepreneur v oblasti Internet of Things.",
-      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/324/608/842/963/028/original/59d76d253dda7a4e.jpg",
-      "followers": 246,
-      "statuses": 77,
-      "score": 27,
-      "tags": [
-        "média"
-      ],
-      "category": "zpravy",
-      "last_active": "2023-11-23",
-      "url": "https://mastodonczech.cz/@martindrtina"
-    },
-    {
       "name": "ondřej s",
       "handle": "white_monkey@witter.cz",
       "bio": "hope-based communication breath &amp; pedagogy student  music releases on: baba vanga, tesla tapes, wrong, radio benska, klangundkrach, red for colourblind 〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️ here for  # onlineprivacy    # decentraliza",
       "avatar": "https://media.witter.cz/accounts/avatars/109/397/837/072/809/695/original/ec7646f42f7b4039.jpeg",
-      "followers": 239,
+      "followers": 241,
       "statuses": 545,
       "score": 13,
       "tags": [],
       "category": "ostatni",
       "last_active": "2026-04-02",
       "url": "https://witter.cz/@white_monkey"
-    },
-    {
-      "name": "Elix",
-      "handle": "elix@mastodonczech.cz",
-      "bio": "# Czech   🇨🇿  # nature   🌲  # birds   🐦  and   # horse   🐴   # photographer   📷",
-      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/383/470/102/644/583/original/cd00b27ee03a8bc5.png",
-      "followers": 237,
-      "statuses": 276,
-      "score": 26,
-      "tags": [
-        "photograph"
-      ],
-      "category": "foto",
-      "last_active": "2023-03-26",
-      "url": "https://mastodonczech.cz/@elix"
-    },
-    {
-      "name": "LazzLazz",
-      "handle": "LazzLazz@witter.cz",
-      "bio": "",
-      "avatar": "https://media.witter.cz/accounts/avatars/109/335/591/724/551/608/original/5e9684ce9106494e.jpg",
-      "followers": 234,
-      "statuses": 646,
-      "score": 33,
-      "tags": [],
-      "category": "ostatni",
-      "last_active": "2023-01-07",
-      "url": "https://witter.cz/@LazzLazz"
-    },
-    {
-      "name": "Fester",
-      "handle": "OnlyFester@cztwitter.cz",
-      "bio": "",
-      "avatar": "https://cztwitter.cz/system/accounts/avatars/110/651/668/366/883/760/original/d5e4a15b1484aca3.jpg",
-      "followers": 232,
-      "statuses": 18,
-      "score": 17,
-      "tags": [],
-      "category": "ostatni",
-      "last_active": "2023-07-12",
-      "url": "https://cztwitter.cz/@OnlyFester"
-    },
-    {
-      "name": "PavelSku",
-      "handle": "baghira@witter.cz",
-      "bio": "Amateur photographer, professional IT specialist, occasional cyclist and tourist.   https://  linktr.ee/digipixcz      * * * * *                                                                                            ",
-      "avatar": "https://media.witter.cz/accounts/avatars/109/309/314/763/591/404/original/4383e21454ccf41d.png",
-      "followers": 231,
-      "statuses": 856,
-      "score": 18,
-      "tags": [
-        "photograph"
-      ],
-      "category": "foto",
-      "last_active": "2024-12-24",
-      "url": "https://witter.cz/@baghira"
-    },
-    {
-      "name": "David_melden",
-      "handle": "david_melden@cztwitter.cz",
-      "bio": "Malý zvědavý vztekloun. 😠  10% 🤫 Občas poeta.  F65.5. a jiné vady. 🤪     # jeblé_kotě      # okem_drona   (občas)    # veršotep   (ještě víc občas)  # Modrák",
-      "avatar": "https://cztwitter.cz/system/accounts/avatars/000/005/886/original/a3b7a7d96eb2f028.jpg",
-      "followers": 228,
-      "statuses": 773,
-      "score": 28,
-      "tags": [
-        "věda"
-      ],
-      "category": "veda",
-      "last_active": "2023-12-23",
-      "url": "https://cztwitter.cz/@david_melden"
-    },
-    {
-      "name": "BikePacking",
-      "handle": "bikepacking@mastodonczech.cz",
-      "bio": "www.bikepacking.cz",
-      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/420/842/956/465/635/original/027bf4c334229655.jpeg",
-      "followers": 226,
-      "statuses": 76,
-      "score": 35,
-      "tags": [],
-      "category": "ostatni",
-      "last_active": "2023-08-10",
-      "url": "https://mastodonczech.cz/@bikepacking"
-    },
-    {
-      "name": "ibidem",
-      "handle": "Ibidem@mastodonczech.cz",
-      "bio": "# HibidemNaCestách",
-      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/366/729/783/603/434/original/2a63f6bf0971c8f5.png",
-      "followers": 221,
-      "statuses": 722,
-      "score": 32,
-      "tags": [],
-      "category": "ostatni",
-      "last_active": "2024-11-27",
-      "url": "https://mastodonczech.cz/@Ibidem"
-    },
-    {
-      "name": "Lifehacky.cz",
-      "handle": "lifehacky@mastodonczech.cz",
-      "bio": "Podomácku vyrobená hackovina.  Za účtem hledej   @ tombarys",
-      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/393/788/402/075/614/original/8ff012443a135c90.jpg",
-      "followers": 220,
-      "statuses": 207,
-      "score": 35,
-      "tags": [],
-      "category": "ostatni",
-      "last_active": "2025-03-29",
-      "url": "https://mastodonczech.cz/@lifehacky"
-    },
-    {
-      "name": "Jaroslav Macháček",
-      "handle": "jaroslav73@cztwitter.cz",
-      "bio": "Asociál na sociální síti. Beznadějný milovník přírody a hub, amatérský cvakálista. Zveřejněné fotky jsou z 99 % moje...",
-      "avatar": "https://cztwitter.cz/system/accounts/avatars/000/006/877/original/45dce7df15a60ee3.jpg",
-      "followers": 220,
-      "statuses": 93,
-      "score": 25,
-      "tags": [],
-      "category": "ostatni",
-      "last_active": "2023-02-14",
-      "url": "https://cztwitter.cz/@jaroslav73"
     },
     {
       "name": "Ondřej Žára",
@@ -2585,25 +1620,12 @@
       "url": "https://cztwitter.cz/@ondras"
     },
     {
-      "name": "Jaromír Šrámek",
-      "handle": "JaromirSramek@mastodonczech.cz",
-      "bio": "skeptik, předseda Českého klubu skeptiků Sisyfos  &quot;Chlap, co blije do klobouku medvědobijce McGeea, je buď nebojácnej, nebo děsně blbej.&quot;",
-      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/327/116/488/540/249/original/fcb644d3f506ea51.jpg",
-      "followers": 218,
-      "statuses": 475,
-      "score": 25,
-      "tags": [],
-      "category": "ostatni",
-      "last_active": "2024-12-12",
-      "url": "https://mastodonczech.cz/@JaromirSramek"
-    },
-    {
       "name": "Ferda 😻",
       "handle": "ferda@f.cz",
       "bio": "Fyzik, introvertní fotograf a novinář, sportující fanoušek, systémový specialista, milovník koček 😻 a Linuxu :arch: physicist, introverted photographer and journalist, sporting a fan, the system specialist, cat 😻 and Lin",
       "avatar": "https://f.cz/system/accounts/avatars/113/402/596/898/507/493/original/0f3dbe213d8b2ccb.gif",
       "followers": 218,
-      "statuses": 9398,
+      "statuses": 9401,
       "score": 35,
       "tags": [
         "linux",
@@ -2640,19 +1662,6 @@
       "category": "ostatni",
       "last_active": "2026-03-25",
       "url": "https://vltava.cloud/@michal"
-    },
-    {
-      "name": "Jana Kinc",
-      "handle": "jana_kinc@cztwitter.cz",
-      "bio": "",
-      "avatar": "https://cztwitter.cz/system/accounts/avatars/110/175/962/487/740/507/original/5e79ad28fdcc81cd.jpeg",
-      "followers": 213,
-      "statuses": 228,
-      "score": 19,
-      "tags": [],
-      "category": "ostatni",
-      "last_active": "2023-12-27",
-      "url": "https://cztwitter.cz/@jana_kinc"
     },
     {
       "name": "Rádio Tata",
@@ -2696,19 +1705,6 @@
       "url": "https://mastodonczech.cz/@TramPhotos"
     },
     {
-      "name": "Martin Tremčinský",
-      "handle": "m_tremcinsky@witter.cz",
-      "bio": "Radši si ode mě držte distanc. On/Jeho",
-      "avatar": "https://media.witter.cz/accounts/avatars/109/369/868/480/173/214/original/e363b761ddfccfc8.png",
-      "followers": 202,
-      "statuses": 138,
-      "score": 20,
-      "tags": [],
-      "category": "ostatni",
-      "last_active": "2023-01-28",
-      "url": "https://witter.cz/@m_tremcinsky"
-    },
-    {
       "name": "Zdeněk David",
       "handle": "davede@mastodonczech.cz",
       "bio": "Postarší právník, t.č. na odchodu z app X a dříve i z FB (v zájmu zachování duševní hygieny). Posluchač LP desek, sjížděč dobrých filmů a seriálů, snad konečně i někdy s časem na literaturu...lokalizován ve Slezsku. Hi, ",
@@ -2724,59 +1720,1079 @@
       "url": "https://mastodonczech.cz/@davede"
     },
     {
-      "name": "Aj Chua",
-      "handle": "Miha@cztwitter.cz",
-      "bio": "",
-      "avatar": "https://cztwitter.cz/system/accounts/avatars/000/006/416/original/82bcb49767d11066.jpg",
-      "followers": 198,
-      "statuses": 221,
+      "name": "Míša Suchardová 🏳️‍🌈",
+      "handle": "MisaSuch@witter.cz",
+      "bio": "Žiju • píšu • kreslím • Sdílím Kapku Čapka jako preventivní péči •  A mám i něco ke čtení:   https://www.  miainlines.cz/p/ulet.html",
+      "avatar": "https://media.witter.cz/accounts/avatars/109/426/586/366/141/168/original/d4628b46d76cf97f.jpg",
+      "followers": 193,
+      "statuses": 84,
+      "score": 10,
+      "tags": [],
+      "category": "ostatni",
+      "last_active": "2026-04-02",
+      "url": "https://witter.cz/@MisaSuch"
+    },
+    {
+      "name": "atomicbee.cz",
+      "handle": "bzz@mastodonczech.cz",
+      "bio": "Causal photographer and lover of *nix systems and CLI",
+      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/326/663/661/489/821/original/4d27f3c0f4c12907.png",
+      "followers": 191,
+      "statuses": 181,
+      "score": 28,
+      "tags": [
+        "photograph"
+      ],
+      "category": "foto",
+      "last_active": "2026-03-31",
+      "url": "https://mastodonczech.cz/@bzz"
+    },
+    {
+      "name": "Tom Herlík",
+      "handle": "tomherlik@mastodon.social",
+      "bio": "Učím angličtinu přes internet &amp; píšu Anglofila, každopondělní newsletter o angličtině a Británii 💌🇬🇧",
+      "avatar": "https://files.mastodon.social/accounts/avatars/110/653/993/062/671/638/original/2b4269ab0de116fd.jpeg",
+      "followers": 180,
+      "statuses": 203,
+      "score": 13,
+      "tags": [],
+      "category": "ostatni",
+      "last_active": "2026-04-01",
+      "url": "https://mastodon.social/@tomherlik"
+    },
+    {
+      "name": "Tomáš Bella",
+      "handle": "kvasinka@mastodonczech.cz",
+      "bio": "chief digital officer and reporter at denník N.",
+      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/377/368/379/395/712/original/1e748e72c8a6821c.jpg",
+      "followers": 179,
+      "statuses": 11,
+      "score": 32,
+      "tags": [],
+      "category": "tech",
+      "last_active": "2026-02-17",
+      "url": "https://mastodonczech.cz/@kvasinka"
+    },
+    {
+      "name": "Radim",
+      "handle": "architektradim@mastodonczech.cz",
+      "bio": "stavitelství, architektura, urbanismus, veřejný prostor, udržitelná mobilita, svobodné technologie   Plzeň, Česko 🇨🇿",
+      "avatar": "https://mastodonczech.cz/system/accounts/avatars/110/536/022/438/469/528/original/cf01934a1c543ff6.png",
+      "followers": 178,
+      "statuses": 1416,
+      "score": 43,
+      "tags": [],
+      "category": "ostatni",
+      "last_active": "2026-03-29",
+      "url": "https://mastodonczech.cz/@architektradim"
+    },
+    {
+      "name": "Jan Antoš",
+      "handle": "janantos@f.cz",
+      "bio": "AI Strategist, Enterprise Architect, Data Sorcerer, Czech expat living in Estonia. Expressing myself in Czech and English  brow6el (Linux terminal graphical browser) developer.   https://www.  brow6el.dev",
+      "avatar": "https://f.cz/system/accounts/avatars/115/531/591/970/190/639/original/dac6766b68be4d0c.jpeg",
+      "followers": 173,
+      "statuses": 878,
+      "score": 20,
+      "tags": [
+        "linux",
+        "developer"
+      ],
+      "category": "tech",
+      "last_active": "2026-04-02",
+      "url": "https://f.cz/@janantos"
+    },
+    {
+      "name": "Karel 'Clock' K.",
+      "handle": "clock@f.cz",
+      "bio": "🏳️‍🌈 I want free access to technologies even for disadvantaged, marginalized and oppressed folks. Author of DIY wireless optical data link Ronja, coauthor of Links web browser, author of Khmer↔EN machine translator SPT T",
+      "avatar": "https://f.cz/system/accounts/avatars/114/542/781/632/843/971/original/c15436853eb647ac.png",
+      "followers": 170,
+      "statuses": 1442,
+      "score": 27,
+      "tags": [],
+      "category": "ostatni",
+      "last_active": "2026-04-02",
+      "url": "https://f.cz/@clock"
+    },
+    {
+      "name": "Michal Šára :arch:",
+      "handle": "MikeshCZ@mamutovo.cz",
+      "bio": "People aren&#39;t supposed to do stuff a robot can do. The people should do stuff that robots can&#39;t. It&#39;s been that way since the industrial revolution.",
+      "avatar": "https://mamutovo.cz/system/accounts/avatars/116/178/404/922/095/929/original/fee40da636cfbbf7.png",
+      "followers": 167,
+      "statuses": 13,
+      "score": 19,
+      "tags": [],
+      "category": "ostatni",
+      "last_active": "2026-03-21",
+      "url": "https://mamutovo.cz/@MikeshCZ"
+    },
+    {
+      "name": "Milan Hubáček",
+      "handle": "nacelnik01@mamutovo.cz",
+      "bio": "Původně přesun z TW  # TWrefugee2022  , Brno, CZ  Nyní migrace z mastodonczech.cz  Born in Czechoslovakia Zájmy: Cyklo, knihy, foto, hudba, politika",
+      "avatar": "https://mamutovo.cz/system/accounts/avatars/114/931/667/279/457/051/original/6bdda02129149a4a.png",
+      "followers": 163,
+      "statuses": 2710,
+      "score": 45,
+      "tags": [
+        "foto",
+        "knihy",
+        "hudba",
+        "politik"
+      ],
+      "category": "foto",
+      "last_active": "2026-04-02",
+      "url": "https://mamutovo.cz/@nacelnik01"
+    },
+    {
+      "name": "Oscloud",
+      "handle": "oscloud@mamutovo.cz",
+      "bio": "Oscloud je váš bezpečný cloud. Naším cílem je ukázat lidem výhody bezpečného internetu a Open Source technologií. Hostujeme a spravujeme různé Open Source aplikace, které poskytují bezpečné a soukromé alternativy ke kome",
+      "avatar": "https://mamutovo.cz/system/accounts/avatars/111/674/651/383/349/773/original/aff72ffdec006932.png",
+      "followers": 162,
+      "statuses": 275,
+      "score": 37,
+      "tags": [],
+      "category": "ostatni",
+      "last_active": "2026-03-26",
+      "url": "https://mamutovo.cz/@oscloud"
+    },
+    {
+      "name": "Sledge",
+      "handle": "sledge@mastodonczech.cz",
+      "bio": "DOS, 486, retro! Sběratel starých her a retrogamer. Profesně webový desetibojař a dělník informačního věku.   &quot;Sledge - knocks down walls in Draracle&#39;s cave.&quot;",
+      "avatar": "https://mastodonczech.cz/system/accounts/avatars/110/853/763/049/949/481/original/b1047868c2c3ae17.jpg",
+      "followers": 160,
+      "statuses": 479,
+      "score": 40,
+      "tags": [
+        "gamer"
+      ],
+      "category": "gaming",
+      "last_active": "2026-04-02",
+      "url": "https://mastodonczech.cz/@sledge"
+    },
+    {
+      "name": "Mlékař Dan 🦣",
+      "handle": "mlekar@witter.cz",
+      "bio": "Angery cat yelling at things.  🇨🇿 🇪🇺 -&gt; 🚐🏞️🌲 ❤️   # Photography   |  # FilmPhotography   |  # M43   |  # Cats   |  # Poodle   |  # 3DPrinting   |  # SciFi   |  # StarTrek   👷   # SAN   |  # NAS   |  # Storage   |  # B",
+      "avatar": "https://media.witter.cz/accounts/avatars/109/307/703/193/258/589/original/388e029159d44f5c.jpeg",
+      "followers": 158,
+      "statuses": 1116,
+      "score": 23,
+      "tags": [
+        "linux",
+        "photograph",
+        "film"
+      ],
+      "category": "tech",
+      "last_active": "2026-04-01",
+      "url": "https://witter.cz/@mlekar"
+    },
+    {
+      "name": "Ptáček",
+      "handle": "KapesniP@witter.cz",
+      "bio": "(He/him)  Proud Member of ICT Union.  Political theory and New Media (interest in theories of revolution / software studies and others)",
+      "avatar": "https://media.witter.cz/accounts/avatars/109/308/407/756/258/284/original/266e3dceef932b9e.jpg",
+      "followers": 158,
+      "statuses": 123,
+      "score": 6,
+      "tags": [
+        "software"
+      ],
+      "category": "tech",
+      "last_active": "2026-03-08",
+      "url": "https://witter.cz/@KapesniP"
+    },
+    {
+      "name": "Jan Sobotka",
+      "handle": "tensob_@mastodonczech.cz",
+      "bio": "AV/livestreamingový technik a technolog v několika organizacích, 📺 fotograf eventů, 📸 technologický hračička a student managementu 👨‍🏫  Novinky ze světa livestreamingu postuji na   @ profi_livestreaming_czsk      Toto je",
+      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/393/270/832/262/019/original/750664d84aa33268.jpg",
+      "followers": 157,
+      "statuses": 1575,
+      "score": 38,
+      "tags": [
+        "linux",
+        "foto"
+      ],
+      "category": "tech",
+      "last_active": "2026-04-01",
+      "url": "https://mastodonczech.cz/@tensob_"
+    },
+    {
+      "name": "Martin Penc",
+      "handle": "martinpenc@mastodonczech.cz",
+      "bio": "Hrdý otec, věčný technologický hračička a zkoumal, nadšený sportovec, cestovatel, ochránce zvířat a přírody.  Domovinou v CHKO Labské pískovce, jednou nohou v Českém Švýcarsku.  Pomáhám udávat směr pro SDZP družstvo.",
+      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/377/989/723/784/772/original/eb0e5d09611f64f5.jpg",
+      "followers": 156,
+      "statuses": 417,
+      "score": 24,
+      "tags": [],
+      "category": "ostatni",
+      "last_active": "2026-03-08",
+      "url": "https://mastodonczech.cz/@martinpenc"
+    },
+    {
+      "name": "Filip Sedlák",
+      "handle": "krab@mastodonczech.cz",
+      "bio": "🇮🇪 DevOps krab",
+      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/344/232/024/704/794/original/3acbeaaebcc224d4.png",
+      "followers": 155,
+      "statuses": 1625,
+      "score": 41,
+      "tags": [],
+      "category": "ostatni",
+      "last_active": "2026-03-24",
+      "url": "https://mastodonczech.cz/@krab"
+    },
+    {
+      "name": "David Jaša",
+      "handle": "djasa@cztwitter.cz",
+      "bio": "Brno, bikes, climate, sometimes free software. Non-zero chance of shitposting.  česky, English, português, ein bisschen Deutsch",
+      "avatar": "https://cztwitter.cz/system/accounts/avatars/000/010/234/original/a120b6bf97d82793.jpg",
+      "followers": 153,
+      "statuses": 3594,
+      "score": 36,
+      "tags": [
+        "software"
+      ],
+      "category": "tech",
+      "last_active": "2026-02-06",
+      "url": "https://cztwitter.cz/@djasa"
+    },
+    {
+      "name": "Petr Ferschmann",
+      "handle": "fersman@mastodonczech.cz",
+      "bio": "CEO for web integration platform Dativery. Host at Kafemlejnek.TV, organizer of saskari.cz and backendisti.cz ex-co-founder of  FlexiBee.eu.",
+      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/329/835/619/253/016/original/db317945eb881d56.jpg",
+      "followers": 152,
+      "statuses": 329,
+      "score": 19,
+      "tags": [],
+      "category": "ostatni",
+      "last_active": "2026-03-28",
+      "url": "https://mastodonczech.cz/@fersman"
+    },
+    {
+      "name": "𝕰𝖌𝖊𝖗𝖑𝖆̈𝖓𝖉𝖊𝖗 𝕻𝖆𝖙𝖗𝖎𝖔𝖙♿️❤️💙",
+      "handle": "PtrSrejbr@mamutovo.cz",
+      "bio": "&quot;The Stroke Is A Bitch&quot;  HAVLOID a člen TOP09...  KARLOVARÁK žijící v Polabí...  Absolvent střední školy gastronomické a hotelové, emeritní KUCHAŘ a restauratér...  Milovník kávy☕️heavy metalu🎸filmů🎬 Footballu⚽",
+      "avatar": "https://mamutovo.cz/system/accounts/avatars/116/045/574/706/726/446/original/a9bfbc63ab3fc6bd.png",
+      "followers": 152,
+      "statuses": 141,
+      "score": 18,
+      "tags": [
+        "astronom",
+        "film"
+      ],
+      "category": "veda",
+      "last_active": "2026-03-08",
+      "url": "https://mamutovo.cz/@PtrSrejbr"
+    },
+    {
+      "name": "Metrobus - hromadná doprava",
+      "handle": "metrobuscz@witter.cz",
+      "bio": "Vytváříme komentovaná videa z hromadné dopravy. U nás naleznete informace, ke kterým byste se sami nedostali.  Nová videa vychází každé úterý na našem youtube kanálu i webu. Na ostatních sítích je doplňujeme dalším drobn",
+      "avatar": "https://media.witter.cz/accounts/avatars/109/394/659/442/067/177/original/7afb08751ce1f7a1.png",
+      "followers": 151,
+      "statuses": 303,
+      "score": 27,
+      "tags": [],
+      "category": "ostatni",
+      "last_active": "2026-04-02",
+      "url": "https://witter.cz/@metrobuscz"
+    },
+    {
+      "name": "Jan Petrus",
+      "handle": "jan_petrus@mastodonczech.cz",
+      "bio": "SAAB, Pink Floyd, BlackBerry, jazz, železnice, plachetnice. &quot;Lead, follow or get out of the road&quot;",
+      "avatar": "https://mastodonczech.cz/system/accounts/avatars/113/279/196/351/501/671/original/96fd07a526c597e2.png",
+      "followers": 150,
+      "statuses": 2336,
+      "score": 45,
+      "tags": [],
+      "category": "ostatni",
+      "last_active": "2026-04-02",
+      "url": "https://mastodonczech.cz/@jan_petrus"
+    },
+    {
+      "name": "Kepi",
+      "handle": "kepi@mamutovo.cz",
+      "bio": "🐂 Free and OS software enthusiast ••• 📝 Emacs user (ViM bindings ofc) ••• 🐧Linux admin (and every day user - Debian and Arch) ••• 💻 Developer (Elixir, Python 🐍, Ruby 💎, TypeScript, Bash, Perl 🐪...) ••• 🎮 (Bad) Gamer ••• ",
+      "avatar": "https://mamutovo.cz/system/accounts/avatars/114/768/222/471/230/250/original/35f6238dcf071f1f.png",
+      "followers": 150,
+      "statuses": 988,
+      "score": 31,
+      "tags": [
+        "linux",
+        "python",
+        "software",
+        "developer"
+      ],
+      "category": "tech",
+      "last_active": "2026-04-02",
+      "url": "https://mamutovo.cz/@kepi"
+    },
+    {
+      "name": "Michal Režný",
+      "handle": "michal_rezny@mastodonczech.cz",
+      "bio": "Důchodce a bývalý testovací pilot formule T3 stáje DPP. 🚋 Všude dobře, v postýlce nejlíp.",
+      "avatar": "https://mastodonczech.cz/system/accounts/avatars/110/292/403/281/868/926/original/a39537cf883ab70c.jpg",
+      "followers": 149,
+      "statuses": 1292,
+      "score": 41,
+      "tags": [],
+      "category": "ostatni",
+      "last_active": "2026-04-02",
+      "url": "https://mastodonczech.cz/@michal_rezny"
+    },
+    {
+      "name": "Botanická zahrada PřF UK",
+      "handle": "Botanicka_zahrada_UK@witter.cz",
+      "bio": "Otvírací doba a vstupné:   https://  bz-uk.cz/cs/navstivte-nas      Kalendář akcí:   https://  bz-uk.cz/cs/kalendar      Kontakty: Adresa: Na slupi 16, Praha 2, 128 00 Pokladna skleníku tel.: 221 951 885  Ředitel Ing. La",
+      "avatar": "https://media.witter.cz/accounts/avatars/114/183/516/836/820/932/original/f41f954893d79be3.jpg",
+      "followers": 148,
+      "statuses": 49,
+      "score": 4,
+      "tags": [],
+      "category": "ostatni",
+      "last_active": "2026-03-20",
+      "url": "https://witter.cz/@Botanicka_zahrada_UK"
+    },
+    {
+      "name": "Petr Mojžíš",
+      "handle": "petrmojzis@mastodonczech.cz",
+      "bio": "Historical board games designer:   # LevyandCampaign   Žižka: Reformation and Crusade in Hussite Bohemia, 1420-1421  The Bell of Treason: 1938 Munich Crisis in Czechoslovakia   # WingLeader   series scenarios  Cybersecur",
+      "avatar": "https://mastodonczech.cz/system/accounts/avatars/110/790/842/341/551/346/original/3d0e87a98e7fdad5.png",
+      "followers": 147,
+      "statuses": 350,
+      "score": 20,
+      "tags": [],
+      "category": "ostatni",
+      "last_active": "2026-03-01",
+      "url": "https://mastodonczech.cz/@petrmojzis"
+    },
+    {
+      "name": "Tritol",
+      "handle": "tritol128@mamutovo.cz",
+      "bio": "Linux, FDM/SLA 3D tisk, VR, vinyly, kulečník a tak různě.",
+      "avatar": "https://mamutovo.cz/system/accounts/avatars/116/030/707/491/594/106/original/f079c8d85d4b2a84.png",
+      "followers": 146,
+      "statuses": 331,
+      "score": 20,
+      "tags": [
+        "linux"
+      ],
+      "category": "tech",
+      "last_active": "2026-04-02",
+      "url": "https://mamutovo.cz/@tritol128"
+    },
+    {
+      "name": "Jaroslav Kraif",
+      "handle": "scobra1cz@mastodonczech.cz",
+      "bio": "Rumový expert značky Rum Shark (vozíme, staříme, plníme a prodáváme rumy). Gastro a zákaznická péče. Auta, videohry, focení menších věcí a Photoshop, zdravý životní styl, sebeobrana, bushcraft, modelářství a historie kol",
+      "avatar": "https://mastodonczech.cz/system/accounts/avatars/110/884/656/165/571/885/original/86006a68623a556b.jpg",
+      "followers": 138,
+      "statuses": 3439,
+      "score": 48,
+      "tags": [
+        "videohry"
+      ],
+      "category": "gaming",
+      "last_active": "2026-04-03",
+      "url": "https://mastodonczech.cz/@scobra1cz"
+    },
+    {
+      "name": "Matěj H.",
+      "handle": "mh@witter.cz",
+      "bio": "Starám se o   @ nolog    a   https://  druit.org    , dřív jsem se jmenoval Matěj Divecký",
+      "avatar": "https://media.witter.cz/accounts/avatars/113/809/376/951/969/270/original/3fecb87f5dfcb300.png",
+      "followers": 135,
+      "statuses": 63,
       "score": 11,
       "tags": [],
       "category": "ostatni",
-      "last_active": "2023-10-10",
-      "url": "https://cztwitter.cz/@Miha"
+      "last_active": "2026-03-31",
+      "url": "https://witter.cz/@mh"
     },
     {
-      "name": "Magda Kudějová",
-      "handle": "Magda@cztwitter.cz",
-      "bio": "Já to říkala!",
-      "avatar": "https://cztwitter.cz/system/accounts/avatars/000/014/868/original/b7b093e295a697bd.jpeg",
-      "followers": 198,
-      "statuses": 193,
-      "score": 9,
+      "name": "Miroslav Buček 🌳",
+      "handle": "miroslavbucek@mastodonczech.cz",
+      "bio": "Zakladatel největší české sociální sítě 🍅   https://  Rajce.net    , zakladatel a majitel AI robota 🧠   https://  Aiviro.com    , zakladatel a majitel Smart Home firmy 🌸   https://  CaspiaTech.cz      Idealista, milovník",
+      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/326/258/515/430/137/original/80d67982e6d38545.jpg",
+      "followers": 131,
+      "statuses": 1095,
+      "score": 42,
       "tags": [],
       "category": "ostatni",
-      "last_active": "2023-08-20",
-      "url": "https://cztwitter.cz/@Magda"
+      "last_active": "2026-03-30",
+      "url": "https://mastodonczech.cz/@miroslavbucek"
     },
     {
-      "name": "Nox",
-      "handle": "Nox@cztwitter.cz",
-      "bio": "Ich dien. Ministerstvo vlkodlaků  # minivlk",
-      "avatar": "https://cztwitter.cz/system/accounts/avatars/000/001/117/original/4ca366ae627ff5f0.jpeg",
-      "followers": 197,
-      "statuses": 206,
+      "name": "Andy Gajdosik",
+      "handle": "agajdosi@witter.cz",
+      "bio": "New media artist and software developer from Prague, CZ. Interested in copy-far-left, politics of digital platforms, veganism and Arte Útil.  Trying to finish my doctoral studies at Faculty of Fine Arts in Brno, CZ, wher",
+      "avatar": "https://media.witter.cz/accounts/avatars/109/426/761/357/694/189/original/64e929f498c5f057.jpeg",
+      "followers": 127,
+      "statuses": 389,
+      "score": 8,
+      "tags": [
+        "python",
+        "software",
+        "developer"
+      ],
+      "category": "tech",
+      "last_active": "2026-04-02",
+      "url": "https://witter.cz/@agajdosi"
+    },
+    {
+      "name": "Podnikatel.cz",
+      "handle": "podnikatel@mastodonczech.cz",
+      "bio": "Jsme největší server pro podnikatele a jedničky pro účetní.",
+      "avatar": "https://mastodonczech.cz/system/accounts/avatars/110/928/834/042/423/520/original/8366d97eb5bd5d82.jpg",
+      "followers": 125,
+      "statuses": 3152,
+      "score": 62,
+      "tags": [],
+      "category": "ostatni",
+      "last_active": "2026-04-02",
+      "url": "https://mastodonczech.cz/@podnikatel"
+    },
+    {
+      "name": "Tomucha",
+      "handle": "tomucha@witter.cz",
+      "bio": "Terror of knowing what this world is about",
+      "avatar": "https://media.witter.cz/accounts/avatars/109/315/909/280/337/563/original/fb5ecf4d6c58de7f.gif",
+      "followers": 123,
+      "statuses": 1272,
+      "score": 23,
+      "tags": [],
+      "category": "ostatni",
+      "last_active": "2026-04-01",
+      "url": "https://witter.cz/@tomucha"
+    },
+    {
+      "name": "Jan Lička",
+      "handle": "Jan_Licka@mastodon.pirati.cz",
+      "bio": "dobro začne prohrávat ve chvíli, kdy před zlem odvrací oči ke květinám / dejte mi raketu s plnou nádrží a volnou cestu na nejbližší planetu.",
+      "avatar": "https://mastodon.pirati.cz/system/accounts/avatars/109/353/762/409/412/527/original/d4a5a1352dd52c92.jpg",
+      "followers": 120,
+      "statuses": 276,
       "score": 12,
       "tags": [],
       "category": "ostatni",
-      "last_active": "2023-08-26",
-      "url": "https://cztwitter.cz/@Nox"
+      "last_active": "2026-01-13",
+      "url": "https://mastodon.pirati.cz/@Jan_Licka"
     },
     {
-      "name": "Daniel Milde",
-      "handle": "danielmilde@mastodonczech.cz",
-      "bio": "Golang a Python vývojář, linuxák, lezec, motorkář.",
-      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/326/204/106/149/383/original/0c208a3f81f98773.jpeg",
-      "followers": 194,
-      "statuses": 210,
-      "score": 19,
+      "name": "Marie Glöckner - genealog",
+      "handle": "rodokmeny@f.cz",
+      "bio": "VRÁTÍM HISTORII VAŠEMU RODU",
+      "avatar": "https://f.cz/system/accounts/avatars/111/028/924/009/480/991/original/9fa5d5bc7bed028c.jpg",
+      "followers": 120,
+      "statuses": 211,
+      "score": 9,
+      "tags": [],
+      "category": "ostatni",
+      "last_active": "2026-02-07",
+      "url": "https://f.cz/@rodokmeny"
+    },
+    {
+      "name": "Michal Vyskočil",
+      "handle": "vyskocilm@witter.cz",
+      "bio": "Linux enthusiasts,  # openSUSE    # Aeon   user, Go developer.   # searchable",
+      "avatar": "https://media.witter.cz/accounts/avatars/109/397/899/662/648/011/original/57a2780948629515.png",
+      "followers": 118,
+      "statuses": 2636,
+      "score": 34,
       "tags": [
         "linux",
-        "python"
+        "developer"
       ],
       "category": "tech",
-      "last_active": "2024-12-16",
-      "url": "https://mastodonczech.cz/@danielmilde"
+      "last_active": "2026-04-01",
+      "url": "https://witter.cz/@vyskocilm"
+    },
+    {
+      "name": "Vlaďka Gottwaldová",
+      "handle": "VladimiraGottwaldova@mastodonczech.cz",
+      "bio": "Konstruktivní pesimistka s životním krédem - hlavně se z toho nepo...čtverečkovat. A prosím tykat, děkuji.🧡",
+      "avatar": "https://mastodonczech.cz/system/accounts/avatars/110/922/114/035/326/019/original/d6a1091f7b471fbd.jpg",
+      "followers": 116,
+      "statuses": 2861,
+      "score": 45,
+      "tags": [],
+      "category": "ostatni",
+      "last_active": "2026-03-30",
+      "url": "https://mastodonczech.cz/@VladimiraGottwaldova"
+    },
+    {
+      "name": "Majo Komár",
+      "handle": "KomarMajo@mastodonczech.cz",
+      "bio": "We are way past that point.",
+      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/434/402/737/155/841/original/45cfabac0f50d09f.jpg",
+      "followers": 116,
+      "statuses": 1517,
+      "score": 37,
+      "tags": [],
+      "category": "ostatni",
+      "last_active": "2026-03-29",
+      "url": "https://mastodonczech.cz/@KomarMajo"
+    },
+    {
+      "name": "diffie :3 (bindiff)",
+      "handle": "jwo@mastodonczech.cz",
+      "bio": "Friends started calling me „diffie“ recently and I love it. You can do it too. :3  Doing RandomThings™ all the time.  Loves low-level stuff and having fun with assembly, embedded stuff and digging into weird stuff on the",
+      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/348/010/973/542/597/original/622d4a1d60b745a3.png",
+      "followers": 115,
+      "statuses": 2647,
+      "score": 44,
+      "tags": [],
+      "category": "ostatni",
+      "last_active": "2026-04-01",
+      "url": "https://mastodonczech.cz/@jwo"
+    },
+    {
+      "name": "GeeZeR",
+      "handle": "geezer@mastodonczech.cz",
+      "bio": "🗜️ Tlačím káru k další lampě 🛋️ GeeZeR™ 👁️  # jasamprvni  ™ 🙋‍♂️♂️🦁💻🕸📱📚🥾🏀🚴 Nikdy v Globusu, Starbucks...  # brno   🔫 # zbrojovka   🌠 # kometa   🐧 # pens   BRNO 🇨🇿 CZE 🇪🇺 EU 🌍 EARTH",
+      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/375/123/758/675/384/original/8841d856f331562b.jpg",
+      "followers": 110,
+      "statuses": 543,
+      "score": 21,
+      "tags": [],
+      "category": "ostatni",
+      "last_active": "2026-01-16",
+      "url": "https://mastodonczech.cz/@geezer"
+    },
+    {
+      "name": "Mirek Vrhel👷‍♂️",
+      "handle": "mireeek@mamutovo.cz",
+      "bio": "Celý život mimo.",
+      "avatar": "https://mamutovo.cz/system/accounts/avatars/116/030/166/855/398/462/original/db8b6efecc7d1ec9.jpg",
+      "followers": 109,
+      "statuses": 105,
+      "score": 16,
+      "tags": [],
+      "category": "ostatni",
+      "last_active": "2026-04-01",
+      "url": "https://mamutovo.cz/@mireeek"
+    },
+    {
+      "name": "Jan Polzer",
+      "handle": "maxiorel@mastodonczech.cz",
+      "bio": "Drupal &amp; Symfony developer Web Development Director v Lesensky.cz",
+      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/337/754/646/730/445/original/90c32b21cfbbcc1d.jpg",
+      "followers": 108,
+      "statuses": 360,
+      "score": 24,
+      "tags": [
+        "developer"
+      ],
+      "category": "tech",
+      "last_active": "2026-03-02",
+      "url": "https://mastodonczech.cz/@maxiorel"
+    },
+    {
+      "name": "František Vaculík",
+      "handle": "Frantem@mastodonczech.cz",
+      "bio": "Tvrdohlavý a citlivý Grafik a zemědělec.",
+      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/374/984/081/333/922/original/7d5887ab14be63a8.jpg",
+      "followers": 105,
+      "statuses": 1547,
+      "score": 55,
+      "tags": [],
+      "category": "ostatni",
+      "last_active": "2026-01-14",
+      "url": "https://mastodonczech.cz/@Frantem"
+    },
+    {
+      "name": "Jirkův Žbrbláček",
+      "handle": "Jirka@mamutovo.cz",
+      "bio": "Jsem věřící Křesťan, zajímám se o historii, žiji se dvěma kocoury, rád spím. Dopřeji si i pivo. Jsem rodilý pražák a Prahu jsem neopustil  # vtipzakorunu    # kostel    # bůh    # kostelignac    # kostel_zderaze    # ziv",
+      "avatar": "https://mamutovo.cz/system/accounts/avatars/112/820/694/864/962/890/original/f41cd5fbd79316d0.jpg",
+      "followers": 105,
+      "statuses": 1560,
+      "score": 37,
+      "tags": [
+        "photograph"
+      ],
+      "category": "foto",
+      "last_active": "2026-04-03",
+      "url": "https://mamutovo.cz/@Jirka"
+    },
+    {
+      "name": "Tadeusz Sikora",
+      "handle": "TaS@mastodonczech.cz",
+      "bio": "Bydlím na východě. Mieszkam na południu. Bývam na západe. Jech stela. Elektrikář, kutil, učitel. A hlava. Rodiny. Na prvním místě být mělo. Yoda mistr řekl by jak.  @TaS@mastodon.com.pl",
+      "avatar": "https://mastodonczech.cz/system/accounts/avatars/111/500/488/854/970/558/original/f2741a8c8c945d52.jpg",
+      "followers": 103,
+      "statuses": 1464,
+      "score": 35,
+      "tags": [],
+      "category": "ostatni",
+      "last_active": "2026-04-01",
+      "url": "https://mastodonczech.cz/@TaS"
+    },
+    {
+      "name": "eudoxos",
+      "handle": "eudoxos@witter.cz",
+      "bio": "",
+      "avatar": "https://media.witter.cz/accounts/avatars/109/414/015/398/514/945/original/e339fdabaad27562.png",
+      "followers": 103,
+      "statuses": 409,
+      "score": 11,
+      "tags": [],
+      "category": "ostatni",
+      "last_active": "2026-04-01",
+      "url": "https://witter.cz/@eudoxos"
+    },
+    {
+      "name": "gandalf",
+      "handle": "gandalf@f.cz",
+      "bio": "",
+      "avatar": "https://f.cz/system/accounts/avatars/109/348/936/546/966/106/original/9860e17d0fd69225.jpeg",
+      "followers": 101,
+      "statuses": 306,
+      "score": 9,
+      "tags": [],
+      "category": "ostatni",
+      "last_active": "2026-04-02",
+      "url": "https://f.cz/@gandalf"
+    },
+    {
+      "name": "Lawondyss",
+      "handle": "lawondyss@mastodonczech.cz",
+      "bio": "PHP vývojář tělem i duší — backend v Nette, frontend ve Svelte.   Vedu virtuální firmu v Sim Companies; chceš-li otestovat své obchodní dovednosti, použij můj referral:   https://www.  simcompanies.com/cs/ref/884988/    ",
+      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/389/354/922/911/345/original/65357ffdec44875b.png",
+      "followers": 100,
+      "statuses": 1670,
+      "score": 38,
+      "tags": [],
+      "category": "ostatni",
+      "last_active": "2026-03-28",
+      "url": "https://mastodonczech.cz/@lawondyss"
+    },
+    {
+      "name": "Michal Janda",
+      "handle": "MichalJanda@mastodonczech.cz",
+      "bio": "Born in Pilsen, living in Prague. Eurohujer. Laciný antikomunista.",
+      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/325/158/598/264/145/original/94f6dae8c829cabe.jpg",
+      "followers": 96,
+      "statuses": 1065,
+      "score": 27,
+      "tags": [],
+      "category": "ostatni",
+      "last_active": "2026-04-01",
+      "url": "https://mastodonczech.cz/@MichalJanda"
+    },
+    {
+      "name": "vilibald",
+      "handle": "wvi@witter.cz",
+      "bio": "I believe in open ...... the only good system is a soundsystem",
+      "avatar": "https://media.witter.cz/accounts/avatars/109/427/095/341/862/587/original/cbc61e257d32df63.png",
+      "followers": 94,
+      "statuses": 1822,
+      "score": 29,
+      "tags": [],
+      "category": "ostatni",
+      "last_active": "2026-04-01",
+      "url": "https://witter.cz/@wvi"
+    },
+    {
+      "name": "Městský Vlk",
+      "handle": "MestskyVlk@cztwitter.cz",
+      "bio": "Úvod do vytváření osobnosti mám za sebou. Co přijde dál?",
+      "avatar": "https://cztwitter.cz/system/accounts/avatars/109/466/378/588/173/133/original/69941c8b620c4e81.png",
+      "followers": 90,
+      "statuses": 268,
+      "score": 8,
+      "tags": [],
+      "category": "ostatni",
+      "last_active": "2026-03-17",
+      "url": "https://cztwitter.cz/@MestskyVlk"
+    },
+    {
+      "name": "Karel Dolejší",
+      "handle": "kd@mastodonczech.cz",
+      "bio": "Bezpečnostní problematika, politika, ekologie, atp. Hlavní editor Britských listů.",
+      "avatar": "https://mastodonczech.cz/system/accounts/avatars/110/640/917/295/552/037/original/0246bf0e81ec0f0b.jpg",
+      "followers": 87,
+      "statuses": 1173,
+      "score": 32,
+      "tags": [
+        "politik"
+      ],
+      "category": "zpravy",
+      "last_active": "2026-04-02",
+      "url": "https://mastodonczech.cz/@kd"
+    },
+    {
+      "name": "zichisek",
+      "handle": "zichisek@mamutovo.cz",
+      "bio": "Diagnóza učitelka. Odjela do UK naučit se anglicky. Místo toho učí češtinu. Sběratel knížek a snů.",
+      "avatar": "https://mamutovo.cz/system/accounts/avatars/115/226/654/433/430/601/original/1489a99b77433a07.jpeg",
+      "followers": 86,
+      "statuses": 158,
+      "score": 16,
+      "tags": [],
+      "category": "ostatni",
+      "last_active": "2026-03-11",
+      "url": "https://mamutovo.cz/@zichisek"
+    },
+    {
+      "name": "Zoufalec©️",
+      "handle": "Zoufalec@mastodonczech.cz",
+      "bio": "Vracim se na tenhle ucet. Seru na to. Posli pajcku.  Pasu tyhle dva smejdy:",
+      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/394/663/782/853/591/original/650d5b678026ea3e.jpeg",
+      "followers": 85,
+      "statuses": 2010,
+      "score": 43,
+      "tags": [],
+      "category": "ostatni",
+      "last_active": "2026-04-03",
+      "url": "https://mastodonczech.cz/@Zoufalec"
+    },
+    {
+      "name": "Ladham_t",
+      "handle": "Ladham_t@mastodonczech.cz",
+      "bio": "Support security technology, furt někde 🇺🇦🇪🇺🇨🇿",
+      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/485/148/868/066/629/original/497fc4b4b9f746a6.png",
+      "followers": 84,
+      "statuses": 21981,
+      "score": 43,
+      "tags": [],
+      "category": "ostatni",
+      "last_active": "2026-04-03",
+      "url": "https://mastodonczech.cz/@Ladham_t"
+    },
+    {
+      "name": "Martin",
+      "handle": "vykend@mastodonczech.cz",
+      "bio": "Coffee 🖤 アニメ❤️ Ingress 💙 Postuju zajímavosti z vědy a techniky. Teda aspoň myslím.",
+      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/325/491/397/997/974/original/821ceb2627a03146.jpg",
+      "followers": 83,
+      "statuses": 960,
+      "score": 27,
+      "tags": [],
+      "category": "ostatni",
+      "last_active": "2026-04-01",
+      "url": "https://mastodonczech.cz/@vykend"
+    },
+    {
+      "name": "Matej Cerny",
+      "handle": "matejcerny@witter.cz",
+      "bio": "Scala &amp; Functional Programming Engineer. Database/SQL Veteran.",
+      "avatar": "https://media.witter.cz/accounts/avatars/109/327/573/105/796/112/original/4dc3cd04a42644b1.jpg",
+      "followers": 83,
+      "statuses": 562,
+      "score": 17,
+      "tags": [],
+      "category": "ostatni",
+      "last_active": "2026-04-02",
+      "url": "https://witter.cz/@matejcerny"
+    },
+    {
+      "name": "hny",
+      "handle": "hny@mastodonczech.cz",
+      "bio": "Every hour wounds. The last one kills.   • brno • SRE • geocaching • GIS •",
+      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/389/870/413/172/250/original/95a1a3678ecdbd5e.png",
+      "followers": 82,
+      "statuses": 1920,
+      "score": 41,
+      "tags": [],
+      "category": "ostatni",
+      "last_active": "2026-04-03",
+      "url": "https://mastodonczech.cz/@hny"
+    },
+    {
+      "name": "alcado",
+      "handle": "alcado@mastodonczech.cz",
+      "bio": "PORUGA NÉM IN VASSOM APARATULA",
+      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/545/536/190/236/630/original/090f556d17b910c2.png",
+      "followers": 82,
+      "statuses": 806,
+      "score": 26,
+      "tags": [],
+      "category": "ostatni",
+      "last_active": "2026-04-02",
+      "url": "https://mastodonczech.cz/@alcado"
+    },
+    {
+      "name": "FFFilm robot",
+      "handle": "fffilm@mastodonczech.cz",
+      "bio": "Tento robot zveřejňuje odkazy na nové články ze serveru   https://  FFFilm.cz    . Je to robot. Pokud mu něco napíšete, nepřečte si to. Živý František Fuka, tvůrce FFFilmu, má Mastodon účet zde:   https://  kompost.cz/@f",
+      "avatar": "https://mastodonczech.cz/system/accounts/avatars/113/380/042/473/998/334/original/06f97577e19e4763.png",
+      "followers": 82,
+      "statuses": 127,
+      "score": 32,
+      "tags": [
+        "film"
+      ],
+      "category": "kultura",
+      "last_active": "2026-04-01",
+      "url": "https://mastodonczech.cz/@fffilm"
+    },
+    {
+      "name": "Zatrsakr 🇨🇿",
+      "handle": "zatrsakr@kompost.cz",
+      "bio": "",
+      "avatar": "https://cdn.masto.host/kompostcz/accounts/avatars/000/003/024/original/737c828066a4a4c2.png",
+      "followers": 82,
+      "statuses": 2498,
+      "score": 39,
+      "tags": [],
+      "category": "ostatni",
+      "last_active": "2026-04-02",
+      "url": "https://kompost.cz/@zatrsakr"
+    },
+    {
+      "name": "Jan Novotný ♥️🇺🇦",
+      "handle": "novoj@mastodonczech.cz",
+      "bio": "Guerilla developer. Fuck the war!",
+      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/335/538/383/272/637/original/0ec963a3f566d307.jpg",
+      "followers": 81,
+      "statuses": 457,
+      "score": 22,
+      "tags": [
+        "developer"
+      ],
+      "category": "tech",
+      "last_active": "2026-03-04",
+      "url": "https://mastodonczech.cz/@novoj"
+    },
+    {
+      "name": "Jiri Vatka",
+      "handle": "jirivatka@mastodonczech.cz",
+      "bio": "DIT, colorist, photographer",
+      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/539/512/006/871/916/original/174620b92ea21277.jpg",
+      "followers": 80,
+      "statuses": 310,
+      "score": 17,
+      "tags": [
+        "photograph"
+      ],
+      "category": "foto",
+      "last_active": "2026-03-28",
+      "url": "https://mastodonczech.cz/@jirivatka"
+    },
+    {
+      "name": "david petera",
+      "handle": "_peteraaaa@witter.cz",
+      "bio": "what is it about society that disappoints you so much?",
+      "avatar": "https://media.witter.cz/accounts/avatars/110/967/931/740/696/288/original/a0ba94217fa09d1f.jpg",
+      "followers": 79,
+      "statuses": 853,
+      "score": 14,
+      "tags": [],
+      "category": "ostatni",
+      "last_active": "2026-03-26",
+      "url": "https://witter.cz/@_peteraaaa"
+    },
+    {
+      "name": "Michele Dvořáků",
+      "handle": "MicheleDvoraku@mamutovo.cz",
+      "bio": "Jsem jaká jsem ...  # mastodonsocial  .com ,  # mastodonczech  .cz",
+      "avatar": "https://mamutovo.cz/system/accounts/avatars/114/329/498/380/846/786/original/651358f673a316e2.jpg",
+      "followers": 77,
+      "statuses": 1687,
+      "score": 38,
+      "tags": [],
+      "category": "ostatni",
+      "last_active": "2026-04-03",
+      "url": "https://mamutovo.cz/@MicheleDvoraku"
+    },
+    {
+      "name": "David Karban",
+      "handle": "DavidKarban@witter.cz",
+      "bio": "Freelancer, former linux admin, AWS consultant now.  Continuously looking for new stuff to feed my ADHD brain and there is something new in the AWS all the time :).  In free time watching  # anime  , playing  # starcraft",
+      "avatar": "https://media.witter.cz/accounts/avatars/109/365/510/271/531/941/original/5b820123852ed6ea.jpg",
+      "followers": 76,
+      "statuses": 356,
+      "score": 7,
+      "tags": [
+        "linux"
+      ],
+      "category": "tech",
+      "last_active": "2026-02-14",
+      "url": "https://witter.cz/@DavidKarban"
+    },
+    {
+      "name": "LibreOffice CZ",
+      "handle": "LibreOfficeCZ@mastodonczech.cz",
+      "bio": "Mastodon profil české komunity LibreOffice. LibreOffice je bezplatný, plnohodnotný open source kancelářský balík - nástupce OpenOffice. Kompatibilní s Microsoft Office.",
+      "avatar": "https://mastodonczech.cz/system/accounts/avatars/113/729/436/259/876/635/original/271e55686ddc018e.png",
+      "followers": 75,
+      "statuses": 452,
+      "score": 35,
+      "tags": [],
+      "category": "ostatni",
+      "last_active": "2026-04-02",
+      "url": "https://mastodonczech.cz/@LibreOfficeCZ"
+    },
+    {
+      "name": "Ondřej Michálek",
+      "handle": "om@witter.cz",
+      "bio": "🖖💚  My posts are licensed under Creative Commons Attribution-NonCommercial-ShareAlike (   https://  creativecommons.org/licenses/b  y-nc-sa/4.0/   )",
+      "avatar": "https://media.witter.cz/accounts/avatars/109/398/171/530/843/782/original/cbd30776472004cf.png",
+      "followers": 75,
+      "statuses": 765,
+      "score": 12,
+      "tags": [],
+      "category": "ostatni",
+      "last_active": "2026-04-02",
+      "url": "https://witter.cz/@om"
+    },
+    {
+      "name": "Bezpečnostní portál",
+      "handle": "Bezpecnostniportal@witter.cz",
+      "bio": "Informujeme a vzděláváme pro bezpečnější zítřek",
+      "avatar": "https://media.witter.cz/accounts/avatars/113/551/148/896/360/799/original/a489ab2d9516e621.png",
+      "followers": 75,
+      "statuses": 160,
+      "score": 23,
+      "tags": [],
+      "category": "ostatni",
+      "last_active": "2026-04-01",
+      "url": "https://witter.cz/@Bezpecnostniportal"
+    },
+    {
+      "name": "Ohlasy",
+      "handle": "ohlasy@boskovice.social",
+      "bio": "Regionální noviny pro Boskovice a okolí",
+      "avatar": "https://boskovice.social/system/accounts/avatars/109/326/353/621/130/922/original/a2db0c978a08011a.png",
+      "followers": 75,
+      "statuses": 588,
+      "score": 29,
+      "tags": [],
+      "category": "ostatni",
+      "last_active": "2026-04-02",
+      "url": "https://boskovice.social/@ohlasy"
+    },
+    {
+      "name": "klokanek",
+      "handle": "klokanek@witter.cz",
+      "bio": "",
+      "avatar": "https://media.witter.cz/accounts/avatars/111/545/484/737/822/195/original/2da0ca979c1f42ae.jpg",
+      "followers": 74,
+      "statuses": 421,
+      "score": 8,
+      "tags": [],
+      "category": "ostatni",
+      "last_active": "2026-04-02",
+      "url": "https://witter.cz/@klokanek"
+    },
+    {
+      "name": "Cyril",
+      "handle": "Erwin@mamutovo.cz",
+      "bio": "Strojař, fanoušek  # Mapy  .cz Politiku se snažím nesledovat, ale ona si mne stejně vždycky najde. Pokud mi chcete napsat, tak neváhejte a použijte  # element   ;)",
+      "avatar": "https://mamutovo.cz/system/accounts/avatars/116/205/281/310/353/001/original/6a298f7cd93b8d60.jpg",
+      "followers": 74,
+      "statuses": 22,
+      "score": 16,
+      "tags": [
+        "politik"
+      ],
+      "category": "zpravy",
+      "last_active": "2026-04-02",
+      "url": "https://mamutovo.cz/@Erwin"
+    },
+    {
+      "name": "Volty.cz",
+      "handle": "volty@mastodonczech.cz",
+      "bio": "",
+      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/398/054/282/125/906/original/8dc2e13e6f792cbb.png",
+      "followers": 73,
+      "statuses": 267,
+      "score": 35,
+      "tags": [],
+      "category": "ostatni",
+      "last_active": "2026-01-08",
+      "url": "https://mastodonczech.cz/@volty"
+    },
+    {
+      "name": "Tlapka",
+      "handle": "tlapka@mastodonczech.cz",
+      "bio": "Jsem: 🐾 digitální tvůrce ⌨️ 🐾 blázen do počítačů a technologií 👩‍💻 🐾 geek 🤓 🐾 programátorka 🖥️ 🐾 hráčka 🎮 🐾 youtuberka ▶️ 🐾 amatérská aktivistka ✊  Mám ráda: 🐾 fantasy 🧝‍♀️ 🐾 sci-fi 👩‍🔬 🐾 hudbu 🎧 🐾 elektromobily ⚡🚗 🐾 pří",
+      "avatar": "https://mastodonczech.cz/system/accounts/avatars/111/751/571/610/547/311/original/5ae0d5d614074eb2.png",
+      "followers": 72,
+      "statuses": 72,
+      "score": 27,
+      "tags": [],
+      "category": "tech",
+      "last_active": "2026-03-31",
+      "url": "https://mastodonczech.cz/@tlapka"
+    },
+    {
+      "name": "Šimon DSK",
+      "handle": "sdsk@witter.cz",
+      "bio": "Silence,  # music  ,  # art   &amp;  # nature   lover    # frontend    # designer   /  # ux    /  # ui   /  # html   /  # css   /  # dj   /  # elektron   /  # digitakt   /  # digitone   /  # tb03   /  # flexitarian   /  ",
+      "avatar": "https://media.witter.cz/accounts/avatars/109/398/173/023/707/137/original/d294f4b2cebae71e.png",
+      "followers": 72,
+      "statuses": 362,
+      "score": 7,
+      "tags": [],
+      "category": "tech",
+      "last_active": "2026-04-02",
+      "url": "https://witter.cz/@sdsk"
+    },
+    {
+      "name": "Jiří Snížek",
+      "handle": "snizek@mastodon.pirati.cz",
+      "bio": "2. místopředseda kolínských Pirátů",
+      "avatar": "https://mastodon.pirati.cz/system/accounts/avatars/000/007/836/original/6f93ead4971f9ec4.png",
+      "followers": 72,
+      "statuses": 433,
+      "score": 12,
+      "tags": [],
+      "category": "ostatni",
+      "last_active": "2026-04-02",
+      "url": "https://mastodon.pirati.cz/@snizek"
+    },
+    {
+      "name": "kulmoss 🇨🇿 🇪🇺",
+      "handle": "u@f.cz",
+      "bio": "e/human, emacs, slepice, mtb, kaktusy, recepty, Brno",
+      "avatar": "https://f.cz/system/accounts/avatars/114/227/281/841/578/871/original/26b0e5a81de96ebb.jpg",
+      "followers": 72,
+      "statuses": 555,
+      "score": 12,
+      "tags": [],
+      "category": "ostatni",
+      "last_active": "2026-04-01",
+      "url": "https://f.cz/@u"
+    },
+    {
+      "name": "ペパ👽ıͣrͮcͤ 🇨🇿🤝🇯🇵🤝🇺🇦",
+      "handle": "pepa@mastodonczech.cz",
+      "bio": "ムンヌシリハテヤネン Linux, Android, FLOSS, Photography, Nature",
+      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/324/742/528/040/747/original/32236ac9d314fb97.png",
+      "followers": 71,
+      "statuses": 1673,
+      "score": 39,
+      "tags": [
+        "linux",
+        "photograph"
+      ],
+      "category": "tech",
+      "last_active": "2026-04-02",
+      "url": "https://mastodonczech.cz/@pepa"
+    },
+    {
+      "name": "Petr Tesařík",
+      "handle": "ptesarik@mastodonczech.cz",
+      "bio": "Táta čtyř, sekulární františkán, výstřední varhaník.",
+      "avatar": "https://mastodonczech.cz/system/accounts/avatars/109/388/613/799/712/425/original/7806062cd2964113.jpg",
+      "followers": 71,
+      "statuses": 752,
+      "score": 26,
+      "tags": [],
+      "category": "ostatni",
+      "last_active": "2026-03-31",
+      "url": "https://mastodonczech.cz/@ptesarik"
     }
   ]
 }

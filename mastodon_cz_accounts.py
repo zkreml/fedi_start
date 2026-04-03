@@ -191,7 +191,10 @@ def passes_quality(acc):
         return False
     try:
         dt = datetime.fromisoformat(last.replace("Z", "+00:00"))
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
         if dt < datetime.now(timezone.utc) - timedelta(days=MAX_DAYS_INACTIVE):
+            log.debug(f"  vyhozen kvůli neaktivitě: {acc.get('_handle', acc.get('acct', '?'))} last_active={last}")
             return False
     except Exception:
         pass
