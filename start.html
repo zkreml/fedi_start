@@ -273,6 +273,32 @@
   .footer-note a { color: var(--accent); text-decoration: none; }
   .footer-note a:hover { text-decoration: underline; }
 
+  /* FOOTER */
+  .site-footer {
+    max-width: 680px;
+    margin: 0 auto 3rem;
+    border-top: 1px solid var(--border);
+    padding-top: 1.5rem;
+    text-align: center;
+  }
+
+  .site-footer-inner {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem 2rem;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.72rem;
+  }
+
+  .site-footer-inner a {
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+
+  .site-footer-inner a:hover { color: var(--accent); }
+
   @media (max-width: 500px) {
     .step { grid-template-columns: 1fr; }
     .step-num { margin-bottom: 0.5rem; }
@@ -358,9 +384,10 @@ Zajímá mě [Linux / příroda / fotografie / ...]. Rád/a se seznámím!
 </div>
 
 <div class="footer-note">
-  Zasekl/a ses? Napiš na <a href="https://mamutovo.cz/@admin">@admin@mamutovo.cz</a> nebo
+  Zasekl/a ses? Napiš na <a href="https://gts.arch-linux.cz/@archos">@archos@gts.arch-linux.cz</a> nebo
   se zeptej v <a href="https://mamutovo.cz/tags/pomoc">#pomoc</a>.<br>
-  Tato stránka je open source: <a href="https://github.com/mamutovo/start">github.com/mamutovo/start</a>
+  Tato stránka je open source: <a href="https://git.arch-linux.cz/archos/fedi_start">Gitea</a> ·
+  <a href="https://oscloud.cz">oscloud.cz</a>
 </div>
 
 <div class="copy-toast" id="toast">Zkopírováno! Vlož do pole pro post ✓</div>

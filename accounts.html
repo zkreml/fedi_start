@@ -521,6 +521,32 @@ select:focus { border-color: var(--accent); }
   .grid { grid-template-columns: 1fr; }
   nav .nav-updated { display: none; }
 }
+
+/* FOOTER */
+.site-footer {
+  margin-top: 4rem;
+  border-top: 1px solid var(--border);
+  padding: 1.5rem 2rem;
+  text-align: center;
+}
+
+.site-footer-inner {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 2rem;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--muted2);
+}
+
+.site-footer-inner a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.site-footer-inner a:hover { color: var(--accent); }
 </style>
 </head>
 <body>
@@ -1007,5 +1033,14 @@ async function loadAccounts() {
 // ────────────────────────────────
 loadAccounts();
 </script>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <a href="https://git.arch-linux.cz/archos/fedi_start">Gitea repo</a>
+    <a href="https://oscloud.cz">Oscloud</a>
+    <a href="https://gts.arch-linux.cz/@archos">@archos@gts.arch-linux.cz</a>
+  </div>
+</footer>
+
 </body>
 </html>
