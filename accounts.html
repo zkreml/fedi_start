@@ -295,6 +295,13 @@ select:focus { border-color: var(--accent); }
   overflow: hidden;
   transition: border-color 0.2s, transform 0.15s;
   animation: fadeIn 0.3s ease both;
+  position: relative;
+}
+
+.card-link {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
 }
 
 .card:hover {
@@ -410,6 +417,8 @@ select:focus { border-color: var(--accent); }
   align-items: center;
   justify-content: space-between;
   gap: 0.5rem;
+  position: relative;
+  z-index: 1;
 }
 
 .follow-btn {
@@ -778,6 +787,7 @@ function cardHTML(a, idx) {
   if (viewMode === 'list') {
     return `
       <div class="card" style="animation-delay:${idx * 0.03}s">
+        <a class="card-link" href="${a.url}" target="_blank" rel="noopener noreferrer" aria-label="Profil ${a.name}"></a>
         <img class="card-avatar-list" src="${av}" alt="" onerror="this.src='${avatarFallback(a.name)}'">
         <div class="card-info">
           <div class="card-name">${a.name}</div>
@@ -796,6 +806,7 @@ function cardHTML(a, idx) {
 
   return `
     <div class="card" style="animation-delay:${idx * 0.04}s">
+      <a class="card-link" href="${a.url}" target="_blank" rel="noopener noreferrer" aria-label="Profil ${a.name}"></a>
       <div class="card-header">
         ${a.header ? `<img class="card-header-img" src="${a.header}" alt="">` : ''}
         <img class="card-avatar" src="${av}" alt="" onerror="this.src='${avatarFallback(a.name)}'">
