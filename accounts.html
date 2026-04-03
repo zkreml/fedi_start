@@ -443,9 +443,9 @@ select:focus { border-color: var(--accent); }
 .score-badge {
   font-family: 'Space Mono', monospace;
   font-size: 0.65rem;
-  color: var(--accent3);
-  background: rgba(251,191,36,0.1);
-  border: 1px solid rgba(251,191,36,0.2);
+  color: var(--muted);
+  background: var(--surface2);
+  border: 1px solid var(--border);
   border-radius: 5px;
   padding: 0.3rem 0.45rem;
   white-space: nowrap;
@@ -762,6 +762,16 @@ function applyFilters() {
 // ────────────────────────────────
 // RENDER
 // ────────────────────────────────
+function fmtDate(iso) {
+  if (!iso) return 'Aktivní: neznámo';
+  const d = new Date(iso);
+  if (isNaN(d)) return 'Aktivní: neznámo';
+  const dd = String(d.getUTCDate()).padStart(2, '0');
+  const mm = String(d.getUTCMonth() + 1).padStart(2, '0');
+  const yyyy = d.getUTCFullYear();
+  return `Aktivní: ${dd}.${mm}.${yyyy}`;
+}
+
 function fmt(n) {
   if (!n) return '0';
   if (n >= 1000) return (n / 1000).toFixed(1) + 'K';
@@ -799,7 +809,7 @@ function cardHTML(a, idx) {
         </div>
         <div class="card-follow">
           <a href="${followUrl(a.handle)}" target="_blank" class="follow-btn">+ Sledovat</a>
-          <span class="score-badge">★ ${a.score || '?'}</span>
+          <span class="score-badge">${fmtDate(a.last_active)}</span>
         </div>
       </div>`;
   }
@@ -828,7 +838,7 @@ function cardHTML(a, idx) {
         </div>
         <div class="card-follow">
           <a href="${followUrl(a.handle)}" target="_blank" class="follow-btn">+ Sledovat</a>
-          <span class="score-badge">★ ${a.score || '?'}</span>
+          <span class="score-badge">${fmtDate(a.last_active)}</span>
         </div>
       </div>
     </div>`;

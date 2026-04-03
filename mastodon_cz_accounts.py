@@ -75,6 +75,7 @@ QUERY_INSTANCES = [
     "spondr.cz",
     "skorpil.cz",
     "ajtaci.club",
+    "toot.whatever.cz",
 ]
 
 MIN_STATUSES      = 10
