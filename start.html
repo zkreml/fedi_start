@@ -76,6 +76,26 @@
 
   .tagline strong { color: var(--text); }
 
+  /* --- BASICS BANNER --- */
+  .basics-banner {
+    display: block;
+    text-align: center;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.82rem;
+    color: var(--accent);
+    text-decoration: none;
+    padding: 0.7rem 1rem;
+    border: 1px solid rgba(99,100,255,0.25);
+    border-radius: var(--radius);
+    background: rgba(99,100,255,0.06);
+    transition: all 0.15s;
+  }
+
+  .basics-banner:hover {
+    background: rgba(99,100,255,0.12);
+    border-color: var(--accent);
+  }
+
   /* --- STEPS --- */
   .steps {
     max-width: 680px;
@@ -322,6 +342,8 @@
 </div>
 
 <div class="steps">
+  <a href="basics.html" class="basics-banner">📖 Základy Mastodonu – nejčastější otázky →</a>
+
 
   <!-- KROK 1 -->
   <div class="step">
@@ -387,7 +409,6 @@ Rád/a poznám nové lidi 🙂 #Představení #novacek #cesky
 </div>
 
 <div class="footer-note">
-  <a href="basics.html">📖 Základy Mastodonu – nejčastější otázky →</a><br><br>
   Zasekl/a ses? Napiš na <a href="https://gts.arch-linux.cz/@archos">@archos@gts.arch-linux.cz</a> nebo
   se zeptej v <a href="https://mamutovo.cz/tags/pomoc">#pomoc</a>.<br>
   Tato stránka je open source: <a href="https://git.arch-linux.cz/Mamutovo/fedi_start">Gitea</a> ·
