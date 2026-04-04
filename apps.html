@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mobilní aplikace – Mamutovo</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap');
+
+  :root {
+    --bg: #0f0f0f;
+    --surface: #1a1a1a;
+    --surface2: #242424;
+    --accent: #6364ff;
+    --accent2: #ff6b6b;
+    --text: #f0f0f0;
+    --muted: #888;
+    --border: #2e2e2e;
+    --radius: 10px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Syne', sans-serif;
+    min-height: 100vh;
+    padding: 0 1rem;
+  }
+
+  /* --- HERO --- */
+  .hero {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 3rem 0 2rem;
+    text-align: center;
+  }
+
+  a.badge { text-decoration: none; }
+  a.badge:hover { border-color: var(--accent); color: var(--accent); }
+
+  .badge {
+    display: inline-block;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    color: var(--muted);
+    font-family: 'Space Mono', monospace;
+    font-size: 0.85rem;
+    padding: 0.45rem 1.1rem;
+    border-radius: 999px;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    font-size: clamp(1.4rem, 4vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  h1 span { color: var(--accent); }
+
+  .tagline {
+    color: var(--muted);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    max-width: 480px;
+    margin: 0 auto 2.5rem;
+  }
+
+  /* --- SECTIONS --- */
+  .sections {
+    max-width: 680px;
+    margin: 0 auto 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .section {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.4rem 1.6rem;
+    transition: border-color 0.2s;
+  }
+
+  .section:hover { border-color: var(--accent); }
+
+  .section h2 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    letter-spacing: -0.01em;
+    color: var(--text);
+  }
+
+  .section a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .section a:hover { text-decoration: underline; }
+
+  /* --- APP LIST --- */
+  .app-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .app-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .app-item:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  .app-name {
+    font-weight: 700;
+    font-size: 0.95rem;
+  }
+
+  .app-name a {
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  .app-name a:hover {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .app-desc {
+    color: var(--muted);
+    font-size: 0.88rem;
+    line-height: 1.5;
+  }
+
+  /* --- FOOTER NOTE --- */
+  .footer-note {
+    max-width: 680px;
+    margin: 0 auto 3rem;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.82rem;
+    line-height: 1.6;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .footer-note a {
+    color: var(--accent);
+    text-decoration: none;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.78rem;
+  }
+
+  .footer-note a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <a href="https://fedi.mamutovo.cz" class="badge">🦣 MAMUTOVO · APLIKACE</a>
+  <h1>Mobilní <span>aplikace</span></h1>
+  <p class="tagline">Doporučené appky pro Mastodon na Android a iOS.</p>
+</div>
+
+<div class="sections">
+
+  <div class="section">
+    <h2>Android</h2>
+    <div class="app-list">
+      <div class="app-item">
+        <div class="app-name"><a href="https://tusky.app">Tusky</a></div>
+        <div class="app-desc">Jednoduchý a přehledný, skvělý pro začátečníky.</div>
+      </div>
+      <div class="app-item">
+        <div class="app-name"><a href="https://sk22.github.io/megalodon">Megalodon</a></div>
+        <div class="app-desc">Fork Tusky s extra funkcemi.</div>
+      </div>
+      <div class="app-item">
+        <div class="app-name"><a href="https://fedilab.app">Fedilab</a></div>
+        <div class="app-desc">Pokročilý, podporuje více účtů.</div>
+      </div>
+      <div class="app-item">
+        <div class="app-name"><a href="https://play.google.com/store/apps/details?id=org.joinmastodon.android">Mastodon</a></div>
+        <div class="app-desc">Oficiální aplikace.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>iOS</h2>
+    <div class="app-list">
+      <div class="app-item">
+        <div class="app-name"><a href="https://tapbots.com/ivory">Ivory</a></div>
+        <div class="app-desc">Nejlepší UX, placená.</div>
+      </div>
+      <div class="app-item">
+        <div class="app-name"><a href="https://apps.apple.com/app/ice-cubes-for-mastodon/id6444915884">Ice Cubes</a></div>
+        <div class="app-desc">Zdarma, open source.</div>
+      </div>
+      <div class="app-item">
+        <div class="app-name"><a href="https://apps.apple.com/app/toot-for-mastodon/id1229021451">Toot!</a></div>
+        <div class="app-desc">Kvalitní a udržovaná appka.</div>
+      </div>
+      <div class="app-item">
+        <div class="app-name"><a href="https://apps.apple.com/app/mastodon-for-iphone/id1571998974">Mastodon</a></div>
+        <div class="app-desc">Oficiální aplikace.</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer-note">
+  <a href="start.html">← Zpět na průvodce</a>
+</div>
+
+</body>
+</html>
