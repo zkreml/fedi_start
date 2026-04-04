@@ -175,6 +175,7 @@ def load_manual_accounts(seen_handles=None):
             seen_handles.add(handle.lower())
             acc["_handle"] = handle
             acc["_source_instance"] = instance
+            acc["_manual"] = True
             accounts.append(acc)
             log.debug(f"  {handle}: OK ({acc.get('followers_count', 0)} followers)")
             time.sleep(RATE_LIMIT_DELAY)
@@ -245,7 +246,7 @@ def extract_tags(acc):
 def build_output(raw):
     results = []
     for acc in raw:
-        if not passes_quality(acc):
+        if not acc.get("_manual") and not passes_quality(acc):
             continue
         handle = acc.get("_handle", acc.get("acct", ""))
         bio = re.sub(r"<[^>]+>", " ", acc.get("note", "") or "").strip()
