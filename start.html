@@ -37,14 +37,17 @@
     text-align: center;
   }
 
+  a.badge { text-decoration: none; }
+  a.badge:hover { border-color: var(--accent); color: var(--accent); }
+
   .badge {
     display: inline-block;
     background: var(--surface2);
     border: 1px solid var(--border);
     color: var(--muted);
     font-family: 'Space Mono', monospace;
-    font-size: 0.72rem;
-    padding: 0.3rem 0.8rem;
+    font-size: 0.85rem;
+    padding: 0.45rem 1.1rem;
     border-radius: 999px;
     margin-bottom: 1.5rem;
     letter-spacing: 0.05em;
@@ -52,7 +55,7 @@
   }
 
   h1 {
-    font-size: clamp(1.8rem, 6vw, 3.5rem);
+    font-size: clamp(1.4rem, 4vw, 2.5rem);
     font-weight: 700;
     line-height: 1.1;
     margin-bottom: 1rem;
@@ -310,8 +313,8 @@
 <body>
 
 <div class="hero">
-  <div class="badge">🦣 Mamutovo · Průvodce pro nováčky</div>
-  <h1>Twitter bez <span>korporátu</span>.<br>Mastodon za 3 minuty.</h1>
+  <a href="https://fedi.mamutovo.cz" class="badge">🦣 MAMUTOVO · PRŮVODCE</a>
+  <h1>🦣 Mamutovo za 3 minuty.</h1>
   <p class="tagline">
     Žádné algoritmy. Žádné reklamy. <strong>Patří komunitě.</strong><br>
     Tyhle 4 kroky ti zaplní feed a pomůžou udělat první post.
@@ -384,6 +387,7 @@ Rád/a poznám nové lidi 🙂 #Představení #novacek #cesky
 </div>
 
 <div class="footer-note">
+  <a href="basics.html">📖 Základy Mastodonu – nejčastější otázky →</a><br><br>
   Zasekl/a ses? Napiš na <a href="https://gts.arch-linux.cz/@archos">@archos@gts.arch-linux.cz</a> nebo
   se zeptej v <a href="https://mamutovo.cz/tags/pomoc">#pomoc</a>.<br>
   Tato stránka je open source: <a href="https://git.arch-linux.cz/Mamutovo/fedi_start">Gitea</a> ·

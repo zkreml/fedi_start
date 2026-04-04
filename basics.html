@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Základy Mastodonu – Mamutovo</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap');
+
+  :root {
+    --bg: #0f0f0f;
+    --surface: #1a1a1a;
+    --surface2: #242424;
+    --accent: #6364ff;
+    --accent2: #ff6b6b;
+    --text: #f0f0f0;
+    --muted: #888;
+    --border: #2e2e2e;
+    --radius: 10px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Syne', sans-serif;
+    min-height: 100vh;
+    padding: 0 1rem;
+  }
+
+  /* --- HERO --- */
+  .hero {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 3rem 0 2rem;
+    text-align: center;
+  }
+
+  a.badge { text-decoration: none; }
+  a.badge:hover { border-color: var(--accent); color: var(--accent); }
+
+  .badge {
+    display: inline-block;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    color: var(--muted);
+    font-family: 'Space Mono', monospace;
+    font-size: 0.85rem;
+    padding: 0.45rem 1.1rem;
+    border-radius: 999px;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    font-size: clamp(1.4rem, 4vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  h1 span { color: var(--accent); }
+
+  .tagline {
+    color: var(--muted);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    max-width: 480px;
+    margin: 0 auto 2.5rem;
+  }
+
+  /* --- SECTIONS --- */
+  .sections {
+    max-width: 680px;
+    margin: 0 auto 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .section {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.4rem 1.6rem;
+    transition: border-color 0.2s;
+  }
+
+  .section:hover { border-color: var(--accent); }
+
+  .section h2 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+    letter-spacing: -0.01em;
+    color: var(--text);
+  }
+
+  .section p {
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .section ul {
+    list-style: none;
+    margin-top: 0.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .section ul li {
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    padding-left: 1rem;
+    position: relative;
+  }
+
+  .section ul li::before {
+    content: "–";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+
+  .section ul li strong {
+    color: var(--text);
+  }
+
+  .section a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .section a:hover { text-decoration: underline; }
+
+  code {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.82rem;
+    color: var(--accent);
+    background: rgba(99,100,255,0.08);
+    border: 1px solid rgba(99,100,255,0.15);
+    border-radius: 4px;
+    padding: 0.1rem 0.4rem;
+  }
+
+  /* --- FOOTER NOTE --- */
+  .footer-note {
+    max-width: 680px;
+    margin: 0 auto 3rem;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.82rem;
+    line-height: 1.6;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .footer-note a {
+    color: var(--accent);
+    text-decoration: none;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.78rem;
+  }
+
+  .footer-note a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <a href="https://fedi.mamutovo.cz" class="badge">🦣 MAMUTOVO · ZÁKLADY</a>
+  <h1>Základy <span>Mastodonu</span></h1>
+  <p class="tagline">Nejčastější otázky a věci které se hodí vědět.</p>
+</div>
+
+<div class="sections">
+
+  <div class="section">
+    <h2>Veřejné tooty</h2>
+    <p>Veřejné tooty se zobrazují na veřejné časové ose – na místní časové ose i na stránce „Co se děje na Mamutovo". Jsou přístupné komukoliv na internetu a mohou být viditelné i na dalších instancích v rámci Fediverse.</p>
+  </div>
+
+  <div class="section">
+    <h2>Neveřejné tooty</h2>
+    <p>Pokud nechceš aby byly příspěvky veřejné, nastav úroveň soukromí:</p>
+    <ul>
+      <li><strong>Neuvedeno</strong> – není na veřejných časových osách, ale je dostupné na tvém profilu</li>
+      <li><strong>Pouze sledující</strong> – vidí ho jen ti, kdo tě sledují</li>
+      <li><strong>Přímá zpráva</strong> – vidí ho pouze adresovaní uživatelé</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Jeden účet stačí</h2>
+    <p>Na Mastodonu a Fediverse nepotřebuješ účet na každém serveru. Jeden účet ti umožní sledovat a komunikovat s kýmkoliv v celém Fediverse.</p>
+  </div>
+
+  <div class="section">
+    <h2>Uživatelská jména nejsou case sensitive</h2>
+    <p><code>@Archos@mamutovo.cz</code> a <code>@archos@mamutovo.cz</code> jsou stejný účet. Velká a malá písmena nehrají roli.</p>
+  </div>
+
+  <div class="section">
+    <h2>Jak správně odpovídat</h2>
+    <p>Při odpovědi na toot se automaticky přidají zmínky (@) všech lidí v konverzaci.</p>
+  </div>
+
+  <div class="section">
+    <h2>Hashtagy</h2>
+    <p>Hashtagy jsou na Mastodonu důležité – slouží k objevování obsahu. Přidávej je na konec tootů. Můžeš sledovat i samotný hashtag a jeho příspěvky se ti budou zobrazovat v timeline. Příklady: <code>#cesky</code> <code>#fotografie</code> <code>#linux</code></p>
+  </div>
+
+  <div class="section">
+    <h2>Užitečné odkazy</h2>
+    <ul>
+      <li><strong>Průvodce Mastodonem (CZ):</strong> <a href="https://about.mamutovo.cz/">about.mamutovo.cz</a> – vytvořil <a href="https://mamutovo.cz/@cynik_obecny">@cynik_obecny@mamutovo.cz</a></li>
+      <li><strong>Administrátoři a moderátoři mamutovo.cz:</strong>
+        <ul style="margin-top:0.35rem;">
+          <li><a href="https://mamutovo.cz/@cynik_obecny">@cynik_obecny@mamutovo.cz</a></li>
+          <li><a href="https://mamutovo.cz/@fabia_man">@fabia_man@mamutovo.cz</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+</div>
+
+<div class="footer-note">
+  <a href="start.html">← Zpět na průvodce</a>
+</div>
+
+</body>
+</html>
