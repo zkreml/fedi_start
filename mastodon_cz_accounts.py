@@ -163,9 +163,7 @@ def load_manual_accounts(seen_handles=None):
                 continue
             handle_part, instance = entry.rsplit("@", 1)
             handle = f"{handle_part}@{instance}"
-            if handle.lower() in seen_handles:
-                log.debug(f"  {handle} již v seznamu, přeskakuji")
-                continue
+            log.info(f"  Zpracovávám manuální účet: {handle}, v seen_handles: {handle.lower() in seen_handles}")
             url = f"https://{instance}/api/v1/accounts/lookup?acct={urllib.parse.quote(handle_part)}"
             token = _token_for(instance)
             acc = api_get(url, token=token)
@@ -176,6 +174,7 @@ def load_manual_accounts(seen_handles=None):
             acc["_handle"] = handle
             acc["_source_instance"] = instance
             acc["_manual"] = True
+            log.info(f"  MANUAL účet přidán: {handle}, _manual={acc.get('_manual')}, statuses={acc.get('statuses_count')}")
             accounts.append(acc)
             log.debug(f"  {handle}: OK ({acc.get('followers_count', 0)} followers)")
             time.sleep(RATE_LIMIT_DELAY)
