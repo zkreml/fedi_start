@@ -76,6 +76,47 @@
 
   .tagline strong { color: var(--text); }
 
+  /* --- CARDS GRID --- */
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  @media (max-width: 500px) {
+    .cards { grid-template-columns: 1fr; }
+  }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.4rem 1.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: border-color 0.2s;
+  }
+
+  .card:hover { border-color: var(--accent); }
+
+  .card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+
+  .card p {
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    flex: 1;
+  }
+
+  .card .btn {
+    align-self: center;
+  }
+
   /* --- BASICS BANNER --- */
   .basics-banner {
     display: block;
@@ -342,7 +383,6 @@
 </div>
 
 <div class="steps">
-  <a href="basics.html" class="basics-banner">📖 Základy Mastodonu – nejčastější otázky →</a>
 
 
   <!-- KROK 1 -->
@@ -406,6 +446,21 @@ Rád/a poznám nové lidi 🙂 #Představení #novacek #cesky
     </div>
   </div>
 
+</div>
+
+<div class="steps" style="margin-top: 0;">
+  <div class="cards">
+    <div class="card">
+      <h3>📖 Základy Mastodonu</h3>
+      <p>Soukromí, hashtagy, jak odpovídat a další tipy.</p>
+      <a href="basics.html" class="btn btn-secondary">Zobrazit →</a>
+    </div>
+    <div class="card">
+      <h3>📱 Mobilní aplikace</h3>
+      <p>Doporučené appky pro Android a iOS.</p>
+      <a href="apps.html" class="btn btn-secondary">Zobrazit →</a>
+    </div>
+  </div>
 </div>
 
 <div class="footer-note">
