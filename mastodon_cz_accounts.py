@@ -232,14 +232,17 @@ def categorize(acc):
             return cat
     return "ostatni"
 
-def extract_tags(acc):
-    text = re.sub(r"<[^>]+>", " ", acc.get("note", "") or "").lower()
-    found = []
-    for kws in CATEGORIES.values():
-        for kw in kws:
-            if kw in text and kw not in found and len(kw) > 3:
-                found.append(kw.strip())
-    return found[:4]
+def fetch_featured_tags(acc):
+    account_id = acc.get("id")
+    instance   = acc.get("_source_instance", "")
+    if not account_id or not instance:
+        return []
+    url   = f"https://{instance}/api/v1/accounts/{account_id}/featured_tags"
+    token = _token_for(instance)
+    data  = api_get(url, token=token)
+    if not data or not isinstance(data, list):
+        return []
+    return [t["name"] for t in data if isinstance(t, dict) and t.get("name")][:4]
 
 # ── VÝSTUP ────────────────────────────────────
 def _to_output(acc):
@@ -253,7 +256,7 @@ def _to_output(acc):
         "followers":   acc.get("followers_count", 0),
         "statuses":    acc.get("statuses_count",  0),
         "score":       score(acc),
-        "tags":        extract_tags(acc),
+        "tags":        fetch_featured_tags(acc),
         "category":    categorize(acc),
         "last_active": acc.get("last_status_at", ""),
         "url":         acc.get("url", ""),
