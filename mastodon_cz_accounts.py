@@ -216,15 +216,24 @@ def score(acc):
 
 # ── KATEGORIE ─────────────────────────────────
 CATEGORIES = {
-    "tech":    ["linux", "python", "programov", "software", "opensource", "developer", "sysadmin", "git"],
-    "foto":    ["fotografi", "foto", "photograph", "objektiv", "kamera"],
-    "veda":    ["věda", "fyzika", "biologi", "astronom", "výzkum", "science", "matematik"],
-    "kultura": ["knihy", "literatura", "film", "hudba", "divadlo", "umění"],
-    "gaming":  ["gaming", "hry", "videohry", "steam", "gamer"],
-    "zpravy":  ["novinář", "zprávy", "politik", "média", "journalist"],
+    "tech":     ["linux", "python", "programov", "software", "opensource", "developer", "sysadmin", "git"],
+    "foto":     ["fotografi", "foto", "photograph", "objektiv", "kamera"],
+    "veda":     ["věda", "fyzika", "biologi", "astronom", "výzkum", "science", "matematik"],
+    "kultura":  ["knihy", "literatura", "film", "hudba", "divadlo", "umění"],
+    "gaming":   ["gaming", "hry", "videohry", "steam", "gamer"],
+    "zpravy":   ["novinář", "zprávy", "politik", "média", "journalist"],
+    "sport":    ["sport", "fotbal", "hokej", "cycling", "running", "fitness", "tenis", "atletika"],
+    "politika": ["politika", "politics", "czech", "democracy", "volby", "eu"],
 }
 
 def categorize(acc):
+    # Primárně matchuj featured_tags proti CATEGORIES
+    for tag in acc.get("_featured_tags", []):
+        tag_lower = tag.lower()
+        for cat, kws in CATEGORIES.items():
+            if any(kw in tag_lower for kw in kws):
+                return cat
+    # Fallback: bio text + display_name
     text = re.sub(r"<[^>]+>", " ", acc.get("note", "") or "").lower()
     text += " " + (acc.get("display_name", "") or "").lower()
     for cat, kws in CATEGORIES.items():
@@ -233,16 +242,22 @@ def categorize(acc):
     return "ostatni"
 
 def fetch_featured_tags(acc):
+    if "_featured_tags" in acc:
+        return acc["_featured_tags"]
     account_id = acc.get("id")
     instance   = acc.get("_source_instance", "")
     if not account_id or not instance:
+        acc["_featured_tags"] = []
         return []
     url   = f"https://{instance}/api/v1/accounts/{account_id}/featured_tags"
     token = _token_for(instance)
     data  = api_get(url, token=token)
     if not data or not isinstance(data, list):
+        acc["_featured_tags"] = []
         return []
-    return [t["name"] for t in data if isinstance(t, dict) and t.get("name")][:4]
+    tags = [t["name"] for t in data if isinstance(t, dict) and t.get("name")][:4]
+    acc["_featured_tags"] = tags
+    return tags
 
 # ── VÝSTUP ────────────────────────────────────
 def _to_output(acc):
