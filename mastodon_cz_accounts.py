@@ -81,7 +81,7 @@ QUERY_INSTANCES = [
 MIN_STATUSES      = 10
 MIN_FOLLOWERS     = 10
 MAX_DAYS_INACTIVE = 90
-TOP_N             = 200
+TOP_N             = 250
 RATE_LIMIT_DELAY  = 1.2
 PAGE_LIMIT        = 80
 MAX_PAGES         = 10
@@ -242,33 +242,50 @@ def extract_tags(acc):
     return found[:4]
 
 # ── VÝSTUP ────────────────────────────────────
+def _to_output(acc):
+    handle = acc.get("_handle", acc.get("acct", ""))
+    bio = re.sub(r"<[^>]+>", " ", acc.get("note", "") or "").strip()
+    return {
+        "name":        acc.get("display_name") or acc.get("username", ""),
+        "handle":      handle,
+        "bio":         bio[:220],
+        "avatar":      acc.get("avatar", ""),
+        "followers":   acc.get("followers_count", 0),
+        "statuses":    acc.get("statuses_count",  0),
+        "score":       score(acc),
+        "tags":        extract_tags(acc),
+        "category":    categorize(acc),
+        "last_active": acc.get("last_status_at", ""),
+        "url":         acc.get("url", ""),
+    }
+
 def build_output(raw):
-    results = []
-    for acc in raw:
-        if not acc.get("_manual") and not passes_quality(acc):
-            continue
-        handle = acc.get("_handle", acc.get("acct", ""))
-        bio = re.sub(r"<[^>]+>", " ", acc.get("note", "") or "").strip()
-        results.append({
-            "name":        acc.get("display_name") or acc.get("username", ""),
-            "handle":      handle,
-            "bio":         bio[:220],
-            "avatar":      acc.get("avatar", ""),
-            "followers":   acc.get("followers_count", 0),
-            "statuses":    acc.get("statuses_count",  0),
-            "score":       score(acc),
-            "tags":        extract_tags(acc),
-            "category":    categorize(acc),
-            "last_active": acc.get("last_status_at", ""),
-            "url":         acc.get("url", ""),
-        })
+    # Manuální účty vždy zahrnuty (bez ohledu na TOP_N)
     seen = set()
-    unique = []
-    for r in sorted(results, key=lambda x: x["followers"], reverse=True):
+    manual = []
+    for acc in raw:
+        if not acc.get("_manual"):
+            continue
+        r = _to_output(acc)
         if r["handle"].lower() not in seen:
             seen.add(r["handle"].lower())
-            unique.append(r)
-    return unique[:TOP_N]
+            manual.append(r)
+
+    # Automatické účty doplní zbývající místa do TOP_N
+    auto_candidates = []
+    for acc in raw:
+        if acc.get("_manual"):
+            continue
+        if not passes_quality(acc):
+            continue
+        r = _to_output(acc)
+        if r["handle"].lower() not in seen:
+            seen.add(r["handle"].lower())
+            auto_candidates.append(r)
+
+    auto_candidates.sort(key=lambda x: x["followers"], reverse=True)
+    remaining = max(0, TOP_N - len(manual))
+    return manual + auto_candidates[:remaining]
 
 def write_json(accounts, output_dir):
     data = {"generated_at": datetime.now(timezone.utc).isoformat(), "count": len(accounts), "accounts": accounts}
