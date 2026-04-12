@@ -384,6 +384,15 @@ select:focus { border-color: var(--accent); }
   border: 1px solid rgba(0,200,150,0.15);
   border-radius: 999px;
   padding: 0.15rem 0.5rem;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.card-tag:hover {
+  background: rgba(0,200,150,0.22);
+  border-color: var(--accent);
 }
 
 .card-stats {
@@ -731,6 +740,28 @@ let viewMode = 'grid'; // 'grid' | 'list'
 // ────────────────────────────────
 // FILTER + SORT
 // ────────────────────────────────
+function filterByTag(tag) {
+  const wrap = document.getElementById('filterTags');
+  const existing = wrap.querySelector(`.ftag[data-tag="${CSS.escape(tag)}"]`);
+  if (existing) {
+    wrap.querySelectorAll('.ftag').forEach(b => b.classList.remove('active'));
+    existing.classList.add('active');
+  } else {
+    const btn = document.createElement('button');
+    btn.className = 'ftag active';
+    btn.dataset.tag = tag;
+    btn.textContent = '#' + tag;
+    btn.addEventListener('click', () => {
+      wrap.querySelectorAll('.ftag').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      applyFilters();
+    });
+    wrap.querySelectorAll('.ftag').forEach(b => b.classList.remove('active'));
+    wrap.appendChild(btn);
+  }
+  applyFilters();
+}
+
 function applyFilters() {
   const q = document.getElementById('searchInput').value.toLowerCase().trim();
   const cat = document.getElementById('categoryFilter').value;
@@ -793,7 +824,7 @@ function avatarFallback(name) {
 function cardHTML(a, idx) {
   const av = a.avatar || avatarFallback(a.name);
   const tags = (a.tags || []).slice(0, 4).map(t =>
-    `<span class="card-tag">#${t}</span>`).join('');
+    `<span class="card-tag" onclick="event.stopPropagation();filterByTag('${t.replace(/'/g, "\\'")}')">#${t}</span>`).join('');
 
   if (viewMode === 'list') {
     return `
