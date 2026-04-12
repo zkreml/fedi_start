@@ -792,7 +792,7 @@ function avatarFallback(name) {
 
 function cardHTML(a, idx) {
   const av = a.avatar || avatarFallback(a.name);
-  const tags = (a.tags || []).slice(0, 3).map(t =>
+  const tags = (a.tags || []).slice(0, 4).map(t =>
     `<span class="card-tag">#${t}</span>`).join('');
 
   if (viewMode === 'list') {
