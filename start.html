@@ -76,6 +76,16 @@
 
   .tagline strong { color: var(--text); }
 
+  .about-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.92rem;
+    opacity: 0.75;
+    transition: opacity 0.15s;
+  }
+
+  .about-link:hover { opacity: 1; text-decoration: underline; }
+
   /* --- CARDS GRID --- */
   .cards {
     display: grid;
@@ -378,7 +388,8 @@
   <h1>🦣 Mamutovo za 3 minuty.</h1>
   <p class="tagline">
     Žádné algoritmy. Žádné reklamy. <strong>Patří komunitě.</strong><br>
-    Tyhle 4 kroky ti zaplní feed a pomůžou udělat první post.
+    Tyhle 4 kroky ti zaplní feed a pomůžou udělat první post.<br>
+    <a href="https://about.mamutovo.cz" target="_blank" class="about-link">Co je Mamutovo.cz?</a>
   </p>
 </div>
 
