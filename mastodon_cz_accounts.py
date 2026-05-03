@@ -50,9 +50,19 @@ _TOKENS = _load_tokens()
 MASTODON_TOKEN = _TOKENS.get("MASTODON_TOKEN")
 GTS_TOKEN      = _TOKENS.get("GTS_TOKEN")
 
+_gts_cache: dict[str, bool] = {}
+
+def _is_gts(instance: str) -> bool:
+    if instance in _gts_cache:
+        return _gts_cache[instance]
+    info = api_get(f"https://{instance}/api/v1/instance")
+    version = (info or {}).get("version", "") if isinstance(info, dict) else ""
+    result = "git" in version or version.startswith("0.")
+    _gts_cache[instance] = result
+    return result
+
 def _token_for(instance: str) -> str | None:
-    """Vrátí GTS_TOKEN pro GoToSocial instance (obsahují 'gts.' v doméně), jinak MASTODON_TOKEN."""
-    if GTS_TOKEN and "gts." in instance:
+    if GTS_TOKEN and _is_gts(instance):
         return GTS_TOKEN
     return MASTODON_TOKEN
 
@@ -167,6 +177,11 @@ def load_manual_accounts(seen_handles=None):
             url = f"https://{instance}/api/v1/accounts/lookup?acct={urllib.parse.quote(handle_part)}"
             token = _token_for(instance)
             acc = api_get(url, token=token)
+            if not acc or not isinstance(acc, dict):
+                log.debug(f"  {instance}: is_gts={_is_gts(instance)}, gts_token={GTS_TOKEN is not None}")
+                if GTS_TOKEN and _is_gts(instance):
+                    log.debug(f"  {handle}: zkouším GTS_TOKEN")
+                    acc = api_get(url, token=GTS_TOKEN)
             if not acc or not isinstance(acc, dict):
                 log.warning(f"  {handle}: lookup selhal")
                 continue
