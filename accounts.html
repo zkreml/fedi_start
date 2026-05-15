@@ -591,6 +591,9 @@ select:focus { border-color: var(--accent); }
     <select id="categoryFilter">
       <option value="">Všechny kategorie</option>
     </select>
+    <select id="instanceFilter">
+      <option value="">Všechny instance</option>
+    </select>
     <select id="sortFilter">
       <option value="score">Nejvyšší skóre</option>
       <option value="followers" selected>Nejvíce sledujících</option>
@@ -765,19 +768,22 @@ function filterByTag(tag) {
 function applyFilters() {
   const q = document.getElementById('searchInput').value.toLowerCase().trim();
   const cat = document.getElementById('categoryFilter').value;
+  const inst = document.getElementById('instanceFilter').value;
   const sort = document.getElementById('sortFilter').value;
   const activeTag = document.querySelector('.ftag.active')?.dataset.tag || '';
 
   filtered = allAccounts.filter(a => {
+    const handle = a.acct || a.handle || '';
     const matchQ = !q ||
       a.name.toLowerCase().includes(q) ||
       (a.bio || '').toLowerCase().includes(q) ||
-      (a.handle || '').toLowerCase().includes(q) ||
+      handle.toLowerCase().includes(q) ||
       (a.tags || []).some(t => t.toLowerCase().includes(q));
     const matchCat = !cat || a.category === cat;
+    const matchInst = !inst || handle.split('@').pop() === inst;
     const matchTag = !activeTag ||
       (a.tags || []).some(t => t.toLowerCase().includes(activeTag.toLowerCase()));
-    return matchQ && matchCat && matchTag;
+    return matchQ && matchCat && matchInst && matchTag;
   });
 
   filtered.sort((a, b) => {
@@ -904,6 +910,7 @@ function downloadCSV(content, filename) {
 // ────────────────────────────────
 document.getElementById('searchInput').addEventListener('input', applyFilters);
 document.getElementById('categoryFilter').addEventListener('change', applyFilters);
+document.getElementById('instanceFilter').addEventListener('change', applyFilters);
 document.getElementById('sortFilter').addEventListener('change', applyFilters);
 
 document.querySelectorAll('.ftag').forEach(btn => {
@@ -961,6 +968,23 @@ function buildDynamicUI() {
     opt.value = cat;
     opt.textContent = CATEGORY_LABELS[cat] || cat;
     sel.appendChild(opt);
+  });
+
+  // --- Instance select ---
+  const instanceCount = {};
+  allAccounts.forEach(a => {
+    const handle = a.acct || a.handle || '';
+    const instance = handle.includes('@') ? handle.split('@').pop() : '';
+    if (instance) instanceCount[instance] = (instanceCount[instance] || 0) + 1;
+  });
+  const instances = Object.keys(instanceCount).sort((a, b) => a.localeCompare(b, 'cs'));
+  const instSel = document.getElementById('instanceFilter');
+  instSel.innerHTML = '<option value="">Všechny instance</option>';
+  instances.forEach(instance => {
+    const opt = document.createElement('option');
+    opt.value = instance;
+    opt.textContent = `${instance} (${instanceCount[instance]})`;
+    instSel.appendChild(opt);
   });
 
   // --- Hashtag tlačítka – top 8 nejčastějších tagů ---
