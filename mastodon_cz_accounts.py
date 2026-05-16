@@ -37,6 +37,17 @@ def _load_tokens():
                     break
         if val:
             tokens[key] = val.strip()
+    # per-instance GTS tokeny: GTS_TOKEN_<DOMAIN>
+    for key, val in os.environ.items():
+        if key.startswith("GTS_TOKEN_") and val:
+            tokens[key] = val.strip()
+    for line in env_lines:
+        line = line.strip()
+        if line.startswith("GTS_TOKEN_") and "=" in line:
+            key, val = line.split("=", 1)
+            key = key.strip()
+            if key not in tokens and val.strip():
+                tokens[key] = val.strip()
     # fallback: raw token value (legacy .env bez klíče)
     if "MASTODON_TOKEN" not in tokens:
         for line in env_lines:
@@ -47,8 +58,9 @@ def _load_tokens():
     return tokens
 
 _TOKENS = _load_tokens()
-MASTODON_TOKEN = _TOKENS.get("MASTODON_TOKEN")
-GTS_TOKEN      = _TOKENS.get("GTS_TOKEN")
+MASTODON_TOKEN       = _TOKENS.get("MASTODON_TOKEN")
+GTS_TOKEN            = _TOKENS.get("GTS_TOKEN")  # legacy fallback
+_GTS_INSTANCE_TOKENS = {k: v for k, v in _TOKENS.items() if k.startswith("GTS_TOKEN_")}
 
 _gts_cache: dict[str, bool] = {}
 
@@ -62,8 +74,11 @@ def _is_gts(instance: str) -> bool:
     return result
 
 def _token_for(instance: str) -> str | None:
-    if GTS_TOKEN and _is_gts(instance):
-        return GTS_TOKEN
+    if _is_gts(instance):
+        key = "GTS_TOKEN_" + re.sub(r"[.\-]", "_", instance).upper()
+        token = _GTS_INSTANCE_TOKENS.get(key) or GTS_TOKEN
+        if token:
+            return token
     return MASTODON_TOKEN
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s", datefmt="%H:%M:%S")
@@ -177,11 +192,6 @@ def load_manual_accounts(seen_handles=None):
             url = f"https://{instance}/api/v1/accounts/lookup?acct={urllib.parse.quote(handle_part)}"
             token = _token_for(instance)
             acc = api_get(url, token=token)
-            if not acc or not isinstance(acc, dict):
-                log.debug(f"  {instance}: is_gts={_is_gts(instance)}, gts_token={GTS_TOKEN is not None}")
-                if GTS_TOKEN and _is_gts(instance):
-                    log.debug(f"  {handle}: zkouším GTS_TOKEN")
-                    acc = api_get(url, token=GTS_TOKEN)
             if not acc or not isinstance(acc, dict):
                 log.warning(f"  {handle}: lookup selhal")
                 continue
