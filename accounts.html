@@ -303,6 +303,11 @@ select:focus { border-color: var(--accent); }
   inset: 0;
   z-index: 0;
 }
+.card-avatar {
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
 
 .card:hover {
   border-color: var(--accent);
@@ -566,6 +571,7 @@ select:focus { border-color: var(--accent); }
 }
 
 .site-footer-inner a:hover { color: var(--accent); }
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:1000;align-items:center;justify-content:center} .modal-overlay.active{display:flex} .modal-card{background:#1e1e2e;border-radius:16px;max-width:420px;width:90%;overflow:hidden;position:relative} .modal-close{position:absolute;top:.75rem;right:.75rem;background:none;border:none;color:#aaa;font-size:1.2rem;cursor:pointer} .modal-header{position:relative;height:120px;background:#2a2a3e} .modal-header-img{width:100%;height:120px;object-fit:cover} .modal-avatar{width:72px;height:72px;border-radius:12px;border:3px solid #1e1e2e;position:absolute;bottom:-36px;left:1.2rem} .modal-body{padding:2.5rem 1.2rem 1.2rem} .modal-name{font-size:1.2rem;font-weight:700;color:#fff} .modal-handle{color:#888;font-size:.85rem;margin-bottom:.5rem} .modal-bio{color:#ccc;font-size:.9rem;margin-bottom:.75rem;line-height:1.5} .modal-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.75rem} .modal-stats{display:flex;gap:1.5rem}
 </style>
 </head>
 <body>
@@ -851,7 +857,7 @@ function cardHTML(a, idx) {
       <a class="card-link" href="${a.url}" target="_blank" rel="noopener noreferrer" aria-label="Profil ${a.name}"></a>
       <div class="card-header">
         ${a.header ? `<img class="card-header-img" src="${a.header}" alt="">` : ''}
-        <img class="card-avatar" src="${av}" alt="" onerror="this.src='${avatarFallback(a.name)}'">
+        <img class="card-avatar" src="${av}" alt="" onclick="event.stopPropagation();openModal(filtered[${idx}])" onerror="this.src='${avatarFallback(a.name)}'">
       </div>
       <div class="card-body">
         <div class="card-name">${a.name}</div>
@@ -1095,5 +1101,6 @@ loadAccounts();
   </div>
 </footer>
 
+<div id="profile-modal" class="modal-overlay" onclick="closeModal()"><div class="modal-card" onclick="event.stopPropagation()"><button class="modal-close" onclick="closeModal()">✕</button><div class="modal-header"><img id="modal-header-img" class="modal-header-img" src="" alt="" style="display:none"><img id="modal-avatar" class="modal-avatar" src="" alt=""></div><div class="modal-body"><div id="modal-name" class="modal-name"></div><div id="modal-handle" class="modal-handle"></div><div id="modal-bio" class="modal-bio"></div><div id="modal-tags" class="modal-tags"></div><div class="modal-stats"><div class="stat"><span id="modal-followers" class="stat-val"></span><span class="stat-label">Sledující</span></div><div class="stat"><span id="modal-statuses" class="stat-val"></span><span class="stat-label">Postů</span></div></div><a id="modal-follow" href="" target="_blank" class="follow-btn" style="margin-top:1rem;display:inline-block">+ Sledovat</a></div></div></div><script>function openModal(a){const av=a.avatar||avatarFallback(a.name);document.getElementById('modal-avatar').src=av;document.getElementById('modal-avatar').onerror=function(){this.src=avatarFallback(a.name);};const hi=document.getElementById('modal-header-img');if(a.header){hi.src=a.header;hi.style.display='block';}else{hi.style.display='none';}document.getElementById('modal-name').textContent=a.name;document.getElementById('modal-handle').textContent='@'+a.handle;document.getElementById('modal-bio').textContent=a.bio||'';document.getElementById('modal-tags').innerHTML=(a.tags||[]).map(t=>`<span class="card-tag">#${t}</span>`).join('');document.getElementById('modal-followers').textContent=fmt(a.followers);document.getElementById('modal-statuses').textContent=fmt(a.statuses);document.getElementById('modal-follow').href=followUrl(a.handle);document.getElementById('profile-modal').classList.add('active');document.body.style.overflow='hidden';}function closeModal(){document.getElementById('profile-modal').classList.remove('active');document.body.style.overflow='';}document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});</script>
 </body>
 </html>
