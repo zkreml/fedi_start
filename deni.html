@@ -150,7 +150,9 @@ let currentScope = 'local';
 
 function setScope(scope) {
   currentScope = scope;
+  currentFilter = 'all';
   document.querySelectorAll('[data-scope]').forEach(b => b.classList.toggle('active', b.dataset.scope === scope));
+  document.querySelectorAll('.filter-tab[data-filter]').forEach(b => b.classList.toggle('active', b.dataset.filter === 'all'));
   loadFeed();
 }
 
@@ -203,7 +205,7 @@ function renderFeed() {
   const feed = document.getElementById('feed');
   const filtered = currentFilter === 'all' ? allPosts : allPosts.filter(p => postType(p) === currentFilter);
   if (!filtered.length) { feed.innerHTML = '<div class="loading">Žádné příspěvky.</div>'; return; }
-  feed.innerHTML = filtered.map(renderPost).join('');
+  try { feed.innerHTML = filtered.map(renderPost).join(''); } catch(e) { console.error('renderFeed error:', e); feed.innerHTML = '<div class="loading">Chyba vykreslování.</div>'; }
 }
 
 function updateCounts() {
@@ -251,9 +253,9 @@ async function loadTopLinks() {
   }
 }
 
-document.querySelectorAll('.filter-tab').forEach(btn => {
+document.querySelectorAll('.filter-tab[data-filter]').forEach(btn => {
   btn.addEventListener('click', () => {
-    document.querySelectorAll('.filter-tab').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.filter-tab[data-filter]').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     currentFilter = btn.dataset.filter;
     renderFeed();
