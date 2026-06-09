@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CZ účty na Mastodonu – Mamutovo</title>
+<script>if(localStorage.getItem('theme')==='light')document.documentElement.classList.add('light');</script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap');
 
@@ -20,7 +21,22 @@
   --muted2: #555;
   --border: #282828;
   --radius: 10px;
+  --nav-bg: rgba(13,13,13,0.9);
 }
+html.light {
+  --bg: #ffffff;
+  --surface: #f8f8f8;
+  --surface2: #f0f0f0;
+  --surface3: #e8e8e8;
+  --border: #e0e0e0;
+  --text: #1a1a1a;
+  --muted: #666666;
+  --muted2: #999999;
+  --accent: #06b6d4;
+  --nav-bg: rgba(245,245,245,0.9);
+}
+.theme-toggle { background: none; border: 1px solid var(--border); border-radius: 50%; width: 32px; height: 32px; cursor: pointer; font-size: 1rem; line-height: 1; flex-shrink: 0; color: var(--text); transition: border-color .15s; }
+.theme-toggle:hover { border-color: var(--accent); }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -38,7 +54,7 @@ nav {
   justify-content: space-between;
   padding: 1rem 2rem;
   border-bottom: 1px solid var(--border);
-  background: rgba(13,13,13,0.9);
+  background: var(--nav-bg);
   backdrop-filter: blur(10px);
   position: sticky;
   top: 0;
@@ -303,6 +319,11 @@ select:focus { border-color: var(--accent); }
   inset: 0;
   z-index: 0;
 }
+.card-avatar {
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
 
 .card:hover {
   border-color: var(--accent);
@@ -566,6 +587,7 @@ select:focus { border-color: var(--accent); }
 }
 
 .site-footer-inner a:hover { color: var(--accent); }
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:1000;align-items:center;justify-content:center} .modal-overlay.active{display:flex} .modal-card{background:var(--surface);border-radius:16px;max-width:420px;width:90%;overflow:hidden;position:relative} .modal-close{position:absolute;top:.75rem;right:.75rem;background:none;border:none;color:var(--muted);font-size:1.2rem;cursor:pointer} .modal-header{position:relative;height:120px;background:var(--surface2)} .modal-header-img{width:100%;height:120px;object-fit:cover} .modal-avatar{width:72px;height:72px;border-radius:12px;border:3px solid var(--surface);position:absolute;bottom:-36px;left:1.2rem} .modal-body{padding:2.5rem 1.2rem 1.2rem} .modal-name{font-size:1.2rem;font-weight:700;color:var(--text)} .modal-handle{color:var(--muted);font-size:.85rem;margin-bottom:.5rem} .modal-bio{color:var(--muted);font-size:.9rem;margin-bottom:.75rem;line-height:1.5} .modal-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.75rem} .modal-stats{display:flex;gap:1.5rem}
 </style>
 </head>
 <body>
@@ -576,6 +598,7 @@ select:focus { border-color: var(--accent); }
     <a href="start.html">← Průvodce</a>
     <a href="accounts.html" class="active">CZ účty</a>
   </div>
+  <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()" aria-label="Přepnout téma">🌙</button>
   <span class="nav-updated"><span id="lastUpdated">načítám...</span><span id="refreshCountdown" style="margin-left:0.4rem;color:var(--muted2);font-size:0.65rem;font-family:'Space Mono',monospace;"></span><span id="refreshBadge" style="margin-left:0.5rem;font-size:0.65rem;font-family:'Space Mono',monospace;transition:color 0.3s;"></span></span>
 </nav>
 
@@ -629,6 +652,13 @@ select:focus { border-color: var(--accent); }
 <div class="empty" id="emptyEl">Žádné účty neodpovídají filtru. Zkus jiný výraz.</div>
 
 <script>
+function toggleTheme() {
+  const light = document.documentElement.classList.toggle('light');
+  localStorage.setItem('theme', light ? 'light' : 'dark');
+  document.getElementById('theme-toggle').textContent = light ? '☀️' : '🌙';
+}
+if (localStorage.getItem('theme') === 'light') document.getElementById('theme-toggle').textContent = '☀️';
+
 // ────────────────────────────────
 // DATA – fallback když není JSON
 // ────────────────────────────────
@@ -857,7 +887,7 @@ function cardHTML(a, idx) {
       <a class="card-link" href="${a.url}" target="_blank" rel="noopener noreferrer" aria-label="Profil ${a.name}"></a>
       <div class="card-header">
         ${a.header ? `<img class="card-header-img" src="${a.header}" alt="">` : ''}
-        <img class="card-avatar" src="${av}" alt="" onerror="this.src='${avatarFallback(a.name)}'">
+        <img class="card-avatar" src="${av}" alt="" onclick="event.stopPropagation();openModal(filtered[${idx}])" onerror="this.src='${avatarFallback(a.name)}'">
       </div>
       <div class="card-body">
         <div class="card-name">${a.name}</div>
@@ -1119,5 +1149,6 @@ loadAccounts();
   </div>
 </footer>
 
+<div id="profile-modal" class="modal-overlay" onclick="closeModal()"><div class="modal-card" onclick="event.stopPropagation()"><button class="modal-close" onclick="closeModal()">✕</button><div class="modal-header"><img id="modal-header-img" class="modal-header-img" src="" alt="" style="display:none"><img id="modal-avatar" class="modal-avatar" src="" alt=""></div><div class="modal-body"><div id="modal-name" class="modal-name"></div><div id="modal-handle" class="modal-handle"></div><div id="modal-bio" class="modal-bio"></div><div id="modal-tags" class="modal-tags"></div><div class="modal-stats"><div class="stat"><span id="modal-followers" class="stat-val"></span><span class="stat-label">Sledující</span></div><div class="stat"><span id="modal-statuses" class="stat-val"></span><span class="stat-label">Postů</span></div></div><a id="modal-follow" href="" target="_blank" class="follow-btn" style="margin-top:1rem;display:inline-block">+ Sledovat</a></div></div></div><script>function openModal(a){const av=a.avatar||avatarFallback(a.name);document.getElementById('modal-avatar').src=av;document.getElementById('modal-avatar').onerror=function(){this.src=avatarFallback(a.name);};const hi=document.getElementById('modal-header-img');if(a.header){hi.src=a.header;hi.style.display='block';}else{hi.style.display='none';}document.getElementById('modal-name').textContent=a.name;document.getElementById('modal-handle').textContent='@'+a.handle;document.getElementById('modal-bio').textContent=a.bio||'';document.getElementById('modal-tags').innerHTML=(a.tags||[]).map(t=>`<span class="card-tag">#${t}</span>`).join('');document.getElementById('modal-followers').textContent=fmt(a.followers);document.getElementById('modal-statuses').textContent=fmt(a.statuses);document.getElementById('modal-follow').href=followUrl(a.handle);document.getElementById('profile-modal').classList.add('active');document.body.style.overflow='hidden';}function closeModal(){document.getElementById('profile-modal').classList.remove('active');document.body.style.overflow='';}document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});</script>
 </body>
 </html>
