@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Co se děje na Mastodonu | Mamutovo</title>
+<script>if(localStorage.getItem('theme')==='light')document.documentElement.classList.add('light');</script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap');
 :root {
@@ -15,12 +16,26 @@
   --muted: #888;
   --accent: #00c896;
   --accent2: #ff6b6b;
+  --nav-bg: rgba(13,13,13,0.95);
 }
+html.light {
+  --bg: #ffffff;
+  --surface: #f8f8f8;
+  --surface2: #f0f0f0;
+  --border: #e0e0e0;
+  --text: #1a1a1a;
+  --muted: #666666;
+  --accent: #06b6d4;
+  --nav-bg: rgba(245,245,245,0.95);
+}
+.theme-toggle { background: none; border: 1px solid var(--border); border-radius: 50%; width: 32px; height: 32px; cursor: pointer; font-size: 1rem; line-height: 1; flex-shrink: 0; color: var(--text); transition: border-color .15s; }
+.theme-toggle:hover { border-color: var(--accent); }
+html.light .post { box-shadow: 0 1px 3px rgba(0,0,0,.08); }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { background: var(--bg); color: var(--text); font-family: 'Syne', sans-serif; min-height: 100vh; }
 
 /* NAV */
-nav { display: flex; align-items: center; justify-content: space-between; padding: .9rem 2rem; border-bottom: 1px solid var(--border); background: rgba(13,13,13,0.95); position: sticky; top: 0; z-index: 100; }
+nav { display: flex; align-items: center; justify-content: space-between; padding: .9rem 2rem; border-bottom: 1px solid var(--border); background: var(--nav-bg); position: sticky; top: 0; z-index: 100; }
 .nav-logo { font-family: 'Space Mono', monospace; font-size: .85rem; color: var(--accent); text-decoration: none; font-weight: 700; }
 .nav-links { display: flex; gap: 1.5rem; }
 .nav-links a { font-family: 'Space Mono', monospace; font-size: .75rem; color: var(--muted); text-decoration: none; transition: color .15s; }
@@ -69,8 +84,8 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
 
 /* FEED */
 .feed-wrap { max-width: 900px; margin: 0 auto; padding: 0 1.5rem 4rem; }
-.feed { display: flex; flex-direction: column; }
-.post { display: flex; gap: .75rem; padding: .6rem 0; border-bottom: 1px solid var(--border); cursor: default; transition: background .1s; }
+.feed { display: flex; flex-direction: column; gap: .75rem; }
+.post { display: flex; gap: .75rem; padding: .8rem 1rem; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; cursor: default; transition: background .1s; }
 .post:hover { background: rgba(255,255,255,.02); }
 .post-avatar { width: 32px; height: 32px; border-radius: 8px; flex-shrink: 0; object-fit: cover; }
 .post-avatar-fallback { width: 32px; height: 32px; border-radius: 8px; flex-shrink: 0; background: var(--border); display: flex; align-items: center; justify-content: center; font-size: .85rem; color: var(--text); }
@@ -103,6 +118,7 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
     <a href="start.html">Průvodce</a>
     <a href="accounts.html">CZ účty</a>
   </div>
+  <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()" aria-label="Přepnout téma">🌙</button>
 </nav>
 
 <div class="hero">
@@ -156,6 +172,13 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
 </div>
 
 <script>
+function toggleTheme() {
+  const light = document.documentElement.classList.toggle('light');
+  localStorage.setItem('theme', light ? 'light' : 'dark');
+  document.getElementById('theme-toggle').textContent = light ? '☀️' : '🌙';
+}
+if (localStorage.getItem('theme') === 'light') document.getElementById('theme-toggle').textContent = '☀️';
+
 let allPosts = [];
 let currentFilter = 'all';
 let currentScope = 'local';

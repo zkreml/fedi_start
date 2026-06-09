@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Základy Mastodonu – Mamutovo</title>
+<script>if(localStorage.getItem('theme')==='light')document.documentElement.classList.add('light');</script>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap');
 
@@ -18,6 +19,17 @@
     --border: #2e2e2e;
     --radius: 10px;
   }
+  html.light {
+    --bg: #ffffff;
+    --surface: #f8f8f8;
+    --surface2: #f0f0f0;
+    --border: #e0e0e0;
+    --text: #1a1a1a;
+    --muted: #666666;
+    --accent: #06b6d4;
+  }
+  .theme-toggle { background: var(--surface); border: 1px solid var(--border); border-radius: 50%; width: 32px; height: 32px; cursor: pointer; font-size: 1rem; line-height: 1; position: fixed; top: 1rem; right: 1rem; z-index: 200; transition: border-color .15s; }
+  .theme-toggle:hover { border-color: var(--accent); }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -174,6 +186,7 @@
 </style>
 </head>
 <body>
+<button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()" aria-label="Přepnout téma">🌙</button>
 
 <div class="hero">
   <a href="https://fedi.mamutovo.cz" class="badge">🦣 MAMUTOVO · ZÁKLADY</a>
@@ -243,5 +256,13 @@
   <a href="start.html">← Zpět na průvodce</a>
 </div>
 
+<script>
+function toggleTheme() {
+  const light = document.documentElement.classList.toggle('light');
+  localStorage.setItem('theme', light ? 'light' : 'dark');
+  document.getElementById('theme-toggle').textContent = light ? '☀️' : '🌙';
+}
+if (localStorage.getItem('theme') === 'light') document.getElementById('theme-toggle').textContent = '☀️';
+</script>
 </body>
 </html>

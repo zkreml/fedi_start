@@ -272,6 +272,7 @@ def _to_output(acc):
         "handle":      handle,
         "bio":         bio[:220],
         "avatar":      acc.get("avatar", ""),
+        "header":      acc.get("header_static", "") if "missing" not in acc.get("header_static", "") else "",
         "followers":   acc.get("followers_count", 0),
         "statuses":    acc.get("statuses_count",  0),
         "score":       score(acc),
