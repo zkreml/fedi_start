@@ -59,22 +59,30 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
 .filter-tab.active { background: var(--accent); color: #000; border-color: var(--accent); font-weight: 700; }
 .filter-count { opacity: .7; }
 
+/* AUTHORS */
+.authors-wrap { max-width: 900px; margin: 0 auto; padding: 0 1.5rem .75rem; }
+.authors-scroll { display: flex; gap: .75rem; overflow-x: auto; padding-bottom: .5rem; scrollbar-width: thin; scrollbar-color: var(--border) transparent; }
+.author-chip { display: flex; flex-direction: column; align-items: center; gap: .3rem; flex-shrink: 0; }
+.author-chip img { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; }
+.author-chip-fallback { width: 48px; height: 48px; border-radius: 50%; background: var(--border); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; }
+.author-chip-name { font-size: .65rem; color: var(--muted); text-align: center; max-width: 56px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
 /* FEED */
 .feed-wrap { max-width: 900px; margin: 0 auto; padding: 0 1.5rem 4rem; }
 .feed { display: flex; flex-direction: column; }
-.post { display: flex; gap: .75rem; padding: .9rem 0; border-bottom: 1px solid var(--border); cursor: default; transition: background .1s; }
+.post { display: flex; gap: .75rem; padding: .6rem 0; border-bottom: 1px solid var(--border); cursor: default; transition: background .1s; }
 .post:hover { background: rgba(255,255,255,.02); }
-.post-avatar { width: 40px; height: 40px; border-radius: 8px; flex-shrink: 0; object-fit: cover; }
-.post-avatar-fallback { width: 40px; height: 40px; border-radius: 8px; flex-shrink: 0; background: var(--border); display: flex; align-items: center; justify-content: center; font-size: 1rem; color: var(--text); }
+.post-avatar { width: 32px; height: 32px; border-radius: 8px; flex-shrink: 0; object-fit: cover; }
+.post-avatar-fallback { width: 32px; height: 32px; border-radius: 8px; flex-shrink: 0; background: var(--border); display: flex; align-items: center; justify-content: center; font-size: .85rem; color: var(--text); }
 .post-main { flex: 1; min-width: 0; }
 .post-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: .2rem; }
-.post-author { font-weight: 700; font-size: .9rem; }
+.post-author { font-weight: 700; font-size: .85rem; }
 .post-time { font-family: 'Space Mono', monospace; font-size: .65rem; color: var(--muted); flex-shrink: 0; margin-left: .5rem; }
-.post-handle { font-family: 'Space Mono', monospace; font-size: .7rem; color: var(--muted); margin-bottom: .35rem; }
-.post-text { font-size: .88rem; line-height: 1.55; color: var(--text); word-break: break-word; }
+.post-handle { font-family: 'Space Mono', monospace; font-size: .65rem; color: var(--muted); margin-bottom: .35rem; }
+.post-text { font-size: .82rem; line-height: 1.55; color: var(--text); word-break: break-word; }
 .post-text a { color: var(--accent); text-decoration: none; }
-.post-media { margin-top: .6rem; border-radius: 8px; overflow: hidden; max-height: 200px; }
-.post-media img { width: 100%; max-height: 200px; object-fit: cover; display: block; }
+.post-media { float: right; margin: 0 0 .25rem .75rem; width: 120px; border-radius: 8px; overflow: hidden; }
+.post-media img { width: 120px; height: 120px; aspect-ratio: 1/1; object-fit: cover; display: block; }
 .post-boost { font-family: 'Space Mono', monospace; font-size: .7rem; color: var(--muted); margin-bottom: .3rem; }
 .post-boost span { color: var(--accent); }
 
@@ -124,6 +132,10 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
     <button class="filter-tab" data-filter="replies">Odpovědi <span class="filter-count" id="count-replies"></span></button>
     <button class="filter-tab" data-filter="boosts">Boosty <span class="filter-count" id="count-boosts"></span></button>
   </div>
+</div>
+
+<div class="authors-wrap">
+  <div class="authors-scroll" id="authors-scroll"></div>
 </div>
 
 <div class="feed-wrap">
@@ -208,6 +220,26 @@ function renderFeed() {
   try { feed.innerHTML = filtered.map(renderPost).join(''); } catch(e) { console.error('renderFeed error:', e); feed.innerHTML = '<div class="loading">Chyba vykreslování.</div>'; }
 }
 
+function updateAuthors() {
+  const scroll = document.getElementById('authors-scroll');
+  if (!scroll) return;
+  const counts = {};
+  allPosts.forEach(p => {
+    const src = p.reblog ? p.reblog : p;
+    const key = src.account.acct;
+    if (!counts[key]) counts[key] = { account: src.account, count: 0 };
+    counts[key].count++;
+  });
+  const sorted = Object.values(counts).sort((a, b) => b.count - a.count).slice(0, 20);
+  scroll.innerHTML = sorted.map(({ account }) => {
+    const av = account.avatar
+      ? `<img src="${account.avatar}" alt="" onerror="this.style.display='none'">`
+      : `<div class="author-chip-fallback">${(account.display_name||account.username).charAt(0)}</div>`;
+    const name = account.display_name || account.username;
+    return `<div class="author-chip">${av}<span class="author-chip-name">${name}</span></div>`;
+  }).join('');
+}
+
 function updateCounts() {
   document.getElementById('count-all').textContent = allPosts.length;
   document.getElementById('count-original').textContent = allPosts.filter(p => postType(p) === 'original').length;
@@ -221,6 +253,7 @@ async function loadFeed() {
     allPosts = await res.json();
     updateCounts();
     renderFeed();
+    updateAuthors();
   } catch(e) {
     document.getElementById('feed').innerHTML = '<div class="loading">Nepodařilo se načíst příspěvky.</div>';
   }
